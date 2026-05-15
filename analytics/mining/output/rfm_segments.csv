@@ -1,0 +1,2001 @@
+customer_sk,full_name,city,source_system,company,company_code,recency_days,frequency,monetary_syp,r_score,f_score,m_score,rfm_code,segment
+1,محمد الأحمد,Tartus,SYRIATEL,Syriatel,SYRIATEL,0,6,180000.00,5,2,1,521,Other
+2,أحمد المصري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,103,9,600000.00,1,4,4,144,At Risk
+3,محمد الطرابلسي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,54,7,379000.00,2,3,2,232,At Risk
+4,سامي الزعبي,Homs,SYRIATEL,Syriatel,SYRIATEL,54,7,401000.00,2,3,2,232,At Risk
+5,بشار العلي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,18,7,396000.00,4,3,2,432,Loyal
+6,سامي الحسن,Quneitra,SYRIATEL,Syriatel,SYRIATEL,42,14,644000.00,3,5,4,354,Loyal
+7,ليلى السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,1,12,1006000.00,5,5,5,555,Champions
+8,علي الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,1,62,3331000.00,5,5,5,555,Champions
+9,سامي المصري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,31,6,710000.00,3,2,4,324,Other
+10,ريم الشامي,Damascus,SYRIATEL,Syriatel,SYRIATEL,29,5,410000.00,3,1,2,312,Other
+11,طارق العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,34,7,328000.00,3,3,2,332,Loyal
+12,سامي الكيلاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,35,12,464000.00,3,5,3,353,Loyal
+13,هدى الدمشقي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,51,4,120000.00,2,1,1,211,Other
+14,حسن البرازي,Idlib,SYRIATEL,Syriatel,SYRIATEL,28,7,755000.00,3,3,4,334,Loyal
+15,سليمان الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,38,3,243000.00,3,1,1,311,Other
+16,إبراهيم الطرابلسي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,52,9,770000.00,2,4,5,245,At Risk
+17,سليمان الدمشقي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,20,11,583000.00,4,5,4,454,Champions
+18,مصطفى السوري,Idlib,SYRIATEL,Syriatel,SYRIATEL,19,10,756000.00,4,4,5,445,Champions
+19,نور الرفاعي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,35,12,503000.00,3,5,3,353,Loyal
+20,حسين العظمة,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,3,7,408000.00,5,3,2,532,Loyal
+21,يوسف الجابري,Tartus,SYRIATEL,Syriatel,SYRIATEL,13,7,366000.00,4,3,2,432,Loyal
+22,إبراهيم السيد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,136,6,473000.00,1,2,3,123,Lost
+23,نزار البرازي,Damascus,SYRIATEL,Syriatel,SYRIATEL,30,11,941000.00,3,5,5,355,Loyal
+24,فاطمة الحلبي,Daraa,SYRIATEL,Syriatel,SYRIATEL,2,64,4562000.00,5,5,5,555,Champions
+25,يوسف البيطار,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,6,8,565000.00,5,3,4,534,Loyal
+26,عائشة العظمة,Quneitra,SYRIATEL,Syriatel,SYRIATEL,82,13,1108000.00,1,5,5,155,At Risk
+27,عمر الكردي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,3,7,264000.00,5,3,1,531,Loyal
+28,ماهر الشامي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,45,19,986000.00,3,5,5,355,Loyal
+29,عائشة الزعبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,66,10,483000.00,2,5,3,253,At Risk
+30,نزار البرازي,Tartus,SYRIATEL,Syriatel,SYRIATEL,21,11,887000.00,4,5,5,455,Champions
+31,فاطمة السوري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,1,8,305000.00,5,3,2,532,Loyal
+32,ماهر الجابري,Daraa,SYRIATEL,Syriatel,SYRIATEL,3,7,541000.00,5,3,3,533,Loyal
+33,سارة الشامي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,15,70,4942000.00,4,5,5,455,Champions
+34,طارق الأحمد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,17,7,570000.00,4,3,4,434,Loyal
+35,ماهر المصري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,7,6,243000.00,5,2,1,521,Other
+36,أحمد الحسن,Aleppo,SYRIATEL,Syriatel,SYRIATEL,91,5,383000.00,1,1,2,112,Lost
+37,يوسف البيطار,Homs,SYRIATEL,Syriatel,SYRIATEL,89,4,143000.00,1,1,1,111,Lost
+38,كريم الطرابلسي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,60,6,456000.00,2,2,3,223,Other
+39,أيمن المصري,Idlib,SYRIATEL,Syriatel,SYRIATEL,246,2,170000.00,1,1,1,111,Lost
+40,وليد الزعبي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,3,66,4831000.00,5,5,5,555,Champions
+41,هدى الطرابلسي,Latakia,SYRIATEL,Syriatel,SYRIATEL,15,6,853000.00,4,2,5,425,Other
+42,مصطفى الحمصي,Latakia,SYRIATEL,Syriatel,SYRIATEL,66,9,544000.00,2,4,3,243,At Risk
+43,نزار الجابري,Latakia,SYRIATEL,Syriatel,SYRIATEL,109,9,378000.00,1,4,2,142,At Risk
+44,يوسف الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,69,7,129000.00,2,3,1,231,At Risk
+45,علي اللاذقاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,14,6,421000.00,4,2,3,423,Other
+46,طارق الأحمد,Homs,SYRIATEL,Syriatel,SYRIATEL,43,10,823000.00,3,5,5,355,Loyal
+47,وليد الخطيب,Daraa,SYRIATEL,Syriatel,SYRIATEL,17,10,1080000.00,4,5,5,455,Champions
+48,زينب الكيلاني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,65,7,645000.00,2,3,4,234,At Risk
+49,سارة الجابري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,35,5,275000.00,3,1,1,311,Other
+50,سارة المصري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,41,9,638000.00,3,4,4,344,Loyal
+51,طارق العلي,Homs,SYRIATEL,Syriatel,SYRIATEL,53,7,420000.00,2,3,3,233,At Risk
+52,كريم العمر,Latakia,SYRIATEL,Syriatel,SYRIATEL,14,6,208000.00,4,2,1,421,Other
+53,بشار الكيلاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,26,8,880000.00,3,3,5,335,Loyal
+54,هدى الشامي,Daraa,SYRIATEL,Syriatel,SYRIATEL,86,6,708000.00,1,2,4,124,Lost
+55,حسن اللاذقاني,Homs,SYRIATEL,Syriatel,SYRIATEL,5,6,495000.00,5,2,3,523,Other
+56,إبراهيم الحسن,Aleppo,SYRIATEL,Syriatel,SYRIATEL,50,7,438000.00,2,3,3,233,At Risk
+57,فاطمة المصري,Idlib,SYRIATEL,Syriatel,SYRIATEL,28,9,353000.00,3,4,2,342,Loyal
+58,علي الدمشقي,Hama,SYRIATEL,Syriatel,SYRIATEL,63,4,278000.00,2,1,2,212,Other
+59,مصطفى العظمة,Tartus,SYRIATEL,Syriatel,SYRIATEL,170,3,195000.00,1,1,1,111,Lost
+60,سارة الطرابلسي,Damascus,SYRIATEL,Syriatel,SYRIATEL,75,7,720000.00,2,3,4,234,At Risk
+61,بشار العظمة,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,9,61,4575000.00,5,5,5,555,Champions
+62,ماهر العظمة,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,1,15,684000.00,5,5,4,554,Champions
+63,ماهر الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,40,6,585000.00,3,2,4,324,Other
+64,محمد المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,3,7,321000.00,5,3,2,532,Loyal
+65,فاطمة الجابري,Latakia,SYRIATEL,Syriatel,SYRIATEL,3,11,466000.00,5,5,3,553,Loyal
+66,فاطمة الخطيب,Hama,SYRIATEL,Syriatel,SYRIATEL,1,8,663000.00,5,3,4,534,Loyal
+67,بشار الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,48,8,788000.00,2,3,5,235,At Risk
+68,وليد المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,59,9,690000.00,2,4,4,244,At Risk
+69,مصطفى الرفاعي,Daraa,SYRIATEL,Syriatel,SYRIATEL,2,8,291000.00,5,3,2,532,Loyal
+70,علي العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,11,9,800000.00,4,4,5,445,Champions
+71,حسين السوري,Tartus,SYRIATEL,Syriatel,SYRIATEL,6,61,4389000.00,5,5,5,555,Champions
+72,فاطمة الخطيب,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,3,6,455000.00,5,2,3,523,Other
+73,فاطمة القباني,Hama,SYRIATEL,Syriatel,SYRIATEL,78,5,235000.00,2,1,1,211,Other
+74,هدى الحسن,Quneitra,SYRIATEL,Syriatel,SYRIATEL,47,7,338000.00,2,3,2,232,At Risk
+75,مصطفى الأحمد,Daraa,SYRIATEL,Syriatel,SYRIATEL,14,5,310000.00,4,1,2,412,New
+76,سليمان الحمصي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,24,4,320000.00,3,1,2,312,Other
+77,نزار البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,18,5,151000.00,4,1,1,411,New
+78,ماهر الحسن,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,55,8,345000.00,2,3,2,232,At Risk
+79,نزار الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,21,10,394000.00,4,5,2,452,Loyal
+80,فاطمة السوري,Hama,SYRIATEL,Syriatel,SYRIATEL,13,5,430000.00,4,1,3,413,New
+81,مصطفى الشامي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,3,9,988000.00,5,4,5,545,Champions
+82,علي الحمصي,Latakia,SYRIATEL,Syriatel,SYRIATEL,17,5,418000.00,4,1,3,413,New
+83,نور الأحمد,Homs,SYRIATEL,Syriatel,SYRIATEL,39,9,555000.00,3,4,4,344,Loyal
+84,محمد الحسن,Aleppo,SYRIATEL,Syriatel,SYRIATEL,1,7,875000.00,5,3,5,535,Loyal
+85,زينب السيد,Tartus,SYRIATEL,Syriatel,SYRIATEL,45,11,1050000.00,3,5,5,355,Loyal
+86,سليمان الكردي,Homs,SYRIATEL,Syriatel,SYRIATEL,69,9,338000.00,2,4,2,242,At Risk
+87,علي الجابري,Idlib,SYRIATEL,Syriatel,SYRIATEL,37,4,203000.00,3,1,1,311,Other
+88,حسن العظمة,Raqqa,SYRIATEL,Syriatel,SYRIATEL,3,5,203000.00,5,1,1,511,New
+89,خالد الخطيب,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,11,6,373000.00,4,2,2,422,Other
+90,عمر العلي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,43,5,190000.00,3,1,1,311,Other
+91,ليلى البيطار,Hama,SYRIATEL,Syriatel,SYRIATEL,30,7,264000.00,3,3,1,331,Loyal
+92,علي السيد,Aleppo,SYRIATEL,Syriatel,SYRIATEL,17,11,781000.00,4,5,5,455,Champions
+93,عمر البيطار,Daraa,SYRIATEL,Syriatel,SYRIATEL,35,12,518000.00,3,5,3,353,Loyal
+94,نزار العمر,Latakia,SYRIATEL,Syriatel,SYRIATEL,68,4,333000.00,2,1,2,212,Other
+95,هدى البرازي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,96,5,310000.00,1,1,2,112,Lost
+96,عمر العظمة,Latakia,SYRIATEL,Syriatel,SYRIATEL,20,14,1281000.00,4,5,5,455,Champions
+97,هدى القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,25,12,1093000.00,3,5,5,355,Loyal
+98,عائشة الأحمد,Latakia,SYRIATEL,Syriatel,SYRIATEL,41,8,456000.00,3,3,3,333,Loyal
+99,فاطمة المصري,Idlib,SYRIATEL,Syriatel,SYRIATEL,188,4,418000.00,1,1,3,113,Lost
+100,نور القباني,Tartus,SYRIATEL,Syriatel,SYRIATEL,37,6,330000.00,3,2,2,322,Other
+101,حسين الحمصي,Damascus,SYRIATEL,Syriatel,SYRIATEL,5,6,340000.00,5,2,2,522,Other
+102,خالد السيد,Tartus,SYRIATEL,Syriatel,SYRIATEL,80,6,888000.00,1,2,5,125,Lost
+103,سليمان الشامي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,100,8,309000.00,1,3,2,132,At Risk
+104,وليد الكردي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,60,9,336000.00,2,4,2,242,At Risk
+105,رنا البيطار,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,45,10,523000.00,3,5,3,353,Loyal
+106,خالد القباني,Homs,SYRIATEL,Syriatel,SYRIATEL,3,11,1176000.00,5,5,5,555,Champions
+107,بشار البيطار,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,39,7,408000.00,3,3,2,332,Loyal
+108,ليلى الطرابلسي,Hama,SYRIATEL,Syriatel,SYRIATEL,22,7,472000.00,4,3,3,433,Loyal
+109,ماهر الحسن,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,7,11,980000.00,5,5,5,555,Champions
+110,علي الرفاعي,Daraa,SYRIATEL,Syriatel,SYRIATEL,109,10,373000.00,1,5,2,152,At Risk
+111,فاطمة الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,150,11,916000.00,1,5,5,155,At Risk
+112,يوسف الشامي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,97,8,578000.00,1,3,4,134,At Risk
+113,مريم البيطار,Raqqa,SYRIATEL,Syriatel,SYRIATEL,3,10,561000.00,5,5,4,554,Champions
+114,نور الحلبي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,15,13,895000.00,4,5,5,455,Champions
+115,أيمن القباني,Latakia,SYRIATEL,Syriatel,SYRIATEL,5,8,238000.00,5,3,1,531,Loyal
+116,ماهر الدمشقي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,45,8,238000.00,3,3,1,331,Loyal
+117,عائشة الجابري,Homs,SYRIATEL,Syriatel,SYRIATEL,57,9,196000.00,2,4,1,241,At Risk
+118,إبراهيم الحسن,Quneitra,SYRIATEL,Syriatel,SYRIATEL,2,10,493000.00,5,5,3,553,Loyal
+119,يوسف السوري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,53,8,282000.00,2,3,2,232,At Risk
+120,أحمد الشامي,Homs,SYRIATEL,Syriatel,SYRIATEL,14,8,468000.00,4,3,3,433,Loyal
+121,ريم الأحمد,Idlib,SYRIATEL,Syriatel,SYRIATEL,2,68,4474000.00,5,5,5,555,Champions
+122,محمد الدمشقي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,118,5,370000.00,1,1,2,112,Lost
+123,سارة الأحمد,Hama,SYRIATEL,Syriatel,SYRIATEL,70,6,388000.00,2,2,2,222,Other
+124,هدى الأحمد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,247,2,240000.00,1,1,1,111,Lost
+125,عمر العظمة,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,10,59,3709000.00,5,5,5,555,Champions
+126,خالد السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,70,3,275000.00,2,1,1,211,Other
+127,ماهر الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,104,8,281000.00,1,3,2,132,At Risk
+128,سارة القباني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,32,8,288000.00,3,3,2,332,Loyal
+129,عائشة الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,61,7,298000.00,2,3,2,232,At Risk
+130,ماهر الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,38,9,423000.00,3,4,3,343,Loyal
+131,محمد القباني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,10,9,394000.00,5,4,2,542,Loyal
+132,أحمد المصري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,21,5,223000.00,4,1,1,411,New
+133,هدى البرازي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,23,11,573000.00,4,5,4,454,Champions
+134,حسين اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,32,8,493000.00,3,3,3,333,Loyal
+135,هدى البيطار,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,19,8,503000.00,4,3,3,433,Loyal
+136,عائشة الرفاعي,Homs,SYRIATEL,Syriatel,SYRIATEL,10,7,780000.00,5,3,5,535,Loyal
+137,زينب السيد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,42,6,735000.00,3,2,4,324,Other
+138,بشار الحلبي,Hama,SYRIATEL,Syriatel,SYRIATEL,17,5,313000.00,4,1,2,412,New
+139,مريم الزعبي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,17,17,1296000.00,4,5,5,455,Champions
+140,عائشة الحمصي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,111,7,341000.00,1,3,2,132,At Risk
+141,سليمان القباني,Tartus,SYRIATEL,Syriatel,SYRIATEL,87,5,71000.00,1,1,1,111,Lost
+142,أحمد العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,125,7,1190000.00,1,3,5,135,At Risk
+143,مصطفى البرازي,Idlib,SYRIATEL,Syriatel,SYRIATEL,68,6,563000.00,2,2,4,224,Other
+144,هدى الزعبي,Latakia,SYRIATEL,Syriatel,SYRIATEL,206,3,83000.00,1,1,1,111,Lost
+145,فاطمة البرازي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,9,6,493000.00,5,2,3,523,Other
+146,ريم الرفاعي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,37,10,694000.00,3,5,4,354,Loyal
+147,زينب الزعبي,Daraa,SYRIATEL,Syriatel,SYRIATEL,10,12,980000.00,5,5,5,555,Champions
+148,نور العمر,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,34,3,143000.00,3,1,1,311,Other
+149,نزار الدمشقي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,15,4,140000.00,4,1,1,411,New
+150,سليمان الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,26,9,486000.00,3,4,3,343,Loyal
+151,عائشة الجابري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,12,10,980000.00,4,5,5,455,Champions
+152,وليد الحلبي,Hama,SYRIATEL,Syriatel,SYRIATEL,114,5,370000.00,1,1,2,112,Lost
+153,طارق الكردي,Tartus,SYRIATEL,Syriatel,SYRIATEL,60,7,528000.00,2,3,3,233,At Risk
+154,هدى العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,52,9,1345000.00,2,4,5,245,At Risk
+155,عمر السوري,Damascus,SYRIATEL,Syriatel,SYRIATEL,67,5,630000.00,2,1,4,214,Other
+156,نور البيطار,Idlib,SYRIATEL,Syriatel,SYRIATEL,30,7,663000.00,3,3,4,334,Loyal
+157,باسل المصري,Damascus,SYRIATEL,Syriatel,SYRIATEL,11,5,390000.00,4,1,2,412,New
+158,مصطفى العظمة,Damascus,SYRIATEL,Syriatel,SYRIATEL,8,9,298000.00,5,4,2,542,Loyal
+159,عمر الشامي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,227,9,837000.00,1,4,5,145,At Risk
+160,أيمن الحمصي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,104,2,63000.00,1,1,1,111,Lost
+161,ليلى العمر,Homs,SYRIATEL,Syriatel,SYRIATEL,270,4,243000.00,1,1,1,111,Lost
+162,نزار الرفاعي,Tartus,SYRIATEL,Syriatel,SYRIATEL,107,7,806000.00,1,3,5,135,At Risk
+163,ماهر القباني,Idlib,SYRIATEL,Syriatel,SYRIATEL,131,4,148000.00,1,1,1,111,Lost
+164,علي الرفاعي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,135,7,518000.00,1,3,3,133,At Risk
+165,سليمان الرفاعي,Latakia,SYRIATEL,Syriatel,SYRIATEL,118,13,802000.00,1,5,5,155,At Risk
+166,محمد البرازي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,48,6,380000.00,2,2,2,222,Other
+167,باسل العلي,Damascus,SYRIATEL,Syriatel,SYRIATEL,25,3,95000.00,3,1,1,311,Other
+168,ليلى الحمصي,Tartus,SYRIATEL,Syriatel,SYRIATEL,97,6,355000.00,1,2,2,122,Lost
+169,عمر الحسن,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,125,6,372000.00,1,2,2,122,Lost
+170,سليمان الحسن,Daraa,SYRIATEL,Syriatel,SYRIATEL,72,8,274000.00,2,3,1,231,At Risk
+171,زينب الشامي,Daraa,SYRIATEL,Syriatel,SYRIATEL,219,3,476000.00,1,1,3,113,Lost
+172,أيمن المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,6,7,618000.00,5,3,4,534,Loyal
+173,مصطفى الحمصي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,130,5,608000.00,1,1,4,114,Lost
+174,هدى الرفاعي,Tartus,SYRIATEL,Syriatel,SYRIATEL,52,4,363000.00,2,1,2,212,Other
+175,مريم الجابري,Hama,SYRIATEL,Syriatel,SYRIATEL,13,7,476000.00,4,3,3,433,Loyal
+176,حسن الحلبي,Damascus,SYRIATEL,Syriatel,SYRIATEL,5,8,595000.00,5,3,4,534,Loyal
+177,هدى البيطار,Idlib,SYRIATEL,Syriatel,SYRIATEL,21,6,291000.00,4,2,2,422,Other
+178,فاطمة السوري,Latakia,SYRIATEL,Syriatel,SYRIATEL,3,8,583000.00,5,3,4,534,Loyal
+179,طارق الدمشقي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,7,6,443000.00,5,2,3,523,Other
+180,يوسف البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,26,9,384000.00,3,4,2,342,Loyal
+181,حسين العلي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,62,7,246000.00,2,3,1,231,At Risk
+182,هدى البرازي,Damascus,SYRIATEL,Syriatel,SYRIATEL,8,7,200000.00,5,3,1,531,Loyal
+183,عمر الخطيب,Aleppo,SYRIATEL,Syriatel,SYRIATEL,10,3,285000.00,5,1,2,512,New
+184,وليد الدمشقي,Homs,SYRIATEL,Syriatel,SYRIATEL,57,8,663000.00,2,3,4,234,At Risk
+185,بشار الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,182,4,248000.00,1,1,1,111,Lost
+186,باسل العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,65,9,463000.00,2,4,3,243,At Risk
+187,مصطفى المصري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,42,5,495000.00,3,1,3,313,Other
+188,عائشة الحسن,Daraa,SYRIATEL,Syriatel,SYRIATEL,55,8,720000.00,2,3,4,234,At Risk
+189,نور الدمشقي,Idlib,SYRIATEL,Syriatel,SYRIATEL,16,4,305000.00,4,1,2,412,New
+190,يوسف الحمصي,Hama,SYRIATEL,Syriatel,SYRIATEL,60,7,445000.00,2,3,3,233,At Risk
+191,علي المصري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,20,6,805000.00,4,2,5,425,Other
+192,مصطفى السوري,Damascus,SYRIATEL,Syriatel,SYRIATEL,213,5,583000.00,1,1,4,114,Lost
+193,يوسف العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,20,2,220000.00,4,1,1,411,New
+194,عمر السيد,Idlib,SYRIATEL,Syriatel,SYRIATEL,79,6,225000.00,1,2,1,121,Lost
+195,يوسف الزعبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,47,9,713000.00,2,4,4,244,At Risk
+196,سارة الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,57,9,696000.00,2,4,4,244,At Risk
+197,سامي الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,69,9,468000.00,2,4,3,243,At Risk
+198,ليلى الجابري,Tartus,SYRIATEL,Syriatel,SYRIATEL,71,6,630000.00,2,2,4,224,Other
+199,عائشة الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,37,4,180000.00,3,1,1,311,Other
+200,أحمد الشامي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,108,14,719000.00,1,5,4,154,At Risk
+201,مريم البيطار,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,52,4,500000.00,2,1,3,213,Other
+202,سامي الكيلاني,Hama,SYRIATEL,Syriatel,SYRIATEL,19,6,518000.00,4,2,3,423,Other
+203,بشار الشامي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,52,2,53000.00,2,1,1,211,Other
+204,زينب العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,63,8,523000.00,2,3,3,233,At Risk
+205,خالد اللاذقاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,39,6,283000.00,3,2,2,322,Other
+206,نور السيد,Damascus,SYRIATEL,Syriatel,SYRIATEL,2,10,1148000.00,5,5,5,555,Champions
+207,كريم الدمشقي,Damascus,SYRIATEL,Syriatel,SYRIATEL,96,6,615000.00,1,2,4,124,Lost
+208,إبراهيم البرازي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,64,4,148000.00,2,1,1,211,Other
+209,حسين الزعبي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,42,8,685000.00,3,3,4,334,Loyal
+210,زينب الكيلاني,Daraa,SYRIATEL,Syriatel,SYRIATEL,11,9,870000.00,4,4,5,445,Champions
+211,ريم البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,115,9,890000.00,1,4,5,145,At Risk
+212,زينب البيطار,Aleppo,SYRIATEL,Syriatel,SYRIATEL,11,11,901000.00,4,5,5,455,Champions
+213,ليلى اللاذقاني,Latakia,SYRIATEL,Syriatel,SYRIATEL,74,7,466000.00,2,3,3,233,At Risk
+214,طارق الحلبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,21,7,440000.00,4,3,3,433,Loyal
+215,بشار الطرابلسي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,51,10,885000.00,2,5,5,255,At Risk
+216,باسل العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,98,5,190000.00,1,1,1,111,Lost
+217,بشار العلي,Tartus,SYRIATEL,Syriatel,SYRIATEL,12,9,389000.00,4,4,2,442,Loyal
+218,سارة الكيلاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,84,11,971000.00,1,5,5,155,At Risk
+219,سليمان السيد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,78,9,569000.00,1,4,4,144,At Risk
+220,ريم الجابري,Tartus,SYRIATEL,Syriatel,SYRIATEL,106,8,328000.00,1,3,2,132,At Risk
+221,إبراهيم البيطار,Homs,SYRIATEL,Syriatel,SYRIATEL,40,6,300000.00,3,2,2,322,Other
+222,ريم الرفاعي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,57,12,769000.00,2,5,5,255,At Risk
+223,رنا الأحمد,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,44,14,1021000.00,3,5,5,355,Loyal
+224,مريم العلي,Daraa,SYRIATEL,Syriatel,SYRIATEL,12,5,300000.00,4,1,2,412,New
+225,بشار البيطار,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,16,9,641000.00,4,4,4,444,Champions
+226,محمد الزعبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,70,4,255000.00,2,1,1,211,Other
+227,إبراهيم المصري,Daraa,SYRIATEL,Syriatel,SYRIATEL,36,5,185000.00,3,1,1,311,Other
+228,نور الطرابلسي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,33,4,198000.00,3,1,1,311,Other
+229,رنا الأحمد,Daraa,SYRIATEL,Syriatel,SYRIATEL,90,3,145000.00,1,1,1,111,Lost
+230,ماهر البيطار,Daraa,SYRIATEL,Syriatel,SYRIATEL,23,9,595000.00,4,4,4,444,Champions
+231,حسين الرفاعي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,78,5,420000.00,1,1,3,113,Lost
+232,زينب الزعبي,Hama,SYRIATEL,Syriatel,SYRIATEL,47,4,198000.00,2,1,1,211,Other
+233,أحمد السوري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,11,4,390000.00,4,1,2,412,New
+234,عمر الحلبي,Hama,SYRIATEL,Syriatel,SYRIATEL,134,8,543000.00,1,3,3,133,At Risk
+235,سارة الكيلاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,23,5,275000.00,4,1,1,411,New
+236,حسين الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,10,3,213000.00,5,1,1,511,New
+237,عمر السيد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,42,6,513000.00,3,2,3,323,Other
+238,خالد الجابري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,19,3,215000.00,4,1,1,411,New
+239,مصطفى العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,100,5,310000.00,1,1,2,112,Lost
+240,أحمد الحسن,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,38,8,860000.00,3,3,5,335,Loyal
+241,أحمد العلي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,17,8,583000.00,4,3,4,434,Loyal
+242,سارة الحمصي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,25,7,233000.00,3,3,1,331,Loyal
+243,بشار الزعبي,Homs,SYRIATEL,Syriatel,SYRIATEL,1,7,520000.00,5,3,3,533,Loyal
+244,هدى الأحمد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,41,7,560000.00,3,3,4,334,Loyal
+245,حسين الأحمد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,44,8,673000.00,3,3,4,334,Loyal
+246,إبراهيم البرازي,Homs,SYRIATEL,Syriatel,SYRIATEL,28,10,953000.00,3,5,5,355,Loyal
+247,كريم الكيلاني,Latakia,SYRIATEL,Syriatel,SYRIATEL,32,6,580000.00,3,2,4,324,Other
+248,هدى الزعبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,22,12,475000.00,4,5,3,453,Loyal
+249,وليد المصري,Latakia,SYRIATEL,Syriatel,SYRIATEL,81,6,606000.00,1,2,4,124,Lost
+250,وليد البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,11,7,256000.00,4,3,1,431,Loyal
+251,زينب الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,95,10,1005000.00,1,5,5,155,At Risk
+252,ماهر العلي,Latakia,SYRIATEL,Syriatel,SYRIATEL,18,7,450000.00,4,3,3,433,Loyal
+253,حسين الكيلاني,Homs,SYRIATEL,Syriatel,SYRIATEL,4,4,115000.00,5,1,1,511,New
+254,هدى الحمصي,Latakia,SYRIATEL,Syriatel,SYRIATEL,3,65,4676000.00,5,5,5,555,Champions
+255,علي الشامي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,38,6,430000.00,3,2,3,323,Other
+256,سارة البيطار,Damascus,SYRIATEL,Syriatel,SYRIATEL,39,14,1071000.00,3,5,5,355,Loyal
+257,مصطفى الزعبي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,31,11,422000.00,3,5,3,353,Loyal
+258,نور الحلبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,1,5,225000.00,5,1,1,511,New
+259,علي البيطار,Hama,SYRIATEL,Syriatel,SYRIATEL,56,7,430000.00,2,3,3,233,At Risk
+260,يوسف الكيلاني,Damascus,SYRIATEL,Syriatel,SYRIATEL,62,11,909000.00,2,5,5,255,At Risk
+261,نزار اللاذقاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,160,6,323000.00,1,2,2,122,Lost
+262,يوسف الخطيب,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,48,7,198000.00,2,3,1,231,At Risk
+263,طارق البيطار,Homs,SYRIATEL,Syriatel,SYRIATEL,65,6,525000.00,2,2,3,223,Other
+264,ليلى الأحمد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,47,8,371000.00,2,3,2,232,At Risk
+265,زينب الخطيب,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,11,10,983000.00,4,5,5,455,Champions
+266,ريم الجابري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,9,11,616000.00,5,5,4,554,Champions
+267,كريم الزعبي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,31,6,228000.00,3,2,1,321,Other
+268,بشار العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,11,3,133000.00,4,1,1,411,New
+269,مريم السيد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,56,7,386000.00,2,3,2,232,At Risk
+270,حسن العمر,Daraa,SYRIATEL,Syriatel,SYRIATEL,80,9,610000.00,1,4,4,144,At Risk
+271,أحمد الدمشقي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,182,5,595000.00,1,1,4,114,Lost
+272,زينب الخطيب,Tartus,SYRIATEL,Syriatel,SYRIATEL,65,6,403000.00,2,2,2,222,Other
+273,سليمان العمر,Latakia,SYRIATEL,Syriatel,SYRIATEL,5,7,541000.00,5,3,3,533,Loyal
+274,نزار السيد,Latakia,SYRIATEL,Syriatel,SYRIATEL,1,10,572000.00,5,5,4,554,Champions
+275,فاطمة الكيلاني,Homs,SYRIATEL,Syriatel,SYRIATEL,55,5,143000.00,2,1,1,211,Other
+276,نور السيد,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,6,7,825000.00,5,3,5,535,Loyal
+277,عائشة العمر,Latakia,SYRIATEL,Syriatel,SYRIATEL,36,10,536000.00,3,5,3,353,Loyal
+278,نزار الحمصي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,141,5,235000.00,1,1,1,111,Lost
+279,سامي المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,52,7,525000.00,2,3,3,233,At Risk
+280,أحمد الشامي,Latakia,SYRIATEL,Syriatel,SYRIATEL,59,7,264000.00,2,3,1,231,At Risk
+281,زينب الزعبي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,1,5,320000.00,5,1,2,512,New
+282,عائشة الحلبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,29,7,550000.00,3,3,3,333,Loyal
+283,كريم الحسن,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,138,8,285000.00,1,3,2,132,At Risk
+284,سارة الطرابلسي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,11,61,4751000.00,4,5,5,455,Champions
+285,ريم القباني,Hama,SYRIATEL,Syriatel,SYRIATEL,58,6,269000.00,2,2,1,221,Other
+286,رنا الحلبي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,37,4,435000.00,3,1,3,313,Other
+287,باسل الخطيب,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,17,6,263000.00,4,2,1,421,Other
+288,إبراهيم الطرابلسي,Hama,SYRIATEL,Syriatel,SYRIATEL,20,11,576000.00,4,5,4,454,Champions
+289,سليمان السيد,Damascus,SYRIATEL,Syriatel,SYRIATEL,69,8,581000.00,2,3,4,234,At Risk
+290,مريم الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,37,7,536000.00,3,3,3,333,Loyal
+291,عمر السوري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,118,4,123000.00,1,1,1,111,Lost
+292,نور اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,32,9,569000.00,3,4,4,344,Loyal
+293,حسين الجابري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,20,4,138000.00,4,1,1,411,New
+294,طارق البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,2,7,433000.00,5,3,3,533,Loyal
+295,حسين الشامي,Latakia,SYRIATEL,Syriatel,SYRIATEL,31,6,805000.00,3,2,5,325,Other
+296,نور الطرابلسي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,63,8,371000.00,2,3,2,232,At Risk
+297,أيمن الرفاعي,Hama,SYRIATEL,Syriatel,SYRIATEL,22,8,666000.00,4,3,4,434,Loyal
+298,وليد الجابري,Idlib,SYRIATEL,Syriatel,SYRIATEL,9,11,785000.00,5,5,5,555,Champions
+299,وليد الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,55,5,255000.00,2,1,1,211,Other
+300,حسن الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,35,6,428000.00,3,2,3,323,Other
+301,زينب الرفاعي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,75,7,1018000.00,2,3,5,235,At Risk
+302,وليد العظمة,Aleppo,SYRIATEL,Syriatel,SYRIATEL,124,10,680000.00,1,5,4,154,At Risk
+303,حسين العمر,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,25,9,389000.00,3,4,2,342,Loyal
+304,فاطمة الكيلاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,30,10,813000.00,3,5,5,355,Loyal
+305,رنا البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,57,7,438000.00,2,3,3,233,At Risk
+306,مصطفى السوري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,75,7,575000.00,2,3,4,234,At Risk
+307,يوسف الحسن,Hama,SYRIATEL,Syriatel,SYRIATEL,33,9,615000.00,3,4,4,344,Loyal
+308,بشار البرازي,Daraa,SYRIATEL,Syriatel,SYRIATEL,61,9,415000.00,2,4,3,243,At Risk
+309,مصطفى الطرابلسي,Homs,SYRIATEL,Syriatel,SYRIATEL,8,6,255000.00,5,2,1,521,Other
+310,سليمان العمر,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,44,3,305000.00,3,1,2,312,Other
+311,زينب البرازي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,39,11,998000.00,3,5,5,355,Loyal
+312,حسين الحلبي,Latakia,SYRIATEL,Syriatel,SYRIATEL,9,5,143000.00,5,1,1,511,New
+313,نزار الكردي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,100,5,606000.00,1,1,4,114,Lost
+314,هدى الزعبي,Hama,SYRIATEL,Syriatel,SYRIATEL,208,5,208000.00,1,1,1,111,Lost
+315,خالد البرازي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,7,6,296000.00,5,2,2,522,Other
+316,سامي السوري,Daraa,SYRIATEL,Syriatel,SYRIATEL,9,10,733000.00,5,5,4,554,Champions
+317,حسين العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,32,7,835000.00,3,3,5,335,Loyal
+318,محمد الكيلاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,10,8,543000.00,5,3,3,533,Loyal
+319,أحمد اللاذقاني,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,33,7,490000.00,3,3,3,333,Loyal
+320,سليمان البيطار,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,17,7,690000.00,4,3,4,434,Loyal
+321,ماهر الكردي,Homs,SYRIATEL,Syriatel,SYRIATEL,5,8,358000.00,5,3,2,532,Loyal
+322,سليمان البرازي,Damascus,SYRIATEL,Syriatel,SYRIATEL,36,6,638000.00,3,2,4,324,Other
+323,حسين الخطيب,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,77,4,163000.00,2,1,1,211,Other
+324,سارة المصري,Latakia,SYRIATEL,Syriatel,SYRIATEL,54,10,819000.00,2,5,5,255,At Risk
+325,عائشة الزعبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,5,10,473000.00,5,5,3,553,Loyal
+326,علي العلي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,11,8,416000.00,4,3,3,433,Loyal
+327,نور البيطار,Raqqa,SYRIATEL,Syriatel,SYRIATEL,42,7,900000.00,3,3,5,335,Loyal
+328,أحمد الجابري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,42,8,768000.00,3,3,5,335,Loyal
+329,نور الكردي,Daraa,SYRIATEL,Syriatel,SYRIATEL,8,7,823000.00,5,3,5,535,Loyal
+330,أيمن الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,5,11,823000.00,5,5,5,555,Champions
+331,بشار الحمصي,Tartus,SYRIATEL,Syriatel,SYRIATEL,16,3,78000.00,4,1,1,411,New
+332,أيمن القباني,Idlib,SYRIATEL,Syriatel,SYRIATEL,3,4,230000.00,5,1,1,511,New
+333,نزار الدمشقي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,39,7,358000.00,3,3,2,332,Loyal
+334,زينب المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,43,8,650000.00,3,3,4,334,Loyal
+335,سامي المصري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,19,7,439000.00,4,3,3,433,Loyal
+336,حسن الرفاعي,Damascus,SYRIATEL,Syriatel,SYRIATEL,30,4,370000.00,3,1,2,312,Other
+337,عمر العلي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,8,8,603000.00,5,3,4,534,Loyal
+338,رنا السوري,Daraa,SYRIATEL,Syriatel,SYRIATEL,97,5,255000.00,1,1,1,111,Lost
+339,حسين العلي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,39,9,910000.00,3,4,5,345,Loyal
+340,وليد الشامي,Homs,SYRIATEL,Syriatel,SYRIATEL,2,6,255000.00,5,2,1,521,Other
+341,سليمان الجابري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,115,5,208000.00,1,1,1,111,Lost
+342,وليد الحسن,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,40,7,281000.00,3,3,2,332,Loyal
+343,محمد الحمصي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,111,5,360000.00,1,1,2,112,Lost
+344,حسن الجابري,Damascus,SYRIATEL,Syriatel,SYRIATEL,171,8,333000.00,1,3,2,132,At Risk
+345,أحمد المصري,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,68,7,675000.00,2,3,4,234,At Risk
+346,ماهر البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,139,3,48000.00,1,1,1,111,Lost
+347,رنا الخطيب,Tartus,SYRIATEL,Syriatel,SYRIATEL,72,9,860000.00,2,4,5,245,At Risk
+348,مريم العظمة,Idlib,SYRIATEL,Syriatel,SYRIATEL,200,4,123000.00,1,1,1,111,Lost
+349,كريم الدمشقي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,39,5,168000.00,3,1,1,311,Other
+350,طارق الشامي,Daraa,SYRIATEL,Syriatel,SYRIATEL,51,8,343000.00,2,3,2,232,At Risk
+351,حسن الدمشقي,Daraa,SYRIATEL,Syriatel,SYRIATEL,61,4,108000.00,2,1,1,211,Other
+352,نور القباني,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,6,8,321000.00,5,3,2,532,Loyal
+353,سامي الرفاعي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,75,4,650000.00,2,1,4,214,Other
+354,خالد الطرابلسي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,7,58,4335000.00,5,5,5,555,Champions
+355,خالد البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,17,7,583000.00,4,3,4,434,Loyal
+356,إبراهيم الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,25,10,523000.00,3,5,3,353,Loyal
+357,ماهر السيد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,25,3,350000.00,3,1,2,312,Other
+358,هدى العظمة,Hama,SYRIATEL,Syriatel,SYRIATEL,135,6,530000.00,1,2,3,123,Lost
+359,هدى العمر,Raqqa,SYRIATEL,Syriatel,SYRIATEL,71,2,140000.00,2,1,1,211,Other
+360,سارة البيطار,Latakia,SYRIATEL,Syriatel,SYRIATEL,164,3,240000.00,1,1,1,111,Lost
+361,سامي الكردي,Idlib,SYRIATEL,Syriatel,SYRIATEL,52,6,416000.00,2,2,3,223,Other
+362,حسن المصري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,195,3,400000.00,1,1,2,112,Lost
+363,يوسف العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,24,8,623000.00,3,3,4,334,Loyal
+364,سليمان الشامي,Latakia,SYRIATEL,Syriatel,SYRIATEL,11,9,409000.00,4,4,2,442,Loyal
+365,بشار العظمة,Daraa,SYRIATEL,Syriatel,SYRIATEL,19,11,833000.00,4,5,5,455,Champions
+366,أحمد الأحمد,Hama,SYRIATEL,Syriatel,SYRIATEL,21,4,480000.00,4,1,3,413,New
+367,مصطفى القباني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,105,7,398000.00,1,3,2,132,At Risk
+368,حسين العمر,Tartus,SYRIATEL,Syriatel,SYRIATEL,3,5,540000.00,5,1,3,513,New
+369,سارة الحلبي,Hama,SYRIATEL,Syriatel,SYRIATEL,120,6,348000.00,1,2,2,122,Lost
+370,هدى الأحمد,Damascus,SYRIATEL,Syriatel,SYRIATEL,22,7,431000.00,4,3,3,433,Loyal
+371,كريم اللاذقاني,Hama,SYRIATEL,Syriatel,SYRIATEL,22,9,569000.00,4,4,4,444,Champions
+372,أيمن العمر,Homs,SYRIATEL,Syriatel,SYRIATEL,28,6,510000.00,3,2,3,323,Other
+373,سامي الخطيب,Daraa,SYRIATEL,Syriatel,SYRIATEL,111,9,528000.00,1,4,3,143,At Risk
+374,إبراهيم اللاذقاني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,25,7,928000.00,3,3,5,335,Loyal
+375,زينب الخطيب,Hama,SYRIATEL,Syriatel,SYRIATEL,12,66,4876000.00,4,5,5,455,Champions
+376,علي الجابري,Idlib,SYRIATEL,Syriatel,SYRIATEL,5,6,244000.00,5,2,1,521,Other
+377,وليد اللاذقاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,37,9,951000.00,3,4,5,345,Loyal
+378,ليلى الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,59,5,290000.00,2,1,2,212,Other
+379,حسين الشامي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,13,7,533000.00,4,3,3,433,Loyal
+380,عمر الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,6,8,566000.00,5,3,4,534,Loyal
+381,مريم الجابري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,63,2,85000.00,2,1,1,211,Other
+382,علي الطرابلسي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,34,8,620000.00,3,3,4,334,Loyal
+383,ماهر العلي,Damascus,SYRIATEL,Syriatel,SYRIATEL,128,6,975000.00,1,2,5,125,Lost
+384,خالد البرازي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,62,4,128000.00,2,1,1,211,Other
+385,مريم الرفاعي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,72,9,600000.00,2,4,4,244,At Risk
+386,بشار السوري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,69,9,885000.00,2,4,5,245,At Risk
+387,أحمد الحسن,Tartus,SYRIATEL,Syriatel,SYRIATEL,4,62,2759000.00,5,5,5,555,Champions
+388,وليد العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,107,5,135000.00,1,1,1,111,Lost
+389,حسين العمر,Homs,SYRIATEL,Syriatel,SYRIATEL,20,51,3375000.00,4,5,5,455,Champions
+390,وليد العظمة,Daraa,SYRIATEL,Syriatel,SYRIATEL,53,5,395000.00,2,1,2,212,Other
+391,سارة السوري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,14,9,353000.00,4,4,2,442,Loyal
+392,هدى العظمة,Latakia,SYRIATEL,Syriatel,SYRIATEL,18,8,453000.00,4,3,3,433,Loyal
+393,مصطفى الحمصي,Tartus,SYRIATEL,Syriatel,SYRIATEL,25,8,232000.00,3,3,1,331,Loyal
+394,يوسف اللاذقاني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,19,6,221000.00,4,2,1,421,Other
+395,نزار العظمة,Latakia,SYRIATEL,Syriatel,SYRIATEL,18,9,486000.00,4,4,3,443,Loyal
+396,ريم السيد,Homs,SYRIATEL,Syriatel,SYRIATEL,94,7,565000.00,1,3,4,134,At Risk
+397,رنا العمر,Raqqa,SYRIATEL,Syriatel,SYRIATEL,8,11,568000.00,5,5,4,554,Champions
+398,كريم الكيلاني,Homs,SYRIATEL,Syriatel,SYRIATEL,53,6,213000.00,2,2,1,221,Other
+399,مصطفى البيطار,Damascus,SYRIATEL,Syriatel,SYRIATEL,105,4,150000.00,1,1,1,111,Lost
+400,هدى الكيلاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,7,8,438000.00,5,3,3,533,Loyal
+401,إبراهيم الحسن,Raqqa,SYRIATEL,Syriatel,SYRIATEL,105,6,290000.00,1,2,2,122,Lost
+402,نزار القباني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,9,11,396000.00,5,5,2,552,Loyal
+403,يوسف العظمة,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,195,3,310000.00,1,1,2,112,Lost
+404,باسل المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,54,10,349000.00,2,5,2,252,At Risk
+405,سارة الزعبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,26,6,530000.00,3,2,3,323,Other
+406,حسين القباني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,10,74,4187000.00,5,5,5,555,Champions
+407,مريم اللاذقاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,29,12,1505000.00,3,5,5,355,Loyal
+408,سامي الحلبي,Homs,SYRIATEL,Syriatel,SYRIATEL,37,8,416000.00,3,3,3,333,Loyal
+409,ماهر الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,4,8,611000.00,5,3,4,534,Loyal
+410,رنا البرازي,Homs,SYRIATEL,Syriatel,SYRIATEL,14,7,630000.00,4,3,4,434,Loyal
+411,ليلى المصري,Hama,SYRIATEL,Syriatel,SYRIATEL,28,9,823000.00,3,4,5,345,Loyal
+412,أيمن الكيلاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,52,7,376000.00,2,3,2,232,At Risk
+413,وليد البيطار,Latakia,SYRIATEL,Syriatel,SYRIATEL,49,4,295000.00,2,1,2,212,Other
+414,مصطفى الزعبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,63,8,401000.00,2,3,2,232,At Risk
+415,نور البرازي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,59,4,353000.00,2,1,2,212,Other
+416,إبراهيم القباني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,3,55,4099000.00,5,5,5,555,Champions
+417,باسل العلي,Latakia,SYRIATEL,Syriatel,SYRIATEL,6,8,630000.00,5,3,4,534,Loyal
+418,وليد العمر,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,13,7,338000.00,4,3,2,432,Loyal
+419,وليد القباني,Daraa,SYRIATEL,Syriatel,SYRIATEL,64,7,335000.00,2,3,2,232,At Risk
+420,رنا البيطار,Idlib,SYRIATEL,Syriatel,SYRIATEL,14,5,255000.00,4,1,1,411,New
+421,كريم القباني,Homs,SYRIATEL,Syriatel,SYRIATEL,110,9,479000.00,1,4,3,143,At Risk
+422,مصطفى الرفاعي,Hama,SYRIATEL,Syriatel,SYRIATEL,25,8,332000.00,3,3,2,332,Loyal
+423,باسل الجابري,Latakia,SYRIATEL,Syriatel,SYRIATEL,114,2,95000.00,1,1,1,111,Lost
+424,باسل الحسن,Tartus,SYRIATEL,Syriatel,SYRIATEL,91,9,608000.00,1,4,4,144,At Risk
+425,علي السيد,Latakia,SYRIATEL,Syriatel,SYRIATEL,41,13,991000.00,3,5,5,355,Loyal
+426,مصطفى الكيلاني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,2,65,5988000.00,5,5,5,555,Champions
+427,عمر الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,2,68,4623000.00,5,5,5,555,Champions
+428,مصطفى الشامي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,7,11,958000.00,5,5,5,555,Champions
+429,نزار القباني,Damascus,SYRIATEL,Syriatel,SYRIATEL,20,4,156000.00,4,1,1,411,New
+430,فاطمة الحلبي,Homs,SYRIATEL,Syriatel,SYRIATEL,209,5,130000.00,1,1,1,111,Lost
+431,عمر الحلبي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,47,9,660000.00,2,4,4,244,At Risk
+432,ليلى الحسن,Raqqa,SYRIATEL,Syriatel,SYRIATEL,19,5,285000.00,4,1,2,412,New
+433,ليلى القباني,Daraa,SYRIATEL,Syriatel,SYRIATEL,36,9,735000.00,3,4,4,344,Loyal
+434,كريم الكيلاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,109,5,270000.00,1,1,1,111,Lost
+435,مريم المصري,Latakia,SYRIATEL,Syriatel,SYRIATEL,7,8,840000.00,5,3,5,535,Loyal
+436,مصطفى الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,114,5,330000.00,1,1,2,112,Lost
+437,زينب السوري,Tartus,SYRIATEL,Syriatel,SYRIATEL,17,6,570000.00,4,2,4,424,Other
+438,عمر الطرابلسي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,37,9,621000.00,3,4,4,344,Loyal
+439,طارق السيد,Homs,SYRIATEL,Syriatel,SYRIATEL,75,5,538000.00,2,1,3,213,Other
+440,مصطفى العظمة,Latakia,SYRIATEL,Syriatel,SYRIATEL,92,2,70000.00,1,1,1,111,Lost
+441,مريم السيد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,73,7,228000.00,2,3,1,231,At Risk
+442,حسين السوري,Damascus,SYRIATEL,Syriatel,SYRIATEL,37,9,464000.00,3,4,3,343,Loyal
+443,باسل الكردي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,6,8,563000.00,5,3,4,534,Loyal
+444,يوسف العلي,Tartus,SYRIATEL,Syriatel,SYRIATEL,15,8,280000.00,4,3,2,432,Loyal
+445,عائشة الدمشقي,Tartus,SYRIATEL,Syriatel,SYRIATEL,9,8,740000.00,5,3,4,534,Loyal
+446,زينب اللاذقاني,Damascus,SYRIATEL,Syriatel,SYRIATEL,60,3,165000.00,2,1,1,211,Other
+447,رنا العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,47,5,430000.00,2,1,3,213,Other
+448,محمد الشامي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,92,5,455000.00,1,1,3,113,Lost
+449,محمد الكيلاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,25,5,125000.00,3,1,1,311,Other
+450,مصطفى اللاذقاني,Damascus,SYRIATEL,Syriatel,SYRIATEL,14,4,475000.00,4,1,3,413,New
+451,باسل العظمة,Aleppo,SYRIATEL,Syriatel,SYRIATEL,5,8,675000.00,5,3,4,534,Loyal
+452,يوسف القباني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,14,7,259000.00,4,3,1,431,Loyal
+453,عائشة الحسن,Quneitra,SYRIATEL,Syriatel,SYRIATEL,66,4,425000.00,2,1,3,213,Other
+454,مريم اللاذقاني,Daraa,SYRIATEL,Syriatel,SYRIATEL,60,7,360000.00,2,3,2,232,At Risk
+455,بشار الكردي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,73,7,881000.00,2,3,5,235,At Risk
+456,نزار الدمشقي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,7,15,945000.00,5,5,5,555,Champions
+457,عمر الرفاعي,Tartus,SYRIATEL,Syriatel,SYRIATEL,8,75,5690000.00,5,5,5,555,Champions
+458,حسن القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,18,4,210000.00,4,1,1,411,New
+459,وليد المصري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,71,4,190000.00,2,1,1,211,Other
+460,سامي العلي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,56,6,215000.00,2,2,1,221,Other
+461,علي العظمة,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,141,6,433000.00,1,2,3,123,Lost
+462,زينب الأحمد,Tartus,SYRIATEL,Syriatel,SYRIATEL,72,4,236000.00,2,1,1,211,Other
+463,نور العلي,Latakia,SYRIATEL,Syriatel,SYRIATEL,66,4,290000.00,2,1,2,212,Other
+464,نور البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,16,6,378000.00,4,2,2,422,Other
+465,نزار البرازي,Idlib,SYRIATEL,Syriatel,SYRIATEL,3,71,4690000.00,5,5,5,555,Champions
+466,بشار السيد,Daraa,SYRIATEL,Syriatel,SYRIATEL,63,8,343000.00,2,3,2,232,At Risk
+467,نور القباني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,7,8,690000.00,5,3,4,534,Loyal
+468,حسين العظمة,Idlib,SYRIATEL,Syriatel,SYRIATEL,11,12,507000.00,4,5,3,453,Loyal
+469,أيمن الزعبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,8,12,664000.00,5,5,4,554,Champions
+470,وليد اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,27,6,635000.00,3,2,4,324,Other
+471,هدى الرفاعي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,85,10,635000.00,1,5,4,154,At Risk
+472,باسل الحسن,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,42,9,496000.00,3,4,3,343,Loyal
+473,خالد المصري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,24,4,295000.00,3,1,2,312,Other
+474,حسين الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,38,9,383000.00,3,4,2,342,Loyal
+475,حسن القباني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,16,8,660000.00,4,3,4,434,Loyal
+476,إبراهيم السيد,Damascus,SYRIATEL,Syriatel,SYRIATEL,35,5,326000.00,3,1,2,312,Other
+477,سليمان الدمشقي,Daraa,SYRIATEL,Syriatel,SYRIATEL,100,2,13000.00,1,1,1,111,Lost
+478,ماهر الرفاعي,Idlib,SYRIATEL,Syriatel,SYRIATEL,13,8,630000.00,4,3,4,434,Loyal
+479,سارة الحلبي,Daraa,SYRIATEL,Syriatel,SYRIATEL,36,6,248000.00,3,2,1,321,Other
+480,ليلى الطرابلسي,Damascus,SYRIATEL,Syriatel,SYRIATEL,3,8,630000.00,5,3,4,534,Loyal
+481,فاطمة الرفاعي,Daraa,SYRIATEL,Syriatel,SYRIATEL,40,3,310000.00,3,1,2,312,Other
+482,رنا الجابري,Damascus,SYRIATEL,Syriatel,SYRIATEL,171,9,586000.00,1,4,4,144,At Risk
+483,حسن السيد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,29,7,138000.00,3,3,1,331,Loyal
+484,فاطمة الكردي,Homs,SYRIATEL,Syriatel,SYRIATEL,22,8,538000.00,4,3,3,433,Loyal
+485,طارق البرازي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,60,8,596000.00,2,3,4,234,At Risk
+486,علي الحمصي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,11,10,386000.00,4,5,2,452,Loyal
+487,سارة الجابري,Hama,SYRIATEL,Syriatel,SYRIATEL,46,4,205000.00,2,1,1,211,Other
+488,بشار الشامي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,25,10,868000.00,3,5,5,355,Loyal
+489,خالد العمر,Hama,SYRIATEL,Syriatel,SYRIATEL,3,5,608000.00,5,1,4,514,New
+490,خالد المصري,Hama,SYRIATEL,Syriatel,SYRIATEL,82,5,330000.00,1,1,2,112,Lost
+491,محمد الجابري,Daraa,SYRIATEL,Syriatel,SYRIATEL,18,13,890000.00,4,5,5,455,Champions
+492,ليلى الشامي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,14,9,903000.00,4,4,5,445,Champions
+493,كريم العظمة,Aleppo,SYRIATEL,Syriatel,SYRIATEL,5,6,228000.00,5,2,1,521,Other
+494,حسين الطرابلسي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,2,62,3951000.00,5,5,5,555,Champions
+495,ليلى الجابري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,21,5,343000.00,4,1,2,412,New
+496,سليمان السوري,Daraa,SYRIATEL,Syriatel,SYRIATEL,53,8,359000.00,2,3,2,232,At Risk
+497,كريم الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,102,2,140000.00,1,1,1,111,Lost
+498,طارق الحمصي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,70,6,345000.00,2,2,2,222,Other
+499,إبراهيم الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,29,9,568000.00,3,4,4,344,Loyal
+500,إبراهيم اللاذقاني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,22,3,760000.00,4,1,5,415,New
+501,عائشة الرفاعي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,59,8,351000.00,2,3,2,232,At Risk
+502,بشار الكردي,Tartus,SYRIATEL,Syriatel,SYRIATEL,2,73,4923000.00,5,5,5,555,Champions
+503,سليمان الشامي,Latakia,SYRIATEL,Syriatel,SYRIATEL,30,11,815000.00,3,5,5,355,Loyal
+504,عائشة اللاذقاني,Hama,SYRIATEL,Syriatel,SYRIATEL,106,7,475000.00,1,3,3,133,At Risk
+505,ليلى القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,53,6,366000.00,2,2,2,222,Other
+506,حسن السيد,Aleppo,SYRIATEL,Syriatel,SYRIATEL,14,10,518000.00,4,5,3,453,Loyal
+507,نور الخطيب,Damascus,SYRIATEL,Syriatel,SYRIATEL,36,10,574000.00,3,5,4,354,Loyal
+508,عائشة الأحمد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,50,7,595000.00,2,3,4,234,At Risk
+509,سامي الأحمد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,14,12,1143000.00,4,5,5,455,Champions
+510,عائشة الكيلاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,47,8,588000.00,2,3,4,234,At Risk
+511,نزار الطرابلسي,Hama,SYRIATEL,Syriatel,SYRIATEL,54,4,395000.00,2,1,2,212,Other
+512,نزار اللاذقاني,Damascus,SYRIATEL,Syriatel,SYRIATEL,159,6,418000.00,1,2,3,123,Lost
+513,علي الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,94,6,321000.00,1,2,2,122,Lost
+514,زينب العمر,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,9,68,5110000.00,5,5,5,555,Champions
+515,إبراهيم اللاذقاني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,64,5,353000.00,2,1,2,212,Other
+516,يوسف الزعبي,Latakia,SYRIATEL,Syriatel,SYRIATEL,189,4,235000.00,1,1,1,111,Lost
+517,فاطمة البرازي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,11,7,820000.00,4,3,5,435,Loyal
+518,سليمان الزعبي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,1,65,5346000.00,5,5,5,555,Champions
+519,زينب اللاذقاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,55,8,849000.00,2,3,5,235,At Risk
+520,أحمد العظمة,Damascus,SYRIATEL,Syriatel,SYRIATEL,24,10,628000.00,3,5,4,354,Loyal
+521,محمد الطرابلسي,Latakia,SYRIATEL,Syriatel,SYRIATEL,60,8,321000.00,2,3,2,232,At Risk
+522,زينب الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,136,5,495000.00,1,1,3,113,Lost
+523,بشار العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,104,7,475000.00,1,3,3,133,At Risk
+524,زينب الخطيب,Quneitra,SYRIATEL,Syriatel,SYRIATEL,33,15,1203000.00,3,5,5,355,Loyal
+525,سارة الجابري,Hama,SYRIATEL,Syriatel,SYRIATEL,13,6,338000.00,4,2,2,422,Other
+526,خالد العظمة,Quneitra,SYRIATEL,Syriatel,SYRIATEL,56,7,269000.00,2,3,1,231,At Risk
+527,رنا الحلبي,Damascus,SYRIATEL,Syriatel,SYRIATEL,14,8,950000.00,4,3,5,435,Loyal
+528,سليمان السوري,Homs,SYRIATEL,Syriatel,SYRIATEL,10,9,748000.00,5,4,4,544,Champions
+529,نور البرازي,Idlib,SYRIATEL,Syriatel,SYRIATEL,2,7,646000.00,5,3,4,534,Loyal
+530,ماهر اللاذقاني,Damascus,SYRIATEL,Syriatel,SYRIATEL,45,9,393000.00,3,4,2,342,Loyal
+531,طارق السيد,Tartus,SYRIATEL,Syriatel,SYRIATEL,84,8,490000.00,1,3,3,133,At Risk
+532,ريم الخطيب,Homs,SYRIATEL,Syriatel,SYRIATEL,38,8,296000.00,3,3,2,332,Loyal
+533,إبراهيم الطرابلسي,Homs,SYRIATEL,Syriatel,SYRIATEL,35,6,503000.00,3,2,3,323,Other
+534,حسين العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,22,19,1333000.00,4,5,5,455,Champions
+535,إبراهيم العلي,Damascus,SYRIATEL,Syriatel,SYRIATEL,70,3,213000.00,2,1,1,211,Other
+536,رنا العلي,Hama,SYRIATEL,Syriatel,SYRIATEL,71,4,240000.00,2,1,1,211,Other
+537,أحمد الحمصي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,5,8,383000.00,5,3,2,532,Loyal
+538,نزار السوري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,2,10,608000.00,5,5,4,554,Champions
+539,عائشة المصري,Tartus,SYRIATEL,Syriatel,SYRIATEL,4,3,143000.00,5,1,1,511,New
+540,سارة الطرابلسي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,117,10,641000.00,1,5,4,154,At Risk
+541,سليمان الحلبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,22,9,978000.00,4,4,5,445,Champions
+542,زينب الجابري,Latakia,SYRIATEL,Syriatel,SYRIATEL,28,8,655000.00,3,3,4,334,Loyal
+543,إبراهيم العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,39,5,206000.00,3,1,1,311,Other
+544,كريم الحسن,Daraa,SYRIATEL,Syriatel,SYRIATEL,153,3,188000.00,1,1,1,111,Lost
+545,رنا اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,49,7,485000.00,2,3,3,233,At Risk
+546,إبراهيم الكردي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,1,4,59000.00,5,1,1,511,New
+547,محمد الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,14,8,311000.00,4,3,2,432,Loyal
+548,طارق المصري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,2,9,553000.00,5,4,4,544,Champions
+549,حسين اللاذقاني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,34,7,563000.00,3,3,4,334,Loyal
+550,علي الطرابلسي,Damascus,SYRIATEL,Syriatel,SYRIATEL,45,13,458000.00,3,5,3,353,Loyal
+551,سليمان الحمصي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,12,8,514000.00,4,3,3,433,Loyal
+552,كريم الزعبي,Daraa,SYRIATEL,Syriatel,SYRIATEL,73,4,173000.00,2,1,1,211,Other
+553,سارة العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,20,11,863000.00,4,5,5,455,Champions
+554,يوسف اللاذقاني,Daraa,SYRIATEL,Syriatel,SYRIATEL,5,7,261000.00,5,3,1,531,Loyal
+555,طارق الدمشقي,Hama,SYRIATEL,Syriatel,SYRIATEL,76,8,513000.00,2,3,3,233,At Risk
+556,طارق العمر,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,33,4,448000.00,3,1,3,313,Other
+557,أيمن الكيلاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,59,8,540000.00,2,3,3,233,At Risk
+558,ماهر القباني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,53,9,590000.00,2,4,4,244,At Risk
+559,ماهر القباني,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,44,8,355000.00,3,3,2,332,Loyal
+560,أحمد الحلبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,8,11,733000.00,5,5,4,554,Champions
+561,علي الزعبي,Homs,SYRIATEL,Syriatel,SYRIATEL,63,4,154000.00,2,1,1,211,Other
+562,زينب الدمشقي,Idlib,SYRIATEL,Syriatel,SYRIATEL,9,9,866000.00,5,4,5,545,Champions
+563,ماهر البرازي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,15,12,831000.00,4,5,5,455,Champions
+564,رنا الأحمد,Damascus,SYRIATEL,Syriatel,SYRIATEL,60,8,540000.00,2,3,3,233,At Risk
+565,سارة الأحمد,Daraa,SYRIATEL,Syriatel,SYRIATEL,79,7,291000.00,1,3,2,132,At Risk
+566,ليلى السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,11,9,670000.00,4,4,4,444,Champions
+567,حسن الزعبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,21,6,418000.00,4,2,3,423,Other
+568,هدى الحسن,Homs,SYRIATEL,Syriatel,SYRIATEL,80,8,391000.00,1,3,2,132,At Risk
+569,حسين الخطيب,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,114,8,491000.00,1,4,3,143,At Risk
+570,رنا القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,33,10,673000.00,3,5,4,354,Loyal
+571,سليمان الخطيب,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,31,11,616000.00,3,5,4,354,Loyal
+572,نور الخطيب,Raqqa,SYRIATEL,Syriatel,SYRIATEL,52,8,581000.00,2,4,4,244,At Risk
+573,فاطمة الزعبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,67,6,450000.00,2,2,3,223,Other
+574,يوسف السوري,Homs,SYRIATEL,Syriatel,SYRIATEL,32,7,361000.00,3,3,2,332,Loyal
+575,علي العلي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,51,4,130000.00,2,1,1,211,Other
+576,أيمن الرفاعي,Hama,SYRIATEL,Syriatel,SYRIATEL,113,6,418000.00,1,2,3,123,Lost
+577,بشار الحمصي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,62,5,255000.00,2,1,1,211,Other
+578,رنا البرازي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,20,6,355000.00,4,2,2,422,Other
+579,عمر الحسن,Raqqa,SYRIATEL,Syriatel,SYRIATEL,21,5,198000.00,4,1,1,411,New
+580,كريم العظمة,Homs,SYRIATEL,Syriatel,SYRIATEL,17,8,511000.00,4,4,3,443,Loyal
+581,رنا الدمشقي,Tartus,SYRIATEL,Syriatel,SYRIATEL,36,7,434000.00,3,3,3,333,Loyal
+582,أيمن السيد,Tartus,SYRIATEL,Syriatel,SYRIATEL,8,55,4272000.00,5,5,5,555,Champions
+583,ليلى الكيلاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,110,7,388000.00,1,3,2,132,At Risk
+584,وليد الحلبي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,85,6,495000.00,1,2,3,123,Lost
+585,رنا السيد,Damascus,SYRIATEL,Syriatel,SYRIATEL,36,4,190000.00,3,1,1,311,Other
+586,حسن المصري,Hama,SYRIATEL,Syriatel,SYRIATEL,84,5,313000.00,1,1,2,112,Lost
+587,مريم اللاذقاني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,26,7,376000.00,3,3,2,332,Loyal
+588,ريم الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,39,9,691000.00,3,4,4,344,Loyal
+589,وليد الأحمد,Aleppo,SYRIATEL,Syriatel,SYRIATEL,171,1,180000.00,1,1,1,111,Lost
+590,رنا الحلبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,110,5,361000.00,1,1,2,112,Lost
+591,ليلى العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,39,5,190000.00,3,1,1,311,Other
+592,مريم العمر,Latakia,SYRIATEL,Syriatel,SYRIATEL,11,11,476000.00,4,5,3,453,Loyal
+593,فاطمة المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,68,9,338000.00,2,4,2,242,At Risk
+594,حسين القباني,Homs,SYRIATEL,Syriatel,SYRIATEL,33,7,905000.00,3,3,5,335,Loyal
+595,بشار الدمشقي,Tartus,SYRIATEL,Syriatel,SYRIATEL,19,6,338000.00,4,2,2,422,Other
+596,علي البيطار,Idlib,SYRIATEL,Syriatel,SYRIATEL,11,4,390000.00,4,1,2,412,New
+597,ليلى القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,4,4,125000.00,5,1,1,511,New
+598,زينب الرفاعي,Homs,SYRIATEL,Syriatel,SYRIATEL,65,9,645000.00,2,4,4,244,At Risk
+599,حسن القباني,Tartus,SYRIATEL,Syriatel,SYRIATEL,90,7,263000.00,1,3,1,131,At Risk
+600,فاطمة الأحمد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,13,8,463000.00,4,4,3,443,Loyal
+601,هدى العلي,Tartus,SYRIATEL,Syriatel,SYRIATEL,85,7,321000.00,1,3,2,132,At Risk
+602,عائشة الحمصي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,26,7,750000.00,3,3,4,334,Loyal
+603,عائشة الحلبي,Daraa,SYRIATEL,Syriatel,SYRIATEL,98,3,200000.00,1,1,1,111,Lost
+604,حسن الأحمد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,14,8,620000.00,4,4,4,444,Champions
+605,زينب المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,4,57,4508000.00,5,5,5,555,Champions
+606,وليد الجابري,Damascus,SYRIATEL,Syriatel,SYRIATEL,107,6,480000.00,1,2,3,123,Lost
+607,سارة العمر,Quneitra,SYRIATEL,Syriatel,SYRIATEL,43,7,335000.00,3,3,2,332,Loyal
+608,أحمد الحمصي,Latakia,SYRIATEL,Syriatel,SYRIATEL,6,7,775000.00,5,3,5,535,Loyal
+609,مصطفى العلي,Latakia,SYRIATEL,Syriatel,SYRIATEL,10,9,427000.00,5,4,3,543,Loyal
+610,فاطمة الحسن,Homs,SYRIATEL,Syriatel,SYRIATEL,11,9,403000.00,4,4,2,442,Loyal
+611,باسل الحسن,Damascus,SYRIATEL,Syriatel,SYRIATEL,15,8,383000.00,4,4,2,442,Loyal
+612,هدى الحسن,Damascus,SYRIATEL,Syriatel,SYRIATEL,226,4,285000.00,1,1,2,112,Lost
+613,سارة القباني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,14,6,468000.00,4,2,3,423,Other
+614,أيمن العظمة,Homs,SYRIATEL,Syriatel,SYRIATEL,24,8,640000.00,3,4,4,344,Loyal
+615,سارة الرفاعي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,185,4,205000.00,1,1,1,111,Lost
+616,علي الشامي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,10,5,303000.00,5,1,2,512,New
+617,أيمن الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,20,9,820000.00,4,4,5,445,Champions
+618,حسن الحمصي,Tartus,SYRIATEL,Syriatel,SYRIATEL,19,14,1475000.00,4,5,5,455,Champions
+619,محمد الأحمد,Latakia,SYRIATEL,Syriatel,SYRIATEL,24,8,1030000.00,3,4,5,345,Loyal
+620,باسل الخطيب,Hama,SYRIATEL,Syriatel,SYRIATEL,5,16,1161000.00,5,5,5,555,Champions
+621,خالد الرفاعي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,8,9,665000.00,5,4,4,544,Champions
+622,فاطمة القباني,Latakia,SYRIATEL,Syriatel,SYRIATEL,10,74,4901000.00,5,5,5,555,Champions
+623,كريم العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,60,11,774000.00,2,5,5,255,At Risk
+624,أيمن البيطار,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,222,1,35000.00,1,1,1,111,Lost
+625,مريم البيطار,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,3,67,5218000.00,5,5,5,555,Champions
+626,باسل الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,62,5,430000.00,2,1,3,213,Other
+627,ليلى السوري,Idlib,SYRIATEL,Syriatel,SYRIATEL,46,11,731000.00,2,5,4,254,At Risk
+628,رنا البرازي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,7,5,408000.00,5,1,2,512,New
+629,سامي الجابري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,71,7,581000.00,2,3,4,234,At Risk
+630,عائشة الحمصي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,58,5,329000.00,2,1,2,212,Other
+631,حسين الرفاعي,Idlib,SYRIATEL,Syriatel,SYRIATEL,58,5,358000.00,2,1,2,212,Other
+632,ليلى الطرابلسي,Homs,SYRIATEL,Syriatel,SYRIATEL,65,6,783000.00,2,2,5,225,Other
+633,سارة السوري,Homs,SYRIATEL,Syriatel,SYRIATEL,46,8,517000.00,2,4,3,243,At Risk
+634,بشار الزعبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,32,10,313000.00,3,5,2,352,Loyal
+635,حسين الزعبي,Homs,SYRIATEL,Syriatel,SYRIATEL,94,7,636000.00,1,3,4,134,At Risk
+636,سارة اللاذقاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,21,6,340000.00,4,2,2,422,Other
+637,حسن الرفاعي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,145,6,543000.00,1,2,3,123,Lost
+638,أيمن اللاذقاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,88,7,913000.00,1,3,5,135,At Risk
+639,طارق المصري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,143,5,355000.00,1,1,2,112,Lost
+640,أيمن المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,8,5,188000.00,5,1,1,511,New
+641,نزار الطرابلسي,Daraa,SYRIATEL,Syriatel,SYRIATEL,7,8,615000.00,5,4,4,544,Champions
+642,علي البرازي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,8,6,803000.00,5,2,5,525,Other
+643,ماهر الحمصي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,10,8,646000.00,5,4,4,544,Champions
+644,محمد البيطار,Daraa,SYRIATEL,Syriatel,SYRIATEL,86,4,225000.00,1,1,1,111,Lost
+645,باسل الدمشقي,Latakia,SYRIATEL,Syriatel,SYRIATEL,9,6,470000.00,5,2,3,523,Other
+646,طارق الجابري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,44,9,434000.00,3,4,3,343,Loyal
+647,عمر الدمشقي,Tartus,SYRIATEL,Syriatel,SYRIATEL,6,3,400000.00,5,1,2,512,New
+648,ريم الكردي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,4,8,720000.00,5,4,4,544,Champions
+649,إبراهيم الخطيب,Aleppo,SYRIATEL,Syriatel,SYRIATEL,141,2,150000.00,1,1,1,111,Lost
+650,نزار اللاذقاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,29,7,555000.00,3,3,4,334,Loyal
+651,ريم الخطيب,Damascus,SYRIATEL,Syriatel,SYRIATEL,1,70,4690000.00,5,5,5,555,Champions
+652,ريم الطرابلسي,Daraa,SYRIATEL,Syriatel,SYRIATEL,63,9,605000.00,2,4,4,244,At Risk
+653,حسين الشامي,Damascus,SYRIATEL,Syriatel,SYRIATEL,39,11,758000.00,3,5,5,355,Loyal
+654,فاطمة المصري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,16,10,993000.00,4,5,5,455,Champions
+655,هدى الحلبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,2,8,603000.00,5,4,4,544,Champions
+656,بشار الحلبي,Idlib,SYRIATEL,Syriatel,SYRIATEL,6,73,5811000.00,5,5,5,555,Champions
+657,طارق اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,154,6,505000.00,1,2,3,123,Lost
+658,مصطفى الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,15,9,740000.00,4,4,4,444,Champions
+659,ماهر الكردي,Daraa,SYRIATEL,Syriatel,SYRIATEL,22,3,143000.00,4,1,1,411,New
+660,مريم العظمة,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,80,15,1187000.00,1,5,5,155,At Risk
+661,باسل السوري,Tartus,SYRIATEL,Syriatel,SYRIATEL,12,7,489000.00,4,3,3,433,Loyal
+662,نزار السيد,Idlib,SYRIATEL,Syriatel,SYRIATEL,63,4,95000.00,2,1,1,211,Other
+663,أيمن العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,38,6,470000.00,3,2,3,323,Other
+664,سارة العلي,Daraa,SYRIATEL,Syriatel,SYRIATEL,29,9,423000.00,3,4,3,343,Loyal
+665,أحمد الخطيب,Idlib,SYRIATEL,Syriatel,SYRIATEL,45,6,361000.00,3,2,2,322,Other
+666,رنا الخطيب,Aleppo,SYRIATEL,Syriatel,SYRIATEL,20,9,753000.00,4,4,4,444,Champions
+667,عمر البيطار,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,106,8,848000.00,1,4,5,145,At Risk
+668,إبراهيم الأحمد,Damascus,SYRIATEL,Syriatel,SYRIATEL,8,3,128000.00,5,1,1,511,New
+669,فاطمة القباني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,69,15,649000.00,2,5,4,254,At Risk
+670,كريم الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,65,10,525000.00,2,5,3,253,At Risk
+671,حسين الكردي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,29,11,1068000.00,3,5,5,355,Loyal
+672,محمد الشامي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,12,10,678000.00,4,5,4,454,Champions
+673,سليمان الكيلاني,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,1,5,360000.00,5,1,2,512,New
+674,كريم العلي,Idlib,SYRIATEL,Syriatel,SYRIATEL,72,5,648000.00,2,1,4,214,Other
+675,سامي الجابري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,15,5,330000.00,4,1,2,412,New
+676,نور الجابري,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,31,7,770000.00,3,3,5,335,Loyal
+677,بشار الشامي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,5,5,450000.00,5,1,3,513,New
+678,باسل الحلبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,45,6,840000.00,3,2,5,325,Other
+679,مريم السوري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,57,6,263000.00,2,2,1,221,Other
+680,طارق الدمشقي,Hama,SYRIATEL,Syriatel,SYRIATEL,13,5,368000.00,4,1,2,412,New
+681,عمر العمر,Daraa,SYRIATEL,Syriatel,SYRIATEL,133,5,363000.00,1,1,2,112,Lost
+682,وليد الحلبي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,64,9,698000.00,2,4,4,244,At Risk
+683,أحمد البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,3,8,785000.00,5,4,5,545,Champions
+684,هدى الحمصي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,22,6,381000.00,4,2,2,422,Other
+685,مصطفى السيد,Idlib,SYRIATEL,Syriatel,SYRIATEL,50,7,346000.00,2,3,2,232,At Risk
+686,حسين الأحمد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,5,71,5464000.00,5,5,5,555,Champions
+687,يوسف الخطيب,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,1,49,3234000.00,5,5,5,555,Champions
+688,طارق العظمة,Raqqa,SYRIATEL,Syriatel,SYRIATEL,1,80,5970000.00,5,5,5,555,Champions
+689,كريم الشامي,Idlib,SYRIATEL,Syriatel,SYRIATEL,9,8,325000.00,5,4,2,542,Loyal
+690,هدى المصري,Latakia,SYRIATEL,Syriatel,SYRIATEL,35,11,755000.00,3,5,5,355,Loyal
+691,وليد الشامي,Idlib,SYRIATEL,Syriatel,SYRIATEL,45,8,901000.00,3,4,5,345,Loyal
+692,حسن السيد,Quneitra,SYRIATEL,Syriatel,SYRIATEL,11,5,578000.00,4,1,4,414,New
+693,ليلى العلي,Tartus,SYRIATEL,Syriatel,SYRIATEL,13,6,365000.00,4,2,2,422,Other
+694,عائشة العظمة,Daraa,SYRIATEL,Syriatel,SYRIATEL,23,5,418000.00,4,1,3,413,New
+695,عمر البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,20,7,528000.00,4,3,3,433,Loyal
+696,عمر الحمصي,Damascus,SYRIATEL,Syriatel,SYRIATEL,74,9,418000.00,2,4,3,243,At Risk
+697,رنا الكردي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,12,72,6867000.00,4,5,5,455,Champions
+698,كريم البرازي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,5,66,5125000.00,5,5,5,555,Champions
+699,محمد البيطار,Hama,SYRIATEL,Syriatel,SYRIATEL,32,7,305000.00,3,3,2,332,Loyal
+700,رنا الكيلاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,17,10,743000.00,4,5,4,454,Champions
+701,علي المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,2,11,618000.00,5,5,4,554,Champions
+702,نور الرفاعي,Idlib,SYRIATEL,Syriatel,SYRIATEL,75,6,490000.00,2,2,3,223,Other
+703,عائشة الدمشقي,Daraa,SYRIATEL,Syriatel,SYRIATEL,6,9,1085000.00,5,4,5,545,Champions
+704,علي الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,30,3,215000.00,3,1,1,311,Other
+705,سليمان الخطيب,Raqqa,SYRIATEL,Syriatel,SYRIATEL,10,6,540000.00,5,2,3,523,Other
+706,عائشة الأحمد,Tartus,SYRIATEL,Syriatel,SYRIATEL,163,5,558000.00,1,1,4,114,Lost
+707,نور الحمصي,Homs,SYRIATEL,Syriatel,SYRIATEL,26,6,441000.00,3,2,3,323,Other
+708,سارة الأحمد,Daraa,SYRIATEL,Syriatel,SYRIATEL,50,13,882000.00,2,5,5,255,At Risk
+709,نزار العمر,Idlib,SYRIATEL,Syriatel,SYRIATEL,39,7,403000.00,3,3,2,332,Loyal
+710,طارق الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,2,14,1119000.00,5,5,5,555,Champions
+711,ماهر الأحمد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,89,5,118000.00,1,1,1,111,Lost
+712,إبراهيم الكيلاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,102,5,200000.00,1,1,1,111,Lost
+713,بشار السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,64,8,177000.00,2,4,1,241,At Risk
+714,رنا الزعبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,14,9,965000.00,4,4,5,445,Champions
+715,وليد السوري,Latakia,SYRIATEL,Syriatel,SYRIATEL,53,4,280000.00,2,1,2,212,Other
+716,إبراهيم اللاذقاني,Aleppo,SYRIATEL,Syriatel,SYRIATEL,65,6,290000.00,2,2,2,222,Other
+717,زينب الرفاعي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,20,7,1010000.00,4,3,5,435,Loyal
+718,طارق الحلبي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,71,4,75000.00,2,1,1,211,Other
+719,يوسف الحلبي,Damascus,SYRIATEL,Syriatel,SYRIATEL,56,4,540000.00,2,1,3,213,Other
+720,باسل السوري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,7,88,5041000.00,5,5,5,555,Champions
+721,محمد الكيلاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,85,3,120000.00,1,1,1,111,Lost
+722,ريم العمر,Tartus,SYRIATEL,Syriatel,SYRIATEL,14,9,441000.00,4,4,3,443,Loyal
+723,مصطفى الدمشقي,Hama,SYRIATEL,Syriatel,SYRIATEL,15,10,483000.00,4,5,3,453,Loyal
+724,إبراهيم الحسن,Aleppo,SYRIATEL,Syriatel,SYRIATEL,2,7,585000.00,5,3,4,534,Loyal
+725,إبراهيم السيد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,13,7,356000.00,4,3,2,432,Loyal
+726,هدى الجابري,Damascus,SYRIATEL,Syriatel,SYRIATEL,6,11,636000.00,5,5,4,554,Champions
+727,حسين الشامي,Idlib,SYRIATEL,Syriatel,SYRIATEL,60,6,415000.00,2,2,3,223,Other
+728,طارق المصري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,27,10,699000.00,3,5,4,354,Loyal
+729,سارة الدمشقي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,11,8,685000.00,4,4,4,444,Champions
+730,أحمد البيطار,Quneitra,SYRIATEL,Syriatel,SYRIATEL,73,6,454000.00,2,2,3,223,Other
+731,ماهر الشامي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,29,7,588000.00,3,3,4,334,Loyal
+732,وليد العمر,Raqqa,SYRIATEL,Syriatel,SYRIATEL,23,5,633000.00,4,1,4,414,New
+733,حسين السوري,Damascus,SYRIATEL,Syriatel,SYRIATEL,15,8,324000.00,4,4,2,442,Loyal
+734,حسين الخطيب,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,66,7,485000.00,2,3,3,233,At Risk
+735,رنا الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,75,5,174000.00,2,1,1,211,Other
+736,عائشة العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,43,8,392000.00,3,4,2,342,Loyal
+737,كريم اللاذقاني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,5,4,325000.00,5,1,2,512,New
+738,سارة اللاذقاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,206,4,78000.00,1,1,1,111,Lost
+739,نور البرازي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,29,5,219000.00,3,1,1,311,Other
+740,أحمد الحلبي,Latakia,SYRIATEL,Syriatel,SYRIATEL,21,8,355000.00,4,4,2,442,Loyal
+741,يوسف الزعبي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,8,55,3596000.00,5,5,5,555,Champions
+742,وليد السوري,Damascus,SYRIATEL,Syriatel,SYRIATEL,70,9,640000.00,2,4,4,244,At Risk
+743,أحمد العظمة,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,40,5,855000.00,3,1,5,315,Other
+744,كريم البيطار,Idlib,SYRIATEL,Syriatel,SYRIATEL,20,4,420000.00,4,1,3,413,New
+745,أيمن الطرابلسي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,20,8,580000.00,4,4,4,444,Champions
+746,بشار الحمصي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,28,2,220000.00,3,1,1,311,Other
+747,حسين الزعبي,Damascus,SYRIATEL,Syriatel,SYRIATEL,22,11,543000.00,4,5,3,453,Loyal
+748,زينب العظمة,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,14,65,4001000.00,4,5,5,455,Champions
+749,سامي الحمصي,Latakia,SYRIATEL,Syriatel,SYRIATEL,6,3,305000.00,5,1,2,512,New
+750,زينب الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,4,5,475000.00,5,1,3,513,New
+751,خالد الرفاعي,Daraa,SYRIATEL,Syriatel,SYRIATEL,11,6,425000.00,4,2,3,423,Other
+752,سامي الجابري,Daraa,SYRIATEL,Syriatel,SYRIATEL,53,8,995000.00,2,4,5,245,At Risk
+753,هدى العلي,Hama,SYRIATEL,Syriatel,SYRIATEL,4,10,556000.00,5,5,4,554,Champions
+754,إبراهيم اللاذقاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,2,59,4488000.00,5,5,5,555,Champions
+755,يوسف الطرابلسي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,3,6,321000.00,5,2,2,522,Other
+756,محمد الدمشقي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,295,1,16000.00,1,1,1,111,Lost
+757,علي الكردي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,51,10,663000.00,2,5,4,254,At Risk
+758,مريم الشامي,Homs,SYRIATEL,Syriatel,SYRIATEL,17,9,513000.00,4,4,3,443,Loyal
+759,حسن الشامي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,4,59,4926000.00,5,5,5,555,Champions
+760,نزار السوري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,45,1,60000.00,3,1,1,311,Other
+761,أيمن العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,51,12,946000.00,2,5,5,255,At Risk
+762,وليد المصري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,8,8,388000.00,5,4,2,542,Loyal
+763,ريم السيد,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,5,6,351000.00,5,2,2,522,Other
+764,ماهر الأحمد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,44,5,195000.00,3,2,1,321,Other
+765,مريم الحلبي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,121,7,558000.00,1,3,4,134,At Risk
+766,بشار الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,187,10,979000.00,1,5,5,155,At Risk
+767,ريم المصري,Raqqa,SYRIATEL,Syriatel,SYRIATEL,12,8,318000.00,4,4,2,442,Loyal
+768,كريم الخطيب,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,19,13,899000.00,4,5,5,455,Champions
+769,محمد الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,25,8,496000.00,3,4,3,343,Loyal
+770,نزار الدمشقي,Tartus,SYRIATEL,Syriatel,SYRIATEL,30,7,394000.00,3,3,2,332,Loyal
+771,سارة الدمشقي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,51,5,580000.00,2,2,4,224,Other
+772,خالد الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,44,7,875000.00,3,3,5,335,Loyal
+773,باسل العمر,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,114,11,586000.00,1,5,4,154,At Risk
+774,زينب الحمصي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,5,9,462000.00,5,4,3,543,Loyal
+775,سامي الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,149,6,143000.00,1,2,1,121,Lost
+776,عمر الخطيب,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,20,8,563000.00,4,4,4,444,Champions
+777,نور البيطار,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,73,11,771000.00,2,5,5,255,At Risk
+778,بشار القباني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,63,7,231000.00,2,3,1,231,At Risk
+779,ريم الأحمد,Homs,SYRIATEL,Syriatel,SYRIATEL,13,6,428000.00,4,2,3,423,Other
+780,يوسف العمر,Daraa,SYRIATEL,Syriatel,SYRIATEL,247,4,304000.00,1,1,2,112,Lost
+781,إبراهيم المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,236,3,180000.00,1,1,1,111,Lost
+782,سارة القباني,Idlib,SYRIATEL,Syriatel,SYRIATEL,32,8,528000.00,3,4,3,343,Loyal
+783,رنا العمر,Damascus,SYRIATEL,Syriatel,SYRIATEL,6,63,3688000.00,5,5,5,555,Champions
+784,خالد الكردي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,82,2,180000.00,1,1,1,111,Lost
+785,فاطمة الدمشقي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,24,7,306000.00,3,3,2,332,Loyal
+786,زينب البيطار,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,181,3,510000.00,1,1,3,113,Lost
+787,خالد القباني,Idlib,SYRIATEL,Syriatel,SYRIATEL,42,11,794000.00,3,5,5,355,Loyal
+788,مريم الحسن,Quneitra,SYRIATEL,Syriatel,SYRIATEL,6,8,980000.00,5,4,5,545,Champions
+789,مريم العلي,Latakia,SYRIATEL,Syriatel,SYRIATEL,32,3,188000.00,3,1,1,311,Other
+790,ريم الخطيب,Latakia,SYRIATEL,Syriatel,SYRIATEL,38,8,318000.00,3,4,2,342,Loyal
+791,عائشة البرازي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,253,1,90000.00,1,1,1,111,Lost
+792,مريم العمر,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,16,6,315000.00,4,2,2,422,Other
+793,نزار الخطيب,Idlib,SYRIATEL,Syriatel,SYRIATEL,10,6,298000.00,5,2,2,522,Other
+794,علي الكردي,Daraa,SYRIATEL,Syriatel,SYRIATEL,8,51,4340000.00,5,5,5,555,Champions
+795,عمر الشامي,Idlib,SYRIATEL,Syriatel,SYRIATEL,46,8,492000.00,2,4,3,243,At Risk
+796,حسين الكردي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,134,3,315000.00,1,1,2,112,Lost
+797,عمر السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,89,8,795000.00,1,4,5,145,At Risk
+798,علي الكردي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,43,11,1133000.00,3,5,5,355,Loyal
+799,حسن الزعبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,34,60,4548000.00,3,5,5,355,Loyal
+800,محمد الحسن,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,14,61,4727000.00,4,5,5,455,Champions
+801,أيمن الكيلاني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,33,8,580000.00,3,4,4,344,Loyal
+802,ريم اللاذقاني,Daraa,SYRIATEL,Syriatel,SYRIATEL,34,16,1501000.00,3,5,5,355,Loyal
+803,فاطمة الأحمد,Tartus,SYRIATEL,Syriatel,SYRIATEL,104,7,418000.00,1,3,3,133,At Risk
+804,عمر الحسن,Idlib,SYRIATEL,Syriatel,SYRIATEL,22,8,1315000.00,4,4,5,445,Champions
+805,نور الكردي,Idlib,SYRIATEL,Syriatel,SYRIATEL,38,8,651000.00,3,4,4,344,Loyal
+806,أيمن القباني,Quneitra,SYRIATEL,Syriatel,SYRIATEL,9,11,870000.00,5,5,5,555,Champions
+807,زينب الكيلاني,Homs,SYRIATEL,Syriatel,SYRIATEL,35,5,260000.00,3,2,1,321,Other
+808,أيمن الرفاعي,Idlib,SYRIATEL,Syriatel,SYRIATEL,39,8,725000.00,3,4,4,344,Loyal
+809,طارق القباني,Latakia,SYRIATEL,Syriatel,SYRIATEL,104,7,405000.00,1,3,2,132,At Risk
+810,رنا الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,16,8,476000.00,4,4,3,443,Loyal
+811,نور الزعبي,Damascus,SYRIATEL,Syriatel,SYRIATEL,82,9,412000.00,1,4,3,143,At Risk
+812,وليد العمر,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,40,8,358000.00,3,4,2,342,Loyal
+813,مريم الخطيب,Tartus,SYRIATEL,Syriatel,SYRIATEL,180,4,550000.00,1,1,4,114,Lost
+814,سارة البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,52,7,578000.00,2,3,4,234,At Risk
+815,ليلى الكيلاني,Raqqa,SYRIATEL,Syriatel,SYRIATEL,20,7,565000.00,4,3,4,434,Loyal
+816,مريم الجابري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,129,6,760000.00,1,2,5,125,Lost
+817,نور الكيلاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,12,5,288000.00,4,2,2,422,Other
+818,يوسف الدمشقي,Idlib,SYRIATEL,Syriatel,SYRIATEL,47,8,423000.00,2,4,3,243,At Risk
+819,يوسف القباني,Damascus,SYRIATEL,Syriatel,SYRIATEL,181,6,234000.00,1,2,1,121,Lost
+820,خالد الدمشقي,Idlib,SYRIATEL,Syriatel,SYRIATEL,64,8,418000.00,2,4,3,243,At Risk
+821,ماهر الجابري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,78,7,428000.00,1,3,3,133,At Risk
+822,وليد الخطيب,Tartus,SYRIATEL,Syriatel,SYRIATEL,33,5,345000.00,3,2,2,322,Other
+823,ليلى الحسن,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,30,4,270000.00,3,1,1,311,Other
+824,أيمن الكيلاني,Latakia,SYRIATEL,Syriatel,SYRIATEL,10,10,498000.00,5,5,3,553,Loyal
+825,سامي الجابري,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,23,6,586000.00,4,2,4,424,Other
+826,نزار الرفاعي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,61,5,381000.00,2,2,2,222,Other
+827,عمر الجابري,Homs,SYRIATEL,Syriatel,SYRIATEL,20,15,1100000.00,4,5,5,455,Champions
+828,أيمن الحمصي,Daraa,SYRIATEL,Syriatel,SYRIATEL,51,10,943000.00,2,5,5,255,At Risk
+829,باسل المصري,Damascus,SYRIATEL,Syriatel,SYRIATEL,44,10,523000.00,3,5,3,353,Loyal
+830,ماهر المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,60,7,251000.00,2,3,1,231,At Risk
+831,سارة العظمة,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,30,14,1014000.00,3,5,5,355,Loyal
+832,رنا الكردي,Idlib,SYRIATEL,Syriatel,SYRIATEL,14,7,718000.00,4,3,4,434,Loyal
+833,عمر اللاذقاني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,14,67,4719000.00,4,5,5,455,Champions
+834,خالد الزعبي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,118,3,115000.00,1,1,1,111,Lost
+835,باسل العمر,Idlib,SYRIATEL,Syriatel,SYRIATEL,77,11,650000.00,2,5,4,254,At Risk
+836,نزار الحسن,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,49,7,294000.00,2,3,2,232,At Risk
+837,باسل العلي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,57,5,256000.00,2,2,1,221,Other
+838,أيمن الدمشقي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,1,74,5110000.00,5,5,5,555,Champions
+839,مريم الحمصي,Damascus,SYRIATEL,Syriatel,SYRIATEL,54,6,230000.00,2,2,1,221,Other
+840,حسين الدمشقي,Damascus,SYRIATEL,Syriatel,SYRIATEL,115,4,695000.00,1,1,4,114,Lost
+841,طارق الحسن,Homs,SYRIATEL,Syriatel,SYRIATEL,71,6,468000.00,2,2,3,223,Other
+842,نزار الخطيب,Idlib,SYRIATEL,Syriatel,SYRIATEL,233,1,30000.00,1,1,1,111,Lost
+843,عائشة البرازي,Hama,SYRIATEL,Syriatel,SYRIATEL,30,7,543000.00,3,3,3,333,Loyal
+844,نور العمر,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,6,4,520000.00,5,1,3,513,New
+845,مريم اللاذقاني,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,12,7,425000.00,4,3,3,433,Loyal
+846,عائشة الأحمد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,78,5,215000.00,1,2,1,121,Lost
+847,باسل الحسن,Daraa,SYRIATEL,Syriatel,SYRIATEL,122,2,260000.00,1,1,1,111,Lost
+848,رنا العمر,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,16,6,573000.00,4,2,4,424,Other
+849,سامي البرازي,Homs,SYRIATEL,Syriatel,SYRIATEL,7,7,225000.00,5,3,1,531,Loyal
+850,زينب الجابري,Hama,SYRIATEL,Syriatel,SYRIATEL,136,7,470000.00,1,3,3,133,At Risk
+851,محمد العظمة,Tartus,SYRIATEL,Syriatel,SYRIATEL,100,6,495000.00,1,2,3,123,Lost
+852,بشار المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,42,10,771000.00,3,5,5,355,Loyal
+853,محمد الكيلاني,Homs,SYRIATEL,Syriatel,SYRIATEL,29,8,538000.00,3,4,3,343,Loyal
+854,عمر الرفاعي,Idlib,SYRIATEL,Syriatel,SYRIATEL,17,59,4993000.00,4,5,5,455,Champions
+855,كريم الكردي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,43,5,365000.00,3,2,2,322,Other
+856,عمر القباني,Damascus,SYRIATEL,Syriatel,SYRIATEL,169,4,145000.00,1,1,1,111,Lost
+857,ماهر السيد,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,29,8,806000.00,3,4,5,345,Loyal
+858,ماهر الخطيب,Raqqa,SYRIATEL,Syriatel,SYRIATEL,29,9,790000.00,3,4,5,345,Loyal
+859,حسين الكردي,Latakia,SYRIATEL,Syriatel,SYRIATEL,47,5,385000.00,2,2,2,222,Other
+860,بشار اللاذقاني,Latakia,SYRIATEL,Syriatel,SYRIATEL,16,9,384000.00,4,4,2,442,Loyal
+861,يوسف القباني,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,22,6,460000.00,4,2,3,423,Other
+862,أيمن الطرابلسي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,47,5,104000.00,2,2,1,221,Other
+863,خالد العلي,Daraa,SYRIATEL,Syriatel,SYRIATEL,33,8,445000.00,3,4,3,343,Loyal
+864,زينب القباني,Latakia,SYRIATEL,Syriatel,SYRIATEL,12,8,585000.00,4,4,4,444,Champions
+865,وليد السيد,Idlib,SYRIATEL,Syriatel,SYRIATEL,77,4,324000.00,2,1,2,212,Other
+866,ماهر العظمة,Raqqa,SYRIATEL,Syriatel,SYRIATEL,7,5,341000.00,5,2,2,522,Other
+867,مريم الشامي,Latakia,SYRIATEL,Syriatel,SYRIATEL,107,2,50000.00,1,1,1,111,Lost
+868,عائشة الزعبي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,51,10,858000.00,2,5,5,255,At Risk
+869,نزار العمر,Homs,SYRIATEL,Syriatel,SYRIATEL,148,4,131000.00,1,1,1,111,Lost
+870,نور الأحمد,Damascus,SYRIATEL,Syriatel,SYRIATEL,18,5,245000.00,4,2,1,421,Other
+871,ليلى السوري,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,12,7,586000.00,4,3,4,434,Loyal
+872,خالد الرفاعي,Latakia,SYRIATEL,Syriatel,SYRIATEL,25,4,313000.00,3,1,2,312,Other
+873,فاطمة الحلبي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,84,11,858000.00,1,5,5,155,At Risk
+874,يوسف اللاذقاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,17,4,438000.00,4,1,3,413,New
+875,هدى القباني,Idlib,SYRIATEL,Syriatel,SYRIATEL,68,6,438000.00,2,2,3,223,Other
+876,أيمن الزعبي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,259,4,458000.00,1,1,3,113,Lost
+877,طارق اللاذقاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,80,5,323000.00,1,2,2,122,Lost
+878,فاطمة السوري,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,19,9,473000.00,4,4,3,443,Loyal
+879,حسين العظمة,Tartus,SYRIATEL,Syriatel,SYRIATEL,124,6,411000.00,1,2,3,123,Lost
+880,طارق البرازي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,46,6,216000.00,2,2,1,221,Other
+881,سامي الرفاعي,Damascus,SYRIATEL,Syriatel,SYRIATEL,16,13,1111000.00,4,5,5,455,Champions
+882,كريم الحمصي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,34,7,529000.00,3,3,3,333,Loyal
+883,ريم السيد,Raqqa,SYRIATEL,Syriatel,SYRIATEL,95,7,318000.00,1,3,2,132,At Risk
+884,عمر العمر,Homs,SYRIATEL,Syriatel,SYRIATEL,116,7,451000.00,1,3,3,133,At Risk
+885,حسين الحمصي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,24,11,1076000.00,3,5,5,355,Loyal
+886,عائشة اللاذقاني,Idlib,SYRIATEL,Syriatel,SYRIATEL,58,7,420000.00,2,3,3,233,At Risk
+887,علي السيد,Homs,SYRIATEL,Syriatel,SYRIATEL,30,8,334000.00,3,4,2,342,Loyal
+888,محمد الشامي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,76,6,530000.00,2,2,3,223,Other
+889,رنا الخطيب,Aleppo,SYRIATEL,Syriatel,SYRIATEL,17,8,465000.00,4,4,3,443,Loyal
+890,أحمد الزعبي,Tartus,SYRIATEL,Syriatel,SYRIATEL,8,5,436000.00,5,2,3,523,Other
+891,وليد الكردي,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,50,5,445000.00,2,2,3,223,Other
+892,نور الأحمد,Quneitra,SYRIATEL,Syriatel,SYRIATEL,113,8,423000.00,1,4,3,143,At Risk
+893,محمد القباني,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,14,7,640000.00,4,3,4,434,Loyal
+894,سارة العظمة,Quneitra,SYRIATEL,Syriatel,SYRIATEL,33,13,1083000.00,3,5,5,355,Loyal
+895,إبراهيم المصري,Homs,SYRIATEL,Syriatel,SYRIATEL,41,6,345000.00,3,2,2,322,Other
+896,ماهر القباني,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,7,72,4678000.00,5,5,5,555,Champions
+897,أحمد الشامي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,13,7,474000.00,4,3,3,433,Loyal
+898,سامي الحمصي,Tartus,SYRIATEL,Syriatel,SYRIATEL,32,9,690000.00,3,4,4,344,Loyal
+899,وليد السيد,Hama,SYRIATEL,Syriatel,SYRIATEL,17,11,983000.00,4,5,5,455,Champions
+900,سليمان الطرابلسي,Latakia,SYRIATEL,Syriatel,SYRIATEL,22,4,460000.00,4,1,3,413,New
+901,حسن الطرابلسي,Damascus,SYRIATEL,Syriatel,SYRIATEL,20,9,788000.00,4,4,5,445,Champions
+902,إبراهيم البيطار,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,45,8,426000.00,3,4,3,343,Loyal
+903,نور المصري,Idlib,SYRIATEL,Syriatel,SYRIATEL,80,9,683000.00,1,4,4,144,At Risk
+904,علي السوري,Aleppo,SYRIATEL,Syriatel,SYRIATEL,10,6,521000.00,5,2,3,523,Other
+905,أحمد الشامي,Daraa,SYRIATEL,Syriatel,SYRIATEL,129,7,330000.00,1,3,2,132,At Risk
+906,محمد العلي,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,55,7,295000.00,2,3,2,232,At Risk
+907,طارق الأحمد,Daraa,SYRIATEL,Syriatel,SYRIATEL,120,6,615000.00,1,2,4,124,Lost
+908,ماهر العلي,Aleppo,SYRIATEL,Syriatel,SYRIATEL,15,9,501000.00,4,4,3,443,Loyal
+909,نزار البيطار,Quneitra,SYRIATEL,Syriatel,SYRIATEL,61,5,235000.00,2,2,1,221,Other
+910,أيمن الحلبي,Hama,SYRIATEL,Syriatel,SYRIATEL,18,7,618000.00,4,3,4,434,Loyal
+911,نزار المصري,Al-Hasakah,SYRIATEL,Syriatel,SYRIATEL,96,6,680000.00,1,2,4,124,Lost
+912,وليد الرفاعي,Latakia,SYRIATEL,Syriatel,SYRIATEL,4,7,710000.00,5,3,4,534,Loyal
+913,يوسف الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,7,8,503000.00,5,4,3,543,Loyal
+914,نور الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,120,5,286000.00,1,2,2,122,Lost
+915,وليد السوري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,40,10,973000.00,3,5,5,355,Loyal
+916,باسل الرفاعي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,102,6,235000.00,1,2,1,121,Lost
+917,أحمد الجابري,Idlib,SYRIATEL,Syriatel,SYRIATEL,84,6,360000.00,1,2,2,122,Lost
+918,عائشة الأحمد,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,38,5,79000.00,3,2,1,321,Other
+919,باسل الخطيب,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,22,10,731000.00,4,5,4,454,Champions
+920,نور الجابري,Latakia,SYRIATEL,Syriatel,SYRIATEL,29,8,516000.00,3,4,3,343,Loyal
+921,مريم العلي,As-Suwayda,SYRIATEL,Syriatel,SYRIATEL,39,7,595000.00,3,3,4,334,Loyal
+922,نزار اللاذقاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,4,5,288000.00,5,2,2,522,Other
+923,مريم الأحمد,Quneitra,SYRIATEL,Syriatel,SYRIATEL,56,7,508000.00,2,3,3,233,At Risk
+924,إبراهيم البيطار,Tartus,SYRIATEL,Syriatel,SYRIATEL,67,3,285000.00,2,1,2,212,Other
+925,محمد الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,7,63,3912000.00,5,5,5,555,Champions
+926,هدى العمر,Damascus,SYRIATEL,Syriatel,SYRIATEL,6,8,490000.00,5,4,3,543,Loyal
+927,خالد العلي,Homs,SYRIATEL,Syriatel,SYRIATEL,25,6,730000.00,3,2,4,324,Other
+928,باسل الرفاعي,Quneitra,SYRIATEL,Syriatel,SYRIATEL,234,3,78000.00,1,1,1,111,Lost
+929,علي الشامي,Daraa,SYRIATEL,Syriatel,SYRIATEL,19,12,681000.00,4,5,4,454,Champions
+930,كريم الحلبي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,34,9,665000.00,3,4,4,344,Loyal
+931,إبراهيم الكيلاني,Tartus,SYRIATEL,Syriatel,SYRIATEL,236,8,424000.00,1,4,3,143,At Risk
+932,نزار السيد,Tartus,SYRIATEL,Syriatel,SYRIATEL,10,12,1239000.00,5,5,5,555,Champions
+933,وليد القباني,Daraa,SYRIATEL,Syriatel,SYRIATEL,79,7,575000.00,1,3,4,134,At Risk
+934,يوسف الطرابلسي,Idlib,SYRIATEL,Syriatel,SYRIATEL,10,7,535000.00,5,3,3,533,Loyal
+935,هدى الكردي,Idlib,SYRIATEL,Syriatel,SYRIATEL,61,7,475000.00,2,3,3,233,At Risk
+936,سارة السوري,Deir ez-Zor,SYRIATEL,Syriatel,SYRIATEL,57,7,451000.00,2,3,3,233,At Risk
+937,مريم الحلبي,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,6,9,718000.00,5,4,4,544,Champions
+938,سارة القباني,Homs,SYRIATEL,Syriatel,SYRIATEL,166,3,160000.00,1,1,1,111,Lost
+939,نور الطرابلسي,Tartus,SYRIATEL,Syriatel,SYRIATEL,11,9,835000.00,4,4,5,445,Champions
+940,مريم العظمة,Rif Dimashq,SYRIATEL,Syriatel,SYRIATEL,64,10,868000.00,2,5,5,255,At Risk
+941,أحمد الشامي,Tartus,SYRIATEL,Syriatel,SYRIATEL,2,7,844000.00,5,3,5,535,Loyal
+942,سليمان الحلبي,Raqqa,SYRIATEL,Syriatel,SYRIATEL,2,13,740000.00,5,5,4,554,Champions
+943,حسن العظمة,Damascus,SYRIATEL,Syriatel,SYRIATEL,11,3,230000.00,4,1,1,411,New
+944,باسل المصري,Quneitra,SYRIATEL,Syriatel,SYRIATEL,111,5,208000.00,1,2,1,121,Lost
+945,Mustafa Zoubi,Raqqa,MTN,MTN Syria,MTN,0,10,634000.00,5,5,4,554,Champions
+946,Layla Halabi,Quneitra,MTN,MTN Syria,MTN,58,8,621000.00,2,4,4,244,At Risk
+947,Mustafa Hassan,Latakia,MTN,MTN Syria,MTN,155,5,175000.00,1,2,1,121,Lost
+948,Aisha Shami,Tartus,MTN,MTN Syria,MTN,60,10,864000.00,2,5,5,255,At Risk
+949,Omar Halabi,Raqqa,MTN,MTN Syria,MTN,22,5,215000.00,4,2,1,421,Other
+950,Ali Ali,Damascus,MTN,MTN Syria,MTN,64,5,400000.00,2,2,2,222,Other
+951,Ahmad Homsi,Damascus,MTN,MTN Syria,MTN,98,5,233000.00,1,2,1,121,Lost
+952,Mustafa Hassan,Al-Hasakah,MTN,MTN Syria,MTN,2,7,428000.00,5,3,3,533,Loyal
+953,Layla Ahmad,Damascus,MTN,MTN Syria,MTN,165,5,355000.00,1,2,2,122,Lost
+954,Huda Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,18,6,550000.00,4,2,4,424,Other
+955,Huda Tarabulsi,Deir ez-Zor,MTN,MTN Syria,MTN,11,10,715000.00,4,5,4,454,Champions
+956,Hassan Rifai,Rif Dimashq,MTN,MTN Syria,MTN,210,1,5000.00,1,1,1,111,Lost
+957,Yousef Tarabulsi,Damascus,MTN,MTN Syria,MTN,39,8,571000.00,3,4,4,344,Loyal
+958,Ibrahim Shami,Latakia,MTN,MTN Syria,MTN,33,5,385000.00,3,2,2,322,Other
+959,Fatima Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,64,9,588000.00,2,4,4,244,At Risk
+960,Ahmad Sayed,As-Suwayda,MTN,MTN Syria,MTN,16,9,567000.00,4,4,4,444,Champions
+961,Khaled Khatib,As-Suwayda,MTN,MTN Syria,MTN,11,8,546000.00,4,4,3,443,Loyal
+962,Yousef Homsi,Homs,MTN,MTN Syria,MTN,138,7,266000.00,1,3,1,131,At Risk
+963,Mohammad Sayed,As-Suwayda,MTN,MTN Syria,MTN,10,6,583000.00,5,2,4,524,Other
+964,Nizar Souri,Aleppo,MTN,MTN Syria,MTN,28,13,549000.00,3,5,3,353,Loyal
+965,Yousef Rifai,Latakia,MTN,MTN Syria,MTN,18,8,535000.00,4,4,3,443,Loyal
+966,Mustafa Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,10,8,488000.00,5,4,3,543,Loyal
+967,Maher Sayed,Raqqa,MTN,MTN Syria,MTN,65,8,438000.00,2,4,3,243,At Risk
+968,Rana Tarabulsi,Rif Dimashq,MTN,MTN Syria,MTN,7,11,583000.00,5,5,4,554,Champions
+969,Mohammad Halabi,Aleppo,MTN,MTN Syria,MTN,61,8,431000.00,2,4,3,243,At Risk
+970,Reem Masri,Latakia,MTN,MTN Syria,MTN,15,6,438000.00,4,2,3,423,Other
+971,Rana Khatib,Idlib,MTN,MTN Syria,MTN,16,4,145000.00,4,1,1,411,New
+972,Mustafa Sayed,Rif Dimashq,MTN,MTN Syria,MTN,89,6,470000.00,1,2,3,123,Lost
+973,Yousef Hassan,Hama,MTN,MTN Syria,MTN,30,6,630000.00,3,2,4,324,Other
+974,Rana Zoubi,Daraa,MTN,MTN Syria,MTN,1,11,1003000.00,5,5,5,555,Champions
+975,Omar Dimashqi,Homs,MTN,MTN Syria,MTN,70,8,313000.00,2,4,2,242,At Risk
+976,Hassan Ali,Idlib,MTN,MTN Syria,MTN,30,9,493000.00,3,4,3,343,Loyal
+977,Sarah Kurdi,Quneitra,MTN,MTN Syria,MTN,24,9,503000.00,3,4,3,343,Loyal
+978,Nizar Halabi,As-Suwayda,MTN,MTN Syria,MTN,5,3,310000.00,5,1,2,512,New
+979,Sami Rifai,Hama,MTN,MTN Syria,MTN,10,8,730000.00,5,4,4,544,Champions
+980,Zainab Ali,Quneitra,MTN,MTN Syria,MTN,1,9,476000.00,5,4,3,543,Loyal
+981,Layla Rifai,Rif Dimashq,MTN,MTN Syria,MTN,61,8,805000.00,2,4,5,245,At Risk
+982,Fatima Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,87,9,736000.00,1,4,4,144,At Risk
+983,Maher Zoubi,Daraa,MTN,MTN Syria,MTN,23,7,328000.00,4,3,2,432,Loyal
+984,Reem Masri,Latakia,MTN,MTN Syria,MTN,12,64,4314000.00,4,5,5,455,Champions
+985,Reem Kurdi,Aleppo,MTN,MTN Syria,MTN,13,6,276000.00,4,2,2,422,Other
+986,Waleed Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,5,8,453000.00,5,4,3,543,Loyal
+987,Ibrahim Kurdi,Daraa,MTN,MTN Syria,MTN,80,9,445000.00,1,4,3,143,At Risk
+988,Omar Sayed,Latakia,MTN,MTN Syria,MTN,15,7,300000.00,4,3,2,432,Loyal
+989,Reem Kurdi,Damascus,MTN,MTN Syria,MTN,86,6,243000.00,1,2,1,121,Lost
+990,Layla Souri,Aleppo,MTN,MTN Syria,MTN,30,9,650000.00,3,4,4,344,Loyal
+991,Mustafa Masri,Daraa,MTN,MTN Syria,MTN,14,8,453000.00,4,4,3,443,Loyal
+992,Noor Ahmad,Latakia,MTN,MTN Syria,MTN,49,5,495000.00,2,2,3,223,Other
+993,Aisha Zoubi,Raqqa,MTN,MTN Syria,MTN,44,3,210000.00,3,1,1,311,Other
+994,Omar Rifai,Homs,MTN,MTN Syria,MTN,26,11,698000.00,3,5,4,354,Loyal
+995,Fatima Khatib,Raqqa,MTN,MTN Syria,MTN,20,5,695000.00,4,2,4,424,Other
+996,Yousef Tarabulsi,Deir ez-Zor,MTN,MTN Syria,MTN,27,10,506000.00,3,5,3,353,Loyal
+997,Rana Ali,Aleppo,MTN,MTN Syria,MTN,261,1,35000.00,1,1,1,111,Lost
+998,Noor Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,105,4,355000.00,1,1,2,112,Lost
+999,Zainab Rifai,Homs,MTN,MTN Syria,MTN,6,68,5703000.00,5,5,5,555,Champions
+1000,Layla Rifai,Quneitra,MTN,MTN Syria,MTN,1,11,402000.00,5,5,2,552,Loyal
+1001,Mohammad Homsi,Quneitra,MTN,MTN Syria,MTN,7,11,788000.00,5,5,5,555,Champions
+1002,Mustafa Omar,As-Suwayda,MTN,MTN Syria,MTN,6,8,510000.00,5,4,3,543,Loyal
+1003,Rana Souri,Homs,MTN,MTN Syria,MTN,20,11,1148000.00,4,5,5,455,Champions
+1004,Maryam Khatib,Aleppo,MTN,MTN Syria,MTN,29,10,427000.00,3,5,3,353,Loyal
+1005,Maher Rifai,Tartus,MTN,MTN Syria,MTN,60,7,428000.00,2,3,3,233,At Risk
+1006,Hussein Zoubi,Daraa,MTN,MTN Syria,MTN,73,6,300000.00,2,2,2,222,Other
+1007,Aisha Ali,Aleppo,MTN,MTN Syria,MTN,15,8,238000.00,4,4,1,441,Loyal
+1008,Ali Omar,Rif Dimashq,MTN,MTN Syria,MTN,44,5,71000.00,3,2,1,321,Other
+1009,Omar Masri,Idlib,MTN,MTN Syria,MTN,7,8,576000.00,5,4,4,544,Champions
+1010,Omar Khatib,Tartus,MTN,MTN Syria,MTN,133,5,475000.00,1,2,3,123,Lost
+1011,Sami Ahmad,Hama,MTN,MTN Syria,MTN,1,10,468000.00,5,5,3,553,Loyal
+1012,Hussein Halabi,Tartus,MTN,MTN Syria,MTN,204,3,258000.00,1,1,1,111,Lost
+1013,Fatima Shami,Rif Dimashq,MTN,MTN Syria,MTN,4,8,960000.00,5,4,5,545,Champions
+1014,Omar Ahmad,As-Suwayda,MTN,MTN Syria,MTN,13,9,845000.00,4,4,5,445,Champions
+1015,Hussein Shami,Homs,MTN,MTN Syria,MTN,8,7,373000.00,5,3,2,532,Loyal
+1016,Ibrahim Ahmad,Deir ez-Zor,MTN,MTN Syria,MTN,20,6,306000.00,4,2,2,422,Other
+1017,Noor Tarabulsi,Aleppo,MTN,MTN Syria,MTN,33,8,358000.00,3,4,2,342,Loyal
+1018,Huda Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,73,4,370000.00,2,1,2,212,Other
+1019,Omar Homsi,Aleppo,MTN,MTN Syria,MTN,144,2,43000.00,1,1,1,111,Lost
+1020,Bashar Shami,Quneitra,MTN,MTN Syria,MTN,43,8,475000.00,3,4,3,343,Loyal
+1021,Sarah Hassan,Idlib,MTN,MTN Syria,MTN,27,7,1045000.00,3,3,5,335,Loyal
+1022,Mohammad Khatib,Idlib,MTN,MTN Syria,MTN,30,11,881000.00,3,5,5,355,Loyal
+1023,Ibrahim Halabi,Rif Dimashq,MTN,MTN Syria,MTN,66,9,441000.00,2,4,3,243,At Risk
+1024,Mohammad Masri,Deir ez-Zor,MTN,MTN Syria,MTN,147,4,310000.00,1,1,2,112,Lost
+1025,Mohammad Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,28,6,326000.00,3,2,2,322,Other
+1026,Noor Souri,Al-Hasakah,MTN,MTN Syria,MTN,10,8,548000.00,5,4,3,543,Loyal
+1027,Sarah Omar,Idlib,MTN,MTN Syria,MTN,19,7,403000.00,4,3,2,432,Loyal
+1028,Nizar Rifai,Aleppo,MTN,MTN Syria,MTN,100,9,1030000.00,1,4,5,145,At Risk
+1029,Hussein Rifai,Quneitra,MTN,MTN Syria,MTN,67,13,713000.00,2,5,4,254,At Risk
+1030,Ali Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,1,5,268000.00,5,2,1,521,Other
+1031,Ali Homsi,Quneitra,MTN,MTN Syria,MTN,68,5,625000.00,2,2,4,224,Other
+1032,Fatima Rifai,As-Suwayda,MTN,MTN Syria,MTN,9,63,3340000.00,5,5,5,555,Champions
+1033,Rana Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,20,11,641000.00,4,5,4,454,Champions
+1034,Reem Homsi,Homs,MTN,MTN Syria,MTN,56,5,435000.00,2,2,3,223,Other
+1035,Fatima Tarabulsi,Tartus,MTN,MTN Syria,MTN,6,9,578000.00,5,4,4,544,Champions
+1036,Nizar Masri,Homs,MTN,MTN Syria,MTN,49,9,418000.00,2,4,3,243,At Risk
+1037,Bashar Souri,Hama,MTN,MTN Syria,MTN,148,4,230000.00,1,1,1,111,Lost
+1038,Ali Khatib,Hama,MTN,MTN Syria,MTN,13,9,733000.00,4,4,4,444,Champions
+1039,Ibrahim Hassan,Homs,MTN,MTN Syria,MTN,18,5,295000.00,4,2,2,422,Other
+1040,Omar Masri,Deir ez-Zor,MTN,MTN Syria,MTN,13,13,999000.00,4,5,5,455,Champions
+1041,Yousef Khatib,Latakia,MTN,MTN Syria,MTN,62,7,558000.00,2,3,4,234,At Risk
+1042,Noor Zoubi,As-Suwayda,MTN,MTN Syria,MTN,74,3,188000.00,2,1,1,211,Other
+1043,Layla Hassan,Homs,MTN,MTN Syria,MTN,10,3,105000.00,5,1,1,511,New
+1044,Sarah Dimashqi,Homs,MTN,MTN Syria,MTN,119,3,178000.00,1,1,1,111,Lost
+1045,Khaled Khatib,Latakia,MTN,MTN Syria,MTN,109,9,462000.00,1,4,3,143,At Risk
+1046,Zainab Dimashqi,Raqqa,MTN,MTN Syria,MTN,69,7,648000.00,2,3,4,234,At Risk
+1047,Nizar Sayed,Daraa,MTN,MTN Syria,MTN,6,64,3431000.00,5,5,5,555,Champions
+1048,Fatima Khatib,Raqqa,MTN,MTN Syria,MTN,12,7,903000.00,4,3,5,435,Loyal
+1049,Reem Tarabulsi,Homs,MTN,MTN Syria,MTN,35,8,1123000.00,3,4,5,345,Loyal
+1050,Zainab Ali,Raqqa,MTN,MTN Syria,MTN,43,8,346000.00,3,4,2,342,Loyal
+1051,Mustafa Ali,Hama,MTN,MTN Syria,MTN,21,10,402000.00,4,5,2,452,Loyal
+1052,Ahmad Kurdi,Quneitra,MTN,MTN Syria,MTN,71,9,603000.00,2,4,4,244,At Risk
+1053,Hussein Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,64,7,179000.00,2,3,1,231,At Risk
+1054,Maryam Dimashqi,Quneitra,MTN,MTN Syria,MTN,7,6,68000.00,5,2,1,521,Other
+1055,Maher Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,127,8,680000.00,1,4,4,144,At Risk
+1056,Ahmad Rifai,Homs,MTN,MTN Syria,MTN,178,3,130000.00,1,1,1,111,Lost
+1057,Nizar Kurdi,Aleppo,MTN,MTN Syria,MTN,90,5,110000.00,1,2,1,121,Lost
+1058,Sarah Kurdi,Idlib,MTN,MTN Syria,MTN,63,10,479000.00,2,5,3,253,At Risk
+1059,Hassan Masri,Damascus,MTN,MTN Syria,MTN,1,9,703000.00,5,4,4,544,Champions
+1060,Aisha Homsi,Hama,MTN,MTN Syria,MTN,53,7,405000.00,2,3,2,232,At Risk
+1061,Mustafa Omar,Daraa,MTN,MTN Syria,MTN,45,7,535000.00,3,3,3,333,Loyal
+1062,Zainab Sayed,Al-Hasakah,MTN,MTN Syria,MTN,9,11,819000.00,5,5,5,555,Champions
+1063,Yousef Ahmad,Raqqa,MTN,MTN Syria,MTN,10,15,955000.00,5,5,5,555,Champions
+1064,Nizar Sayed,Aleppo,MTN,MTN Syria,MTN,7,5,471000.00,5,2,3,523,Other
+1065,Layla Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,9,5,590000.00,5,2,4,524,Other
+1066,Hassan Ali,Al-Hasakah,MTN,MTN Syria,MTN,3,6,253000.00,5,2,1,521,Other
+1067,Fatima Khatib,Idlib,MTN,MTN Syria,MTN,30,3,163000.00,3,1,1,311,Other
+1068,Nizar Omar,Idlib,MTN,MTN Syria,MTN,25,11,660000.00,3,5,4,354,Loyal
+1069,Sami Hassan,Al-Hasakah,MTN,MTN Syria,MTN,17,7,245000.00,4,3,1,431,Loyal
+1070,Yousef Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,123,6,635000.00,1,2,4,124,Lost
+1071,Hussein Sayed,Aleppo,MTN,MTN Syria,MTN,26,6,180000.00,3,2,1,321,Other
+1072,Khaled Hassan,Homs,MTN,MTN Syria,MTN,20,5,136000.00,4,2,1,421,Other
+1073,Mohammad Souri,Quneitra,MTN,MTN Syria,MTN,44,11,628000.00,3,5,4,354,Loyal
+1074,Waleed Halabi,Aleppo,MTN,MTN Syria,MTN,79,7,765000.00,1,3,5,135,At Risk
+1075,Maher Hassan,Deir ez-Zor,MTN,MTN Syria,MTN,34,3,226000.00,3,1,1,311,Other
+1076,Hassan Khatib,As-Suwayda,MTN,MTN Syria,MTN,25,10,563000.00,3,5,4,354,Loyal
+1077,Sami Kurdi,As-Suwayda,MTN,MTN Syria,MTN,45,9,584000.00,3,4,4,344,Loyal
+1078,Omar Homsi,Aleppo,MTN,MTN Syria,MTN,6,10,523000.00,5,5,3,553,Loyal
+1079,Hussein Kurdi,Latakia,MTN,MTN Syria,MTN,59,7,425000.00,2,3,3,233,At Risk
+1080,Fatima Souri,Daraa,MTN,MTN Syria,MTN,61,3,74000.00,2,1,1,211,Other
+1081,Zainab Rifai,Latakia,MTN,MTN Syria,MTN,139,6,530000.00,1,2,3,123,Lost
+1082,Ahmad Khatib,As-Suwayda,MTN,MTN Syria,MTN,119,7,728000.00,1,3,4,134,At Risk
+1083,Hassan Rifai,Homs,MTN,MTN Syria,MTN,12,9,553000.00,4,4,4,444,Champions
+1084,Khaled Ali,Rif Dimashq,MTN,MTN Syria,MTN,88,5,190000.00,1,2,1,121,Lost
+1085,Maryam Hassan,Deir ez-Zor,MTN,MTN Syria,MTN,9,52,3686000.00,5,5,5,555,Champions
+1086,Mohammad Ali,Al-Hasakah,MTN,MTN Syria,MTN,62,6,588000.00,2,2,4,224,Other
+1087,Hassan Sayed,Al-Hasakah,MTN,MTN Syria,MTN,51,7,430000.00,2,3,3,233,At Risk
+1088,Ali Shami,Daraa,MTN,MTN Syria,MTN,84,9,905000.00,1,4,5,145,At Risk
+1089,Khaled Souri,Quneitra,MTN,MTN Syria,MTN,16,6,331000.00,4,2,2,422,Other
+1090,Hassan Hassan,Deir ez-Zor,MTN,MTN Syria,MTN,22,11,692000.00,4,5,4,454,Champions
+1091,Huda Masri,Daraa,MTN,MTN Syria,MTN,1,5,143000.00,5,2,1,521,Other
+1092,Reem Ali,Daraa,MTN,MTN Syria,MTN,10,9,893000.00,5,4,5,545,Champions
+1093,Maryam Souri,Raqqa,MTN,MTN Syria,MTN,117,4,345000.00,1,1,2,112,Lost
+1094,Mohammad Zoubi,Quneitra,MTN,MTN Syria,MTN,26,4,230000.00,3,1,1,311,Other
+1095,Omar Halabi,Idlib,MTN,MTN Syria,MTN,3,5,528000.00,5,2,3,523,Other
+1096,Mohammad Souri,Aleppo,MTN,MTN Syria,MTN,10,9,706000.00,5,4,4,544,Champions
+1097,Yousef Sayed,Rif Dimashq,MTN,MTN Syria,MTN,8,9,1285000.00,5,4,5,545,Champions
+1098,Bashar Kurdi,Damascus,MTN,MTN Syria,MTN,53,6,330000.00,2,2,2,222,Other
+1099,Hussein Masri,Quneitra,MTN,MTN Syria,MTN,60,4,520000.00,2,1,3,213,Other
+1100,Mustafa Halabi,Idlib,MTN,MTN Syria,MTN,11,8,450000.00,4,4,3,443,Loyal
+1101,Noor Omar,Raqqa,MTN,MTN Syria,MTN,1,8,1200000.00,5,4,5,545,Champions
+1102,Khaled Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,1,11,587000.00,5,5,4,554,Champions
+1103,Rana Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,61,6,595000.00,2,2,4,224,Other
+1104,Hussein Ahmad,Raqqa,MTN,MTN Syria,MTN,52,7,366000.00,2,3,2,232,At Risk
+1105,Maher Khatib,Homs,MTN,MTN Syria,MTN,91,7,355000.00,1,3,2,132,At Risk
+1106,Bashar Hassan,Hama,MTN,MTN Syria,MTN,49,6,368000.00,2,2,2,222,Other
+1107,Bashar Dimashqi,Al-Hasakah,MTN,MTN Syria,MTN,58,7,355000.00,2,3,2,232,At Risk
+1108,Ahmad Masri,Deir ez-Zor,MTN,MTN Syria,MTN,16,8,558000.00,4,4,4,444,Champions
+1109,Sami Zoubi,Hama,MTN,MTN Syria,MTN,39,9,475000.00,3,4,3,343,Loyal
+1110,Maher Kurdi,Tartus,MTN,MTN Syria,MTN,13,6,563000.00,4,2,4,424,Other
+1111,Maher Rifai,Homs,MTN,MTN Syria,MTN,50,9,553000.00,2,4,4,244,At Risk
+1112,Waleed Souri,Homs,MTN,MTN Syria,MTN,16,8,608000.00,4,4,4,444,Champions
+1113,Ali Omar,Raqqa,MTN,MTN Syria,MTN,47,4,270000.00,2,1,1,211,Other
+1114,Maher Masri,Hama,MTN,MTN Syria,MTN,114,5,415000.00,1,2,3,123,Lost
+1115,Bashar Homsi,Damascus,MTN,MTN Syria,MTN,122,5,318000.00,1,2,2,122,Lost
+1116,Sarah Kurdi,Latakia,MTN,MTN Syria,MTN,35,8,490000.00,3,4,3,343,Loyal
+1117,Noor Sayed,Deir ez-Zor,MTN,MTN Syria,MTN,26,7,324000.00,3,3,2,332,Loyal
+1118,Sarah Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,4,8,451000.00,5,4,3,543,Loyal
+1119,Aisha Kurdi,Latakia,MTN,MTN Syria,MTN,12,75,4658000.00,4,5,5,455,Champions
+1120,Zainab Ali,Aleppo,MTN,MTN Syria,MTN,13,9,683000.00,4,4,4,444,Champions
+1121,Layla Sayed,Al-Hasakah,MTN,MTN Syria,MTN,10,9,825000.00,5,4,5,545,Champions
+1122,Ali Halabi,Idlib,MTN,MTN Syria,MTN,68,8,448000.00,2,4,3,243,At Risk
+1123,Ibrahim Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,8,13,1033000.00,5,5,5,555,Champions
+1124,Huda Shami,Al-Hasakah,MTN,MTN Syria,MTN,12,12,731000.00,4,5,4,454,Champions
+1125,Ahmad Shami,Hama,MTN,MTN Syria,MTN,3,4,330000.00,5,1,2,512,New
+1126,Ibrahim Rifai,Damascus,MTN,MTN Syria,MTN,24,6,418000.00,3,2,3,323,Other
+1127,Noor Homsi,Latakia,MTN,MTN Syria,MTN,11,11,692000.00,4,5,4,454,Champions
+1128,Reem Shami,Damascus,MTN,MTN Syria,MTN,54,8,246000.00,2,4,1,241,At Risk
+1129,Ibrahim Homsi,Daraa,MTN,MTN Syria,MTN,17,11,621000.00,4,5,4,454,Champions
+1130,Huda Dimashqi,Daraa,MTN,MTN Syria,MTN,34,8,566000.00,3,4,4,344,Loyal
+1131,Waleed Omar,Homs,MTN,MTN Syria,MTN,83,2,100000.00,1,1,1,111,Lost
+1132,Nizar Sayed,As-Suwayda,MTN,MTN Syria,MTN,19,6,423000.00,4,2,3,423,Other
+1133,Sami Hassan,Rif Dimashq,MTN,MTN Syria,MTN,48,9,485000.00,2,4,3,243,At Risk
+1134,Ahmad Masri,Damascus,MTN,MTN Syria,MTN,21,6,433000.00,4,2,3,423,Other
+1135,Huda Sayed,As-Suwayda,MTN,MTN Syria,MTN,141,3,240000.00,1,1,1,111,Lost
+1136,Rana Hassan,Quneitra,MTN,MTN Syria,MTN,142,6,275000.00,1,2,2,122,Lost
+1137,Waleed Zoubi,Latakia,MTN,MTN Syria,MTN,5,69,4789000.00,5,5,5,555,Champions
+1138,Layla Ali,Damascus,MTN,MTN Syria,MTN,79,5,335000.00,1,2,2,122,Lost
+1139,Maryam Kurdi,Idlib,MTN,MTN Syria,MTN,1,8,480000.00,5,4,3,543,Loyal
+1140,Khaled Ahmad,Tartus,MTN,MTN Syria,MTN,18,6,765000.00,4,2,5,425,Other
+1141,Nizar Masri,Damascus,MTN,MTN Syria,MTN,15,10,488000.00,4,5,3,453,Loyal
+1142,Noor Masri,Rif Dimashq,MTN,MTN Syria,MTN,18,9,593000.00,4,4,4,444,Champions
+1143,Zainab Ahmad,Deir ez-Zor,MTN,MTN Syria,MTN,86,7,623000.00,1,3,4,134,At Risk
+1144,Omar Ahmad,Quneitra,MTN,MTN Syria,MTN,18,9,508000.00,4,4,3,443,Loyal
+1145,Ahmad Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,57,2,400000.00,2,1,2,212,Other
+1146,Hassan Omar,Damascus,MTN,MTN Syria,MTN,20,6,157000.00,4,2,1,421,Other
+1147,Maryam Zoubi,Hama,MTN,MTN Syria,MTN,77,5,293000.00,2,2,2,222,Other
+1148,Rana Dimashqi,Daraa,MTN,MTN Syria,MTN,36,5,368000.00,3,2,2,322,Other
+1149,Hassan Hassan,Rif Dimashq,MTN,MTN Syria,MTN,69,6,283000.00,2,2,2,222,Other
+1150,Hussein Shami,Aleppo,MTN,MTN Syria,MTN,4,9,985000.00,5,4,5,545,Champions
+1151,Huda Sayed,Idlib,MTN,MTN Syria,MTN,44,6,248000.00,3,2,1,321,Other
+1152,Mustafa Homsi,Hama,MTN,MTN Syria,MTN,141,10,973000.00,1,5,5,155,At Risk
+1153,Bashar Hassan,Raqqa,MTN,MTN Syria,MTN,61,6,188000.00,2,2,1,221,Other
+1154,Ahmad Hassan,Latakia,MTN,MTN Syria,MTN,6,9,471000.00,5,4,3,543,Loyal
+1155,Yousef Ali,Quneitra,MTN,MTN Syria,MTN,177,2,50000.00,1,1,1,111,Lost
+1156,Zainab Rifai,Hama,MTN,MTN Syria,MTN,22,6,663000.00,4,2,4,424,Other
+1157,Aisha Shami,Raqqa,MTN,MTN Syria,MTN,84,3,113000.00,1,1,1,111,Lost
+1158,Zainab Souri,Quneitra,MTN,MTN Syria,MTN,13,6,461000.00,4,2,3,423,Other
+1159,Ali Homsi,As-Suwayda,MTN,MTN Syria,MTN,70,9,1150000.00,2,4,5,245,At Risk
+1160,Maher Ahmad,Quneitra,MTN,MTN Syria,MTN,227,3,245000.00,1,1,1,111,Lost
+1161,Layla Ahmad,Tartus,MTN,MTN Syria,MTN,1,8,604000.00,5,4,4,544,Champions
+1162,Mustafa Homsi,Tartus,MTN,MTN Syria,MTN,158,8,451000.00,1,4,3,143,At Risk
+1163,Maher Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,2,3,238000.00,5,1,1,511,New
+1164,Ali Sayed,Idlib,MTN,MTN Syria,MTN,30,5,225000.00,3,2,1,321,Other
+1165,Layla Shami,Raqqa,MTN,MTN Syria,MTN,37,7,693000.00,3,3,4,334,Loyal
+1166,Khaled Tarabulsi,Quneitra,MTN,MTN Syria,MTN,56,4,193000.00,2,1,1,211,Other
+1167,Maryam Ali,Latakia,MTN,MTN Syria,MTN,23,6,111000.00,4,2,1,421,Other
+1168,Zainab Halabi,As-Suwayda,MTN,MTN Syria,MTN,25,5,143000.00,3,2,1,321,Other
+1169,Sami Rifai,Daraa,MTN,MTN Syria,MTN,35,8,820000.00,3,4,5,345,Loyal
+1170,Layla Sayed,Quneitra,MTN,MTN Syria,MTN,2,4,220000.00,5,1,1,511,New
+1171,Bashar Masri,As-Suwayda,MTN,MTN Syria,MTN,48,7,978000.00,2,3,5,235,At Risk
+1172,Hassan Omar,As-Suwayda,MTN,MTN Syria,MTN,34,8,396000.00,3,4,2,342,Loyal
+1173,Maher Masri,Raqqa,MTN,MTN Syria,MTN,11,7,433000.00,4,3,3,433,Loyal
+1174,Hassan Masri,Homs,MTN,MTN Syria,MTN,1,9,728000.00,5,4,4,544,Champions
+1175,Hassan Masri,Daraa,MTN,MTN Syria,MTN,10,5,93000.00,5,2,1,521,Other
+1176,Zainab Omar,Raqqa,MTN,MTN Syria,MTN,61,3,178000.00,2,1,1,211,Other
+1177,Hussein Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,55,5,293000.00,2,2,2,222,Other
+1178,Zainab Zoubi,Idlib,MTN,MTN Syria,MTN,80,8,504000.00,1,4,3,143,At Risk
+1179,Noor Hassan,Homs,MTN,MTN Syria,MTN,17,6,350000.00,4,2,2,422,Other
+1180,Zainab Souri,Damascus,MTN,MTN Syria,MTN,15,9,505000.00,4,4,3,443,Loyal
+1181,Maryam Khatib,As-Suwayda,MTN,MTN Syria,MTN,10,8,785000.00,5,4,5,545,Champions
+1182,Fatima Hassan,Raqqa,MTN,MTN Syria,MTN,95,9,411000.00,1,4,3,143,At Risk
+1183,Hussein Halabi,As-Suwayda,MTN,MTN Syria,MTN,12,8,648000.00,4,4,4,444,Champions
+1184,Waleed Masri,Rif Dimashq,MTN,MTN Syria,MTN,53,8,283000.00,2,4,2,242,At Risk
+1185,Khaled Ali,Quneitra,MTN,MTN Syria,MTN,1,60,4003000.00,5,5,5,555,Champions
+1186,Sarah Kurdi,Tartus,MTN,MTN Syria,MTN,11,9,826000.00,4,4,5,445,Champions
+1187,Yousef Homsi,Latakia,MTN,MTN Syria,MTN,76,11,963000.00,2,5,5,255,At Risk
+1188,Reem Shami,Hama,MTN,MTN Syria,MTN,30,7,354000.00,3,3,2,332,Loyal
+1189,Omar Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,46,5,218000.00,2,2,1,221,Other
+1190,Aisha Sayed,Rif Dimashq,MTN,MTN Syria,MTN,33,6,313000.00,3,2,2,322,Other
+1191,Nizar Ali,Raqqa,MTN,MTN Syria,MTN,48,12,769000.00,2,5,5,255,At Risk
+1192,Rana Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,81,4,383000.00,1,1,2,112,Lost
+1193,Ali Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,70,10,669000.00,2,5,4,254,At Risk
+1194,Layla Homsi,Raqqa,MTN,MTN Syria,MTN,6,59,3182000.00,5,5,5,555,Champions
+1195,Ahmad Sayed,Rif Dimashq,MTN,MTN Syria,MTN,6,11,1368000.00,5,5,5,555,Champions
+1196,Maher Ahmad,Al-Hasakah,MTN,MTN Syria,MTN,88,7,625000.00,1,3,4,134,At Risk
+1197,Yousef Masri,Quneitra,MTN,MTN Syria,MTN,22,6,250000.00,4,2,1,421,Other
+1198,Reem Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,21,10,850000.00,4,5,5,455,Champions
+1199,Huda Omar,Hama,MTN,MTN Syria,MTN,12,8,720000.00,4,4,4,444,Champions
+1200,Ahmad Homsi,Tartus,MTN,MTN Syria,MTN,8,9,439000.00,5,4,3,543,Loyal
+1201,Mustafa Khatib,Quneitra,MTN,MTN Syria,MTN,51,6,835000.00,2,2,5,225,Other
+1202,Reem Masri,Al-Hasakah,MTN,MTN Syria,MTN,10,7,429000.00,5,3,3,533,Loyal
+1203,Bashar Kurdi,Rif Dimashq,MTN,MTN Syria,MTN,29,4,360000.00,3,1,2,312,Other
+1204,Noor Souri,Latakia,MTN,MTN Syria,MTN,11,63,4440000.00,4,5,5,455,Champions
+1205,Mohammad Kurdi,Homs,MTN,MTN Syria,MTN,92,4,240000.00,1,1,1,111,Lost
+1206,Fatima Homsi,Damascus,MTN,MTN Syria,MTN,28,7,668000.00,3,3,4,334,Loyal
+1207,Khaled Kurdi,Hama,MTN,MTN Syria,MTN,157,7,336000.00,1,3,2,132,At Risk
+1208,Sami Tarabulsi,Rif Dimashq,MTN,MTN Syria,MTN,3,77,6755000.00,5,5,5,555,Champions
+1209,Hussein Dimashqi,Rif Dimashq,MTN,MTN Syria,MTN,177,4,323000.00,1,1,2,112,Lost
+1210,Aisha Hassan,Raqqa,MTN,MTN Syria,MTN,4,88,6404000.00,5,5,5,555,Champions
+1211,Hussein Omar,Tartus,MTN,MTN Syria,MTN,2,67,4830000.00,5,5,5,555,Champions
+1212,Ahmad Omar,Quneitra,MTN,MTN Syria,MTN,9,8,338000.00,5,4,2,542,Loyal
+1213,Noor Ahmad,Raqqa,MTN,MTN Syria,MTN,26,8,571000.00,3,4,4,344,Loyal
+1214,Waleed Hassan,Tartus,MTN,MTN Syria,MTN,5,8,708000.00,5,4,4,544,Champions
+1215,Noor Ahmad,Tartus,MTN,MTN Syria,MTN,18,10,1033000.00,4,5,5,455,Champions
+1216,Ali Sayed,Damascus,MTN,MTN Syria,MTN,298,2,165000.00,1,1,1,111,Lost
+1217,Noor Ahmad,Raqqa,MTN,MTN Syria,MTN,86,4,250000.00,1,1,1,111,Lost
+1218,Ibrahim Kurdi,Daraa,MTN,MTN Syria,MTN,111,8,595000.00,1,4,4,144,At Risk
+1219,Aisha Sayed,Al-Hasakah,MTN,MTN Syria,MTN,46,6,483000.00,2,2,3,223,Other
+1220,Nizar Dimashqi,Hama,MTN,MTN Syria,MTN,13,5,418000.00,4,2,3,423,Other
+1221,Noor Hassan,Quneitra,MTN,MTN Syria,MTN,73,8,778000.00,2,4,5,245,At Risk
+1222,Waleed Shami,Hama,MTN,MTN Syria,MTN,126,5,123000.00,1,2,1,121,Lost
+1223,Sami Dimashqi,Al-Hasakah,MTN,MTN Syria,MTN,20,7,611000.00,4,3,4,434,Loyal
+1224,Sami Omar,Rif Dimashq,MTN,MTN Syria,MTN,64,5,358000.00,2,2,2,222,Other
+1225,Nizar Ahmad,Hama,MTN,MTN Syria,MTN,85,3,118000.00,1,1,1,111,Lost
+1226,Waleed Ali,Tartus,MTN,MTN Syria,MTN,52,7,256000.00,2,3,1,231,At Risk
+1227,Ali Kurdi,Tartus,MTN,MTN Syria,MTN,48,8,443000.00,2,4,3,243,At Risk
+1228,Yousef Ahmad,Hama,MTN,MTN Syria,MTN,113,7,428000.00,1,3,3,133,At Risk
+1229,Maher Shami,Damascus,MTN,MTN Syria,MTN,31,6,171000.00,3,2,1,321,Other
+1230,Bashar Souri,As-Suwayda,MTN,MTN Syria,MTN,7,8,530000.00,5,4,3,543,Loyal
+1231,Rana Dimashqi,Raqqa,MTN,MTN Syria,MTN,32,7,162000.00,3,3,1,331,Loyal
+1232,Hussein Souri,Tartus,MTN,MTN Syria,MTN,75,4,215000.00,2,1,1,211,Other
+1233,Hassan Masri,Latakia,MTN,MTN Syria,MTN,56,6,565000.00,2,2,4,224,Other
+1234,Mustafa Halabi,Idlib,MTN,MTN Syria,MTN,63,7,620000.00,2,3,4,234,At Risk
+1235,Mohammad Tarabulsi,Raqqa,MTN,MTN Syria,MTN,3,8,566000.00,5,4,4,544,Champions
+1236,Reem Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,66,8,269000.00,2,4,1,241,At Risk
+1237,Yousef Shami,Tartus,MTN,MTN Syria,MTN,8,90,6349000.00,5,5,5,555,Champions
+1238,Rana Tarabulsi,Latakia,MTN,MTN Syria,MTN,72,8,636000.00,2,4,4,244,At Risk
+1239,Khaled Zoubi,Latakia,MTN,MTN Syria,MTN,8,10,508000.00,5,5,3,553,Loyal
+1240,Mohammad Dimashqi,Damascus,MTN,MTN Syria,MTN,10,5,385000.00,5,2,2,522,Other
+1241,Mustafa Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,13,6,665000.00,4,2,4,424,Other
+1242,Rana Zoubi,Deir ez-Zor,MTN,MTN Syria,MTN,2,57,4749000.00,5,5,5,555,Champions
+1243,Maher Masri,Quneitra,MTN,MTN Syria,MTN,164,6,435000.00,1,2,3,123,Lost
+1244,Nizar Dimashqi,Aleppo,MTN,MTN Syria,MTN,124,3,125000.00,1,1,1,111,Lost
+1245,Zainab Zoubi,Idlib,MTN,MTN Syria,MTN,48,6,670000.00,2,2,4,224,Other
+1246,Noor Omar,Raqqa,MTN,MTN Syria,MTN,3,15,913000.00,5,5,5,555,Champions
+1247,Zainab Ahmad,Damascus,MTN,MTN Syria,MTN,145,5,225000.00,1,2,1,121,Lost
+1248,Hussein Kurdi,As-Suwayda,MTN,MTN Syria,MTN,26,6,610000.00,3,2,4,324,Other
+1249,Bashar Masri,Quneitra,MTN,MTN Syria,MTN,44,9,747000.00,3,4,4,344,Loyal
+1250,Nizar Tarabulsi,Aleppo,MTN,MTN Syria,MTN,59,11,696000.00,2,5,4,254,At Risk
+1251,Yousef Halabi,Homs,MTN,MTN Syria,MTN,12,8,655000.00,4,4,4,444,Champions
+1252,Yousef Tarabulsi,Aleppo,MTN,MTN Syria,MTN,127,6,450000.00,1,2,3,123,Lost
+1253,Mustafa Sayed,Hama,MTN,MTN Syria,MTN,66,7,533000.00,2,3,3,233,At Risk
+1254,Ali Masri,Homs,MTN,MTN Syria,MTN,16,4,260000.00,4,1,1,411,New
+1255,Yousef Halabi,Hama,MTN,MTN Syria,MTN,118,5,340000.00,1,2,2,122,Lost
+1256,Maryam Homsi,Hama,MTN,MTN Syria,MTN,15,9,1090000.00,4,4,5,445,Champions
+1257,Yousef Shami,Hama,MTN,MTN Syria,MTN,93,6,218000.00,1,2,1,121,Lost
+1258,Zainab Omar,Hama,MTN,MTN Syria,MTN,20,7,548000.00,4,3,3,433,Loyal
+1259,Fatima Zoubi,Aleppo,MTN,MTN Syria,MTN,15,10,518000.00,4,5,3,453,Loyal
+1260,Bashar Zoubi,Idlib,MTN,MTN Syria,MTN,118,7,568000.00,1,3,4,134,At Risk
+1261,Sami Kurdi,Homs,MTN,MTN Syria,MTN,32,10,833000.00,3,5,5,355,Loyal
+1262,Sarah Halabi,Quneitra,MTN,MTN Syria,MTN,4,7,625000.00,5,3,4,534,Loyal
+1263,Hussein Kurdi,Latakia,MTN,MTN Syria,MTN,26,5,410000.00,3,2,2,322,Other
+1264,Nizar Tarabulsi,Rif Dimashq,MTN,MTN Syria,MTN,78,5,91000.00,1,2,1,121,Lost
+1265,Aisha Khatib,Al-Hasakah,MTN,MTN Syria,MTN,126,3,170000.00,1,1,1,111,Lost
+1266,Nizar Ahmad,Raqqa,MTN,MTN Syria,MTN,184,4,685000.00,1,1,4,114,Lost
+1267,Omar Ali,As-Suwayda,MTN,MTN Syria,MTN,52,7,275000.00,2,3,2,232,At Risk
+1268,Ibrahim Kurdi,Raqqa,MTN,MTN Syria,MTN,102,5,340000.00,1,2,2,122,Lost
+1269,Omar Sayed,Raqqa,MTN,MTN Syria,MTN,17,8,223000.00,4,4,1,441,Loyal
+1270,Fatima Khatib,Quneitra,MTN,MTN Syria,MTN,51,7,271000.00,2,3,1,231,At Risk
+1271,Ibrahim Halabi,Damascus,MTN,MTN Syria,MTN,122,3,195000.00,1,1,1,111,Lost
+1272,Bashar Ahmad,Rif Dimashq,MTN,MTN Syria,MTN,30,8,763000.00,3,4,5,345,Loyal
+1273,Layla Masri,Idlib,MTN,MTN Syria,MTN,4,8,418000.00,5,4,3,543,Loyal
+1274,Ibrahim Kurdi,Homs,MTN,MTN Syria,MTN,140,8,505000.00,1,4,3,143,At Risk
+1275,Noor Sayed,Homs,MTN,MTN Syria,MTN,5,10,904000.00,5,5,5,555,Champions
+1276,Nizar Shami,Idlib,MTN,MTN Syria,MTN,199,4,210000.00,1,1,1,111,Lost
+1277,Maryam Omar,Homs,MTN,MTN Syria,MTN,9,10,577000.00,5,5,4,554,Champions
+1278,Hassan Rifai,Aleppo,MTN,MTN Syria,MTN,38,4,158000.00,3,1,1,311,Other
+1279,Nizar Ahmad,Tartus,MTN,MTN Syria,MTN,56,5,460000.00,2,2,3,223,Other
+1280,Sami Omar,Raqqa,MTN,MTN Syria,MTN,25,7,380000.00,3,3,2,332,Loyal
+1281,Ibrahim Kurdi,Hama,MTN,MTN Syria,MTN,153,4,220000.00,1,1,1,111,Lost
+1282,Sami Omar,Rif Dimashq,MTN,MTN Syria,MTN,85,12,1055000.00,1,5,5,155,At Risk
+1283,Nizar Sayed,Latakia,MTN,MTN Syria,MTN,22,4,178000.00,4,1,1,411,New
+1284,Ibrahim Khatib,Aleppo,MTN,MTN Syria,MTN,86,2,205000.00,1,1,1,111,Lost
+1285,Waleed Rifai,Raqqa,MTN,MTN Syria,MTN,179,5,131000.00,1,2,1,121,Lost
+1286,Zainab Masri,Al-Hasakah,MTN,MTN Syria,MTN,101,3,48000.00,1,1,1,111,Lost
+1287,Waleed Homsi,Aleppo,MTN,MTN Syria,MTN,97,9,523000.00,1,4,3,143,At Risk
+1288,Omar Rifai,Daraa,MTN,MTN Syria,MTN,11,7,455000.00,4,3,3,433,Loyal
+1289,Rana Omar,Quneitra,MTN,MTN Syria,MTN,27,7,546000.00,3,3,3,333,Loyal
+1290,Zainab Shami,Rif Dimashq,MTN,MTN Syria,MTN,81,8,525000.00,1,4,3,143,At Risk
+1291,Ali Shami,Hama,MTN,MTN Syria,MTN,27,7,563000.00,3,3,4,334,Loyal
+1292,Bashar Halabi,Latakia,MTN,MTN Syria,MTN,112,7,252000.00,1,3,1,131,At Risk
+1293,Ali Shami,Aleppo,MTN,MTN Syria,MTN,18,8,690000.00,4,4,4,444,Champions
+1294,Maher Homsi,Rif Dimashq,MTN,MTN Syria,MTN,16,6,460000.00,4,2,3,423,Other
+1295,Yousef Hassan,Raqqa,MTN,MTN Syria,MTN,39,4,190000.00,3,1,1,311,Other
+1296,Aisha Rifai,Daraa,MTN,MTN Syria,MTN,14,5,210000.00,4,2,1,421,Other
+1297,Bashar Souri,Aleppo,MTN,MTN Syria,MTN,7,68,4162000.00,5,5,5,555,Champions
+1298,Yousef Tarabulsi,Homs,MTN,MTN Syria,MTN,4,5,316000.00,5,2,2,522,Other
+1299,Mustafa Ali,Idlib,MTN,MTN Syria,MTN,20,6,564000.00,4,2,4,424,Other
+1300,Sami Shami,Homs,MTN,MTN Syria,MTN,7,9,444000.00,5,4,3,543,Loyal
+1301,Omar Sayed,Damascus,MTN,MTN Syria,MTN,21,8,623000.00,4,4,4,444,Champions
+1302,Bashar Halabi,Homs,MTN,MTN Syria,MTN,58,4,263000.00,2,1,1,211,Other
+1303,Noor Dimashqi,Daraa,MTN,MTN Syria,MTN,52,7,500000.00,2,3,3,233,At Risk
+1304,Nizar Khatib,Damascus,MTN,MTN Syria,MTN,94,3,113000.00,1,1,1,111,Lost
+1305,Huda Souri,Tartus,MTN,MTN Syria,MTN,2,7,334000.00,5,3,2,532,Loyal
+1306,Rana Masri,Deir ez-Zor,MTN,MTN Syria,MTN,18,8,268000.00,4,4,1,441,Loyal
+1307,Aisha Ali,Rif Dimashq,MTN,MTN Syria,MTN,17,7,328000.00,4,3,2,432,Loyal
+1308,Bashar Souri,Tartus,MTN,MTN Syria,MTN,87,5,398000.00,1,2,2,122,Lost
+1309,Aisha Ahmad,Homs,MTN,MTN Syria,MTN,137,7,476000.00,1,3,3,133,At Risk
+1310,Aisha Hassan,Tartus,MTN,MTN Syria,MTN,2,10,976000.00,5,5,5,555,Champions
+1311,Hassan Souri,As-Suwayda,MTN,MTN Syria,MTN,2,5,475000.00,5,2,3,523,Other
+1312,Maryam Dimashqi,Idlib,MTN,MTN Syria,MTN,186,4,590000.00,1,1,4,114,Lost
+1313,Ali Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,26,8,267000.00,3,4,1,341,Loyal
+1314,Fatima Homsi,Quneitra,MTN,MTN Syria,MTN,2,7,238000.00,5,3,1,531,Loyal
+1315,Rana Zoubi,As-Suwayda,MTN,MTN Syria,MTN,22,8,578000.00,4,4,4,444,Champions
+1316,Huda Souri,Hama,MTN,MTN Syria,MTN,9,7,243000.00,5,3,1,531,Loyal
+1317,Fatima Ahmad,Idlib,MTN,MTN Syria,MTN,143,1,80000.00,1,1,1,111,Lost
+1318,Khaled Khatib,Raqqa,MTN,MTN Syria,MTN,10,12,1210000.00,5,5,5,555,Champions
+1319,Khaled Masri,Damascus,MTN,MTN Syria,MTN,32,9,218000.00,3,4,1,341,Loyal
+1320,Reem Halabi,Quneitra,MTN,MTN Syria,MTN,2,9,606000.00,5,4,4,544,Champions
+1321,Hassan Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,36,18,946000.00,3,5,5,355,Loyal
+1322,Mohammad Homsi,Damascus,MTN,MTN Syria,MTN,5,4,293000.00,5,1,2,512,New
+1323,Nizar Masri,Deir ez-Zor,MTN,MTN Syria,MTN,23,9,398000.00,4,4,2,442,Loyal
+1324,Zainab Ahmad,Tartus,MTN,MTN Syria,MTN,22,5,400000.00,4,2,2,422,Other
+1325,Reem Sayed,Daraa,MTN,MTN Syria,MTN,66,7,590000.00,2,3,4,234,At Risk
+1326,Noor Zoubi,Daraa,MTN,MTN Syria,MTN,71,9,703000.00,2,4,4,244,At Risk
+1327,Huda Kurdi,Quneitra,MTN,MTN Syria,MTN,68,10,330000.00,2,5,2,252,At Risk
+1328,Ibrahim Dimashqi,Aleppo,MTN,MTN Syria,MTN,27,11,595000.00,3,5,4,354,Loyal
+1329,Hussein Omar,Idlib,MTN,MTN Syria,MTN,60,7,313000.00,2,3,2,232,At Risk
+1330,Khaled Kurdi,Tartus,MTN,MTN Syria,MTN,12,9,554000.00,4,4,4,444,Champions
+1331,Waleed Omar,Homs,MTN,MTN Syria,MTN,4,14,1355000.00,5,5,5,555,Champions
+1332,Sarah Rifai,Aleppo,MTN,MTN Syria,MTN,45,7,393000.00,2,3,2,232,At Risk
+1333,Waleed Rifai,Al-Hasakah,MTN,MTN Syria,MTN,152,7,515000.00,1,3,3,133,At Risk
+1334,Noor Ahmad,Aleppo,MTN,MTN Syria,MTN,3,77,5972000.00,5,5,5,555,Champions
+1335,Mohammad Ahmad,Damascus,MTN,MTN Syria,MTN,274,4,230000.00,1,1,1,111,Lost
+1336,Khaled Khatib,Raqqa,MTN,MTN Syria,MTN,115,11,703000.00,1,5,4,154,At Risk
+1337,Rana Masri,Idlib,MTN,MTN Syria,MTN,2,74,4658000.00,5,5,5,555,Champions
+1338,Aisha Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,75,8,835000.00,2,4,5,245,At Risk
+1339,Fatima Zoubi,Idlib,MTN,MTN Syria,MTN,16,5,350000.00,4,2,2,422,Other
+1340,Khaled Omar,Idlib,MTN,MTN Syria,MTN,106,7,568000.00,1,3,4,134,At Risk
+1341,Mohammad Ali,Rif Dimashq,MTN,MTN Syria,MTN,3,68,5193000.00,5,5,5,555,Champions
+1342,Omar Halabi,Hama,MTN,MTN Syria,MTN,58,6,393000.00,2,2,2,222,Other
+1343,Aisha Khatib,Rif Dimashq,MTN,MTN Syria,MTN,6,5,290000.00,5,2,2,522,Other
+1344,Ibrahim Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,38,6,318000.00,3,2,2,322,Other
+1345,Waleed Kurdi,Rif Dimashq,MTN,MTN Syria,MTN,158,3,135000.00,1,1,1,111,Lost
+1346,Sarah Sayed,Rif Dimashq,MTN,MTN Syria,MTN,3,9,1181000.00,5,4,5,545,Champions
+1347,Ali Tarabulsi,Deir ez-Zor,MTN,MTN Syria,MTN,48,8,485000.00,2,4,3,243,At Risk
+1348,Ahmad Shami,Daraa,MTN,MTN Syria,MTN,77,4,111000.00,2,1,1,211,Other
+1349,Sami Homsi,Quneitra,MTN,MTN Syria,MTN,6,9,669000.00,5,4,4,544,Champions
+1350,Mohammad Rifai,Tartus,MTN,MTN Syria,MTN,5,9,560000.00,5,4,4,544,Champions
+1351,Hassan Dimashqi,Hama,MTN,MTN Syria,MTN,37,10,853000.00,3,5,5,355,Loyal
+1352,Sami Hassan,Latakia,MTN,MTN Syria,MTN,69,4,350000.00,2,1,2,212,Other
+1353,Waleed Khatib,Homs,MTN,MTN Syria,MTN,13,5,133000.00,4,2,1,421,Other
+1354,Mustafa Shami,Rif Dimashq,MTN,MTN Syria,MTN,178,6,350000.00,1,2,2,122,Lost
+1355,Sarah Sayed,Al-Hasakah,MTN,MTN Syria,MTN,112,5,483000.00,1,2,3,123,Lost
+1356,Khaled Shami,Hama,MTN,MTN Syria,MTN,32,9,995000.00,3,4,5,345,Loyal
+1357,Maryam Khatib,Raqqa,MTN,MTN Syria,MTN,8,78,5481000.00,5,5,5,555,Champions
+1358,Hassan Ahmad,Damascus,MTN,MTN Syria,MTN,14,7,423000.00,4,3,3,433,Loyal
+1359,Layla Khatib,Al-Hasakah,MTN,MTN Syria,MTN,4,12,297000.00,5,5,2,552,Loyal
+1360,Hassan Souri,Damascus,MTN,MTN Syria,MTN,1,7,585000.00,5,3,4,534,Loyal
+1361,Aisha Omar,As-Suwayda,MTN,MTN Syria,MTN,35,3,95000.00,3,1,1,311,Other
+1362,Zainab Khatib,Daraa,MTN,MTN Syria,MTN,59,3,330000.00,2,1,2,212,Other
+1363,Omar Shami,Al-Hasakah,MTN,MTN Syria,MTN,45,4,94000.00,2,1,1,211,Other
+1364,Ahmad Zoubi,Damascus,MTN,MTN Syria,MTN,3,12,1240000.00,5,5,5,555,Champions
+1365,Maryam Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,5,6,283000.00,5,2,2,522,Other
+1366,Ali Sayed,Hama,MTN,MTN Syria,MTN,38,8,460000.00,3,4,3,343,Loyal
+1367,Mustafa Sayed,Deir ez-Zor,MTN,MTN Syria,MTN,19,11,529000.00,4,5,3,453,Loyal
+1368,Fatima Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,12,5,480000.00,4,2,3,423,Other
+1369,Fatima Rifai,Damascus,MTN,MTN Syria,MTN,183,4,595000.00,1,1,4,114,Lost
+1370,Sarah Rifai,Latakia,MTN,MTN Syria,MTN,215,5,363000.00,1,2,2,122,Lost
+1371,Fatima Shami,Daraa,MTN,MTN Syria,MTN,24,10,868000.00,3,5,5,355,Loyal
+1372,Ibrahim Hassan,Rif Dimashq,MTN,MTN Syria,MTN,173,7,191000.00,1,3,1,131,At Risk
+1373,Reem Hassan,Al-Hasakah,MTN,MTN Syria,MTN,26,12,681000.00,3,5,4,354,Loyal
+1374,Khaled Sayed,Hama,MTN,MTN Syria,MTN,10,7,575000.00,5,3,4,534,Loyal
+1375,Yousef Ahmad,Idlib,MTN,MTN Syria,MTN,34,7,738000.00,3,3,4,334,Loyal
+1376,Omar Ali,Tartus,MTN,MTN Syria,MTN,105,6,890000.00,1,2,5,125,Lost
+1377,Hussein Sayed,Aleppo,MTN,MTN Syria,MTN,11,7,478000.00,4,3,3,433,Loyal
+1378,Reem Ahmad,Al-Hasakah,MTN,MTN Syria,MTN,4,7,400000.00,5,3,2,532,Loyal
+1379,Sarah Omar,Hama,MTN,MTN Syria,MTN,22,6,645000.00,4,2,4,424,Other
+1380,Noor Homsi,Quneitra,MTN,MTN Syria,MTN,52,3,155000.00,2,1,1,211,Other
+1381,Khaled Sayed,Al-Hasakah,MTN,MTN Syria,MTN,16,8,648000.00,4,4,4,444,Champions
+1382,Yousef Ahmad,Hama,MTN,MTN Syria,MTN,1,8,303000.00,5,4,2,542,Loyal
+1383,Huda Rifai,Aleppo,MTN,MTN Syria,MTN,16,9,661000.00,4,4,4,444,Champions
+1384,Sarah Hassan,Homs,MTN,MTN Syria,MTN,67,9,371000.00,2,4,2,242,At Risk
+1385,Waleed Masri,Daraa,MTN,MTN Syria,MTN,38,7,223000.00,3,3,1,331,Loyal
+1386,Khaled Kurdi,Tartus,MTN,MTN Syria,MTN,6,65,4718000.00,5,5,5,555,Champions
+1387,Bashar Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,5,7,665000.00,5,3,4,534,Loyal
+1388,Mohammad Homsi,Hama,MTN,MTN Syria,MTN,4,57,3245000.00,5,5,5,555,Champions
+1389,Hussein Dimashqi,Idlib,MTN,MTN Syria,MTN,46,13,581000.00,2,5,4,254,At Risk
+1390,Ali Souri,Homs,MTN,MTN Syria,MTN,16,7,1053000.00,4,3,5,435,Loyal
+1391,Maryam Homsi,Homs,MTN,MTN Syria,MTN,32,9,508000.00,3,4,3,343,Loyal
+1392,Hussein Masri,Idlib,MTN,MTN Syria,MTN,13,7,700000.00,4,3,4,434,Loyal
+1393,Rana Homsi,Hama,MTN,MTN Syria,MTN,4,8,1275000.00,5,4,5,545,Champions
+1394,Maher Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,5,59,4174000.00,5,5,5,555,Champions
+1395,Sami Hassan,Damascus,MTN,MTN Syria,MTN,52,8,404000.00,2,4,2,242,At Risk
+1396,Ali Dimashqi,Quneitra,MTN,MTN Syria,MTN,5,7,254000.00,5,3,1,531,Loyal
+1397,Ibrahim Rifai,Rif Dimashq,MTN,MTN Syria,MTN,103,6,360000.00,1,2,2,122,Lost
+1398,Maher Kurdi,Homs,MTN,MTN Syria,MTN,1,66,4543000.00,5,5,5,555,Champions
+1399,Hussein Ahmad,Latakia,MTN,MTN Syria,MTN,69,7,506000.00,2,3,3,233,At Risk
+1400,Omar Omar,Latakia,MTN,MTN Syria,MTN,21,3,410000.00,4,1,2,412,New
+1401,Noor Halabi,Raqqa,MTN,MTN Syria,MTN,36,12,1185000.00,3,5,5,355,Loyal
+1402,Zainab Khatib,Aleppo,MTN,MTN Syria,MTN,177,3,124000.00,1,1,1,111,Lost
+1403,Ahmad Ali,Daraa,MTN,MTN Syria,MTN,72,6,380000.00,2,2,2,222,Other
+1404,Zainab Zoubi,Deir ez-Zor,MTN,MTN Syria,MTN,135,4,348000.00,1,1,2,112,Lost
+1405,Khaled Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,114,2,105000.00,1,1,1,111,Lost
+1406,Sami Rifai,Latakia,MTN,MTN Syria,MTN,235,5,123000.00,1,2,1,121,Lost
+1407,Reem Rifai,Idlib,MTN,MTN Syria,MTN,30,3,226000.00,3,1,1,311,Other
+1408,Zainab Zoubi,Damascus,MTN,MTN Syria,MTN,49,8,350000.00,2,4,2,242,At Risk
+1409,Bashar Halabi,Homs,MTN,MTN Syria,MTN,158,5,695000.00,1,2,4,124,Lost
+1410,Zainab Omar,Homs,MTN,MTN Syria,MTN,30,9,706000.00,3,4,4,344,Loyal
+1411,Yousef Masri,Latakia,MTN,MTN Syria,MTN,9,10,723000.00,5,5,4,554,Champions
+1412,Layla Ahmad,Tartus,MTN,MTN Syria,MTN,74,6,260000.00,2,2,1,221,Other
+1413,Sami Halabi,Homs,MTN,MTN Syria,MTN,29,7,476000.00,3,3,3,333,Loyal
+1414,Noor Khatib,Raqqa,MTN,MTN Syria,MTN,36,9,854000.00,3,4,5,345,Loyal
+1415,Hassan Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,49,5,485000.00,2,2,3,223,Other
+1416,Layla Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,30,5,238000.00,3,2,1,321,Other
+1417,Ali Souri,Raqqa,MTN,MTN Syria,MTN,93,4,278000.00,1,1,2,112,Lost
+1418,Yousef Khatib,Rif Dimashq,MTN,MTN Syria,MTN,28,7,480000.00,3,3,3,333,Loyal
+1419,Mustafa Ahmad,Al-Hasakah,MTN,MTN Syria,MTN,9,11,1028000.00,5,5,5,555,Champions
+1420,Fatima Halabi,Latakia,MTN,MTN Syria,MTN,15,8,543000.00,4,4,3,443,Loyal
+1421,Mohammad Khatib,Homs,MTN,MTN Syria,MTN,115,7,376000.00,1,3,2,132,At Risk
+1422,Mustafa Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,22,10,766000.00,4,5,5,455,Champions
+1423,Waleed Homsi,Damascus,MTN,MTN Syria,MTN,41,9,976000.00,3,4,5,345,Loyal
+1424,Mohammad Dimashqi,Homs,MTN,MTN Syria,MTN,60,3,225000.00,2,1,1,211,Other
+1425,Mohammad Halabi,Latakia,MTN,MTN Syria,MTN,4,6,450000.00,5,2,3,523,Other
+1426,Hassan Ali,Idlib,MTN,MTN Syria,MTN,144,6,535000.00,1,2,3,123,Lost
+1427,Ahmad Zoubi,Daraa,MTN,MTN Syria,MTN,156,4,395000.00,1,1,2,112,Lost
+1428,Ali Homsi,Raqqa,MTN,MTN Syria,MTN,3,60,4202000.00,5,5,5,555,Champions
+1429,Noor Halabi,Aleppo,MTN,MTN Syria,MTN,82,10,563000.00,1,5,4,154,At Risk
+1430,Ahmad Shami,Quneitra,MTN,MTN Syria,MTN,10,10,620000.00,4,5,4,454,Champions
+1431,Hussein Shami,As-Suwayda,MTN,MTN Syria,MTN,90,7,356000.00,1,3,2,132,At Risk
+1432,Khaled Shami,As-Suwayda,MTN,MTN Syria,MTN,36,10,565000.00,3,5,4,354,Loyal
+1433,Noor Sayed,Latakia,MTN,MTN Syria,MTN,13,5,193000.00,4,2,1,421,Other
+1434,Khaled Masri,Daraa,MTN,MTN Syria,MTN,15,6,303000.00,4,2,2,422,Other
+1435,Huda Hassan,Al-Hasakah,MTN,MTN Syria,MTN,38,9,588000.00,3,4,4,344,Loyal
+1436,Maher Ali,Quneitra,MTN,MTN Syria,MTN,62,6,435000.00,2,2,3,223,Other
+1437,Hussein Tarabulsi,Aleppo,MTN,MTN Syria,MTN,49,4,535000.00,2,1,3,213,Other
+1438,Ahmad Sayed,Raqqa,MTN,MTN Syria,MTN,40,6,785000.00,3,2,5,325,Other
+1439,Hassan Rifai,Rif Dimashq,MTN,MTN Syria,MTN,23,9,530000.00,4,4,3,443,Loyal
+1440,Omar Hassan,Aleppo,MTN,MTN Syria,MTN,243,2,145000.00,1,1,1,111,Lost
+1441,Mustafa Rifai,Quneitra,MTN,MTN Syria,MTN,6,11,708000.00,5,5,4,554,Champions
+1442,Mohammad Ali,Latakia,MTN,MTN Syria,MTN,14,8,625000.00,4,4,4,444,Champions
+1443,Ibrahim Kurdi,Latakia,MTN,MTN Syria,MTN,105,7,878000.00,1,3,5,135,At Risk
+1444,Yousef Omar,Latakia,MTN,MTN Syria,MTN,28,5,450000.00,3,2,3,323,Other
+1445,Reem Halabi,Aleppo,MTN,MTN Syria,MTN,242,4,133000.00,1,1,1,111,Lost
+1446,Waleed Shami,Latakia,MTN,MTN Syria,MTN,8,3,225000.00,5,1,1,511,New
+1447,Nizar Ahmad,Homs,MTN,MTN Syria,MTN,54,9,481000.00,2,4,3,243,At Risk
+1448,Zainab Sayed,Rif Dimashq,MTN,MTN Syria,MTN,15,10,663000.00,4,5,4,454,Champions
+1449,Omar Ahmad,Hama,MTN,MTN Syria,MTN,102,5,290000.00,1,2,2,122,Lost
+1450,Yousef Homsi,Homs,MTN,MTN Syria,MTN,58,5,440000.00,2,2,3,223,Other
+1451,Maher Khatib,Hama,MTN,MTN Syria,MTN,88,9,838000.00,1,4,5,145,At Risk
+1452,Waleed Homsi,Homs,MTN,MTN Syria,MTN,42,14,1271000.00,3,5,5,355,Loyal
+1453,Maher Homsi,Hama,MTN,MTN Syria,MTN,18,6,560000.00,4,2,4,424,Other
+1454,Hassan Hassan,Latakia,MTN,MTN Syria,MTN,7,6,393000.00,5,2,2,522,Other
+1455,Ibrahim Ahmad,Damascus,MTN,MTN Syria,MTN,110,7,430000.00,1,3,3,133,At Risk
+1456,Yousef Sayed,Deir ez-Zor,MTN,MTN Syria,MTN,37,4,235000.00,3,1,1,311,Other
+1457,Waleed Shami,Damascus,MTN,MTN Syria,MTN,68,6,475000.00,2,2,3,223,Other
+1458,Rana Masri,Rif Dimashq,MTN,MTN Syria,MTN,46,6,158000.00,2,2,1,221,Other
+1459,Reem Ahmad,Homs,MTN,MTN Syria,MTN,282,1,35000.00,1,1,1,111,Lost
+1460,Bashar Khatib,Raqqa,MTN,MTN Syria,MTN,9,59,3849000.00,5,5,5,555,Champions
+1461,Hussein Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,19,5,230000.00,4,2,1,421,Other
+1462,Mustafa Zoubi,Daraa,MTN,MTN Syria,MTN,52,8,344000.00,2,4,2,242,At Risk
+1463,Maryam Khatib,Rif Dimashq,MTN,MTN Syria,MTN,167,3,240000.00,1,1,1,111,Lost
+1464,Zainab Homsi,Tartus,MTN,MTN Syria,MTN,7,9,441000.00,5,4,3,543,Loyal
+1465,Khaled Homsi,As-Suwayda,MTN,MTN Syria,MTN,4,10,956000.00,5,5,5,555,Champions
+1466,Zainab Zoubi,Raqqa,MTN,MTN Syria,MTN,58,9,641000.00,2,4,4,244,At Risk
+1467,Ali Souri,Rif Dimashq,MTN,MTN Syria,MTN,85,3,145000.00,1,1,1,111,Lost
+1468,Sami Zoubi,Aleppo,MTN,MTN Syria,MTN,75,7,443000.00,2,3,3,233,At Risk
+1469,Sarah Souri,Idlib,MTN,MTN Syria,MTN,171,5,378000.00,1,2,2,122,Lost
+1470,Ibrahim Khatib,Damascus,MTN,MTN Syria,MTN,3,7,365000.00,5,3,2,532,Loyal
+1471,Mohammad Halabi,Idlib,MTN,MTN Syria,MTN,26,6,863000.00,3,2,5,325,Other
+1472,Mohammad Ali,Idlib,MTN,MTN Syria,MTN,82,8,613000.00,1,4,4,144,At Risk
+1473,Maryam Ahmad,Latakia,MTN,MTN Syria,MTN,4,5,340000.00,5,2,2,522,Other
+1474,Yousef Halabi,As-Suwayda,MTN,MTN Syria,MTN,38,6,435000.00,3,2,3,323,Other
+1475,Noor Masri,Hama,MTN,MTN Syria,MTN,107,3,190000.00,1,1,1,111,Lost
+1476,Sarah Omar,Tartus,MTN,MTN Syria,MTN,61,8,333000.00,2,4,2,242,At Risk
+1477,Mustafa Tarabulsi,Latakia,MTN,MTN Syria,MTN,36,6,685000.00,3,2,4,324,Other
+1478,Bashar Rifai,Tartus,MTN,MTN Syria,MTN,188,3,58000.00,1,1,1,111,Lost
+1479,Rana Sayed,Deir ez-Zor,MTN,MTN Syria,MTN,39,3,188000.00,3,1,1,311,Other
+1480,Fatima Homsi,Raqqa,MTN,MTN Syria,MTN,163,7,301000.00,1,3,2,132,At Risk
+1481,Ali Shami,Latakia,MTN,MTN Syria,MTN,2,13,462000.00,5,5,3,553,Loyal
+1482,Rana Dimashqi,Latakia,MTN,MTN Syria,MTN,2,5,515000.00,5,2,3,523,Other
+1483,Fatima Sayed,Aleppo,MTN,MTN Syria,MTN,3,9,1000000.00,5,4,5,545,Champions
+1484,Mohammad Zoubi,Hama,MTN,MTN Syria,MTN,24,5,160000.00,3,2,1,321,Other
+1485,Noor Homsi,As-Suwayda,MTN,MTN Syria,MTN,11,11,718000.00,4,5,4,454,Champions
+1486,Layla Hassan,Raqqa,MTN,MTN Syria,MTN,40,7,603000.00,3,3,4,334,Loyal
+1487,Omar Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,28,5,390000.00,3,2,2,322,Other
+1488,Omar Masri,Aleppo,MTN,MTN Syria,MTN,58,7,910000.00,2,3,5,235,At Risk
+1489,Omar Omar,Damascus,MTN,MTN Syria,MTN,127,4,128000.00,1,1,1,111,Lost
+1490,Hussein Ali,Latakia,MTN,MTN Syria,MTN,66,4,368000.00,2,1,2,212,Other
+1491,Mohammad Zoubi,Deir ez-Zor,MTN,MTN Syria,MTN,23,8,763000.00,4,4,5,445,Champions
+1492,Bashar Omar,Rif Dimashq,MTN,MTN Syria,MTN,174,3,278000.00,1,1,2,112,Lost
+1493,Yousef Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,27,9,866000.00,3,4,5,345,Loyal
+1494,Aisha Kurdi,Tartus,MTN,MTN Syria,MTN,13,9,925000.00,4,4,5,445,Champions
+1495,Yousef Sayed,Daraa,MTN,MTN Syria,MTN,44,4,126000.00,3,1,1,311,Other
+1496,Aisha Shami,Raqqa,MTN,MTN Syria,MTN,10,7,693000.00,4,3,4,434,Loyal
+1497,Ali Souri,Rif Dimashq,MTN,MTN Syria,MTN,54,9,483000.00,2,4,3,243,At Risk
+1498,Ahmad Shami,Tartus,MTN,MTN Syria,MTN,33,6,520000.00,3,2,3,323,Other
+1499,Zainab Ali,As-Suwayda,MTN,MTN Syria,MTN,5,7,475000.00,5,3,3,533,Loyal
+1500,Yousef Masri,Aleppo,MTN,MTN Syria,MTN,31,9,830000.00,3,4,5,345,Loyal
+1501,Waleed Omar,Raqqa,MTN,MTN Syria,MTN,26,3,81000.00,3,1,1,311,Other
+1502,Reem Masri,Al-Hasakah,MTN,MTN Syria,MTN,15,5,530000.00,4,2,3,423,Other
+1503,Nizar Dimashqi,Aleppo,MTN,MTN Syria,MTN,2,6,239000.00,5,2,1,521,Other
+1504,Yousef Ali,Homs,MTN,MTN Syria,MTN,8,75,5041000.00,5,5,5,555,Champions
+1505,Maher Souri,Idlib,MTN,MTN Syria,MTN,115,5,463000.00,1,2,3,123,Lost
+1506,Sami Hassan,As-Suwayda,MTN,MTN Syria,MTN,30,9,454000.00,3,4,3,343,Loyal
+1507,Nizar Halabi,Quneitra,MTN,MTN Syria,MTN,64,8,786000.00,2,4,5,245,At Risk
+1508,Aisha Kurdi,Quneitra,MTN,MTN Syria,MTN,45,7,273000.00,2,3,1,231,At Risk
+1509,Hassan Masri,Hama,MTN,MTN Syria,MTN,19,11,790000.00,4,5,5,455,Champions
+1510,Yousef Ahmad,Aleppo,MTN,MTN Syria,MTN,13,9,643000.00,4,4,4,444,Champions
+1511,Khaled Rifai,Aleppo,MTN,MTN Syria,MTN,16,6,633000.00,4,2,4,424,Other
+1512,Ahmad Omar,Al-Hasakah,MTN,MTN Syria,MTN,32,7,540000.00,3,3,3,333,Loyal
+1513,Nizar Kurdi,Latakia,MTN,MTN Syria,MTN,51,8,676000.00,2,4,4,244,At Risk
+1514,Reem Rifai,Latakia,MTN,MTN Syria,MTN,365,1,10000.00,1,1,1,111,Lost
+1515,Ali Hassan,Idlib,MTN,MTN Syria,MTN,46,5,603000.00,2,2,4,224,Other
+1516,Ibrahim Omar,Quneitra,MTN,MTN Syria,MTN,7,3,356000.00,5,1,2,512,New
+1517,Ahmad Masri,Tartus,MTN,MTN Syria,MTN,171,6,321000.00,1,2,2,122,Lost
+1518,Sarah Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,61,4,255000.00,2,1,1,211,Other
+1519,Mustafa Ali,Deir ez-Zor,MTN,MTN Syria,MTN,58,6,438000.00,2,2,3,223,Other
+1520,Noor Kurdi,Latakia,MTN,MTN Syria,MTN,2,9,748000.00,5,4,4,544,Champions
+1521,Maher Shami,Aleppo,MTN,MTN Syria,MTN,24,8,538000.00,3,4,3,343,Loyal
+1522,Aisha Ahmad,Latakia,MTN,MTN Syria,MTN,9,9,795000.00,5,4,5,545,Champions
+1523,Ibrahim Ahmad,Idlib,MTN,MTN Syria,MTN,97,4,308000.00,1,1,2,112,Lost
+1524,Yousef Homsi,Daraa,MTN,MTN Syria,MTN,21,5,425000.00,4,2,3,423,Other
+1525,Noor Omar,Quneitra,MTN,MTN Syria,MTN,48,7,541000.00,2,3,3,233,At Risk
+1526,Khaled Zoubi,Tartus,MTN,MTN Syria,MTN,40,9,644000.00,3,4,4,344,Loyal
+1527,Yousef Hassan,Daraa,MTN,MTN Syria,MTN,121,4,198000.00,1,1,1,111,Lost
+1528,Reem Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,36,6,505000.00,3,2,3,323,Other
+1529,Sarah Ahmad,Idlib,MTN,MTN Syria,MTN,43,8,580000.00,3,4,4,344,Loyal
+1530,Maher Masri,Homs,MTN,MTN Syria,MTN,71,8,660000.00,2,4,4,244,At Risk
+1531,Ibrahim Souri,Quneitra,MTN,MTN Syria,MTN,52,11,1233000.00,2,5,5,255,At Risk
+1532,Mohammad Tarabulsi,Homs,MTN,MTN Syria,MTN,20,12,1108000.00,4,5,5,455,Champions
+1533,Yousef Khatib,Hama,MTN,MTN Syria,MTN,2,6,168000.00,5,2,1,521,Other
+1534,Waleed Souri,As-Suwayda,MTN,MTN Syria,MTN,205,5,283000.00,1,2,2,122,Lost
+1535,Maher Shami,Latakia,MTN,MTN Syria,MTN,15,11,625000.00,4,5,4,454,Champions
+1536,Sarah Sayed,Al-Hasakah,MTN,MTN Syria,MTN,13,5,336000.00,4,2,2,422,Other
+1537,Rana Souri,Latakia,MTN,MTN Syria,MTN,127,10,765000.00,1,5,5,155,At Risk
+1538,Waleed Homsi,Aleppo,MTN,MTN Syria,MTN,23,6,548000.00,4,2,3,423,Other
+1539,Omar Halabi,Idlib,MTN,MTN Syria,MTN,46,5,380000.00,2,2,2,222,Other
+1540,Ahmad Halabi,Damascus,MTN,MTN Syria,MTN,66,6,460000.00,2,2,3,223,Other
+1541,Mustafa Zoubi,Tartus,MTN,MTN Syria,MTN,75,5,238000.00,2,2,1,221,Other
+1542,Maryam Ali,Rif Dimashq,MTN,MTN Syria,MTN,16,8,321000.00,4,4,2,442,Loyal
+1543,Huda Sayed,Raqqa,MTN,MTN Syria,MTN,11,10,454000.00,4,5,3,453,Loyal
+1544,Mustafa Shami,Al-Hasakah,MTN,MTN Syria,MTN,33,6,237000.00,3,2,1,321,Other
+1545,Mustafa Shami,As-Suwayda,MTN,MTN Syria,MTN,63,11,1158000.00,2,5,5,255,At Risk
+1546,Khaled Khatib,Hama,MTN,MTN Syria,MTN,12,58,4289000.00,4,5,5,455,Champions
+1547,Mustafa Omar,Latakia,MTN,MTN Syria,MTN,10,7,538000.00,4,3,3,433,Loyal
+1548,Maher Shami,Damascus,MTN,MTN Syria,MTN,27,6,410000.00,3,2,2,322,Other
+1549,Nizar Souri,Quneitra,MTN,MTN Syria,MTN,12,7,373000.00,4,3,2,432,Loyal
+1550,Nizar Sayed,Latakia,MTN,MTN Syria,MTN,26,3,225000.00,3,1,1,311,Other
+1551,Maher Rifai,Aleppo,MTN,MTN Syria,MTN,10,10,898000.00,4,5,5,455,Champions
+1552,Maher Ahmad,Idlib,MTN,MTN Syria,MTN,32,3,148000.00,3,1,1,311,Other
+1553,Maryam Zoubi,Damascus,MTN,MTN Syria,MTN,59,9,415000.00,2,4,3,243,At Risk
+1554,Mohammad Tarabulsi,Deir ez-Zor,MTN,MTN Syria,MTN,119,5,560000.00,1,2,4,124,Lost
+1555,Zainab Shami,Damascus,MTN,MTN Syria,MTN,5,5,255000.00,5,2,1,521,Other
+1556,Hussein Kurdi,Rif Dimashq,MTN,MTN Syria,MTN,29,7,950000.00,3,3,5,335,Loyal
+1557,Yousef Tarabulsi,Idlib,MTN,MTN Syria,MTN,121,6,875000.00,1,2,5,125,Lost
+1558,Omar Khatib,Homs,MTN,MTN Syria,MTN,19,12,715000.00,4,5,4,454,Champions
+1559,Layla Hassan,Daraa,MTN,MTN Syria,MTN,2,6,393000.00,5,2,2,522,Other
+1560,Sarah Omar,Rif Dimashq,MTN,MTN Syria,MTN,27,10,572000.00,3,5,4,354,Loyal
+1561,Layla Omar,Daraa,MTN,MTN Syria,MTN,26,5,218000.00,3,2,1,321,Other
+1562,Ahmad Shami,As-Suwayda,MTN,MTN Syria,MTN,11,7,485000.00,4,3,3,433,Loyal
+1563,Omar Tarabulsi,Aleppo,MTN,MTN Syria,MTN,40,9,508000.00,3,4,3,343,Loyal
+1564,Fatima Ahmad,Tartus,MTN,MTN Syria,MTN,2,59,3310000.00,5,5,5,555,Champions
+1565,Khaled Shami,Tartus,MTN,MTN Syria,MTN,14,10,916000.00,4,5,5,455,Champions
+1566,Ali Shami,Aleppo,MTN,MTN Syria,MTN,8,8,575000.00,5,4,4,544,Champions
+1567,Reem Ali,Latakia,MTN,MTN Syria,MTN,26,12,963000.00,3,5,5,355,Loyal
+1568,Khaled Khatib,Aleppo,MTN,MTN Syria,MTN,40,11,1181000.00,3,5,5,355,Loyal
+1569,Hussein Khatib,Damascus,MTN,MTN Syria,MTN,13,15,1039000.00,4,5,5,455,Champions
+1570,Ali Masri,Tartus,MTN,MTN Syria,MTN,15,8,506000.00,4,4,3,443,Loyal
+1571,Mustafa Souri,Quneitra,MTN,MTN Syria,MTN,51,9,456000.00,2,4,3,243,At Risk
+1572,Bashar Hassan,Daraa,MTN,MTN Syria,MTN,28,5,250000.00,3,2,1,321,Other
+1573,Hassan Shami,Aleppo,MTN,MTN Syria,MTN,33,5,410000.00,3,2,2,322,Other
+1574,Sami Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,20,4,338000.00,4,1,2,412,New
+1575,Bashar Souri,Rif Dimashq,MTN,MTN Syria,MTN,31,6,390000.00,3,2,2,322,Other
+1576,Sami Zoubi,Latakia,MTN,MTN Syria,MTN,2,53,4172000.00,5,5,5,555,Champions
+1577,Yousef Masri,Rif Dimashq,MTN,MTN Syria,MTN,17,11,882000.00,4,5,5,455,Champions
+1578,Maryam Shami,Hama,MTN,MTN Syria,MTN,1,88,5190000.00,5,5,5,555,Champions
+1579,Ali Souri,Damascus,MTN,MTN Syria,MTN,9,69,6060000.00,5,5,5,555,Champions
+1580,Fatima Ahmad,Quneitra,MTN,MTN Syria,MTN,88,5,183000.00,1,2,1,121,Lost
+1581,Ibrahim Homsi,Rif Dimashq,MTN,MTN Syria,MTN,54,7,478000.00,2,3,3,233,At Risk
+1582,Omar Omar,Quneitra,MTN,MTN Syria,MTN,6,9,735000.00,5,4,4,544,Champions
+1583,Yousef Omar,Raqqa,MTN,MTN Syria,MTN,57,6,343000.00,2,2,2,222,Other
+1584,Ibrahim Ali,Latakia,MTN,MTN Syria,MTN,5,4,465000.00,5,1,3,513,New
+1585,Sarah Dimashqi,Aleppo,MTN,MTN Syria,MTN,18,7,755000.00,4,3,5,435,Loyal
+1586,Maher Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,57,7,470000.00,2,3,3,233,At Risk
+1587,Ali Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,96,12,1208000.00,1,5,5,155,At Risk
+1588,Layla Masri,Raqqa,MTN,MTN Syria,MTN,3,70,4446000.00,5,5,5,555,Champions
+1589,Ibrahim Homsi,Damascus,MTN,MTN Syria,MTN,63,5,348000.00,2,2,2,222,Other
+1590,Noor Souri,Homs,MTN,MTN Syria,MTN,18,8,494000.00,4,4,3,443,Loyal
+1591,Yousef Khatib,Rif Dimashq,MTN,MTN Syria,MTN,52,8,676000.00,2,4,4,244,At Risk
+1592,Bashar Khatib,Homs,MTN,MTN Syria,MTN,17,4,186000.00,4,1,1,411,New
+1593,Maher Homsi,Latakia,MTN,MTN Syria,MTN,12,6,238000.00,4,2,1,421,Other
+1594,Nizar Omar,Rif Dimashq,MTN,MTN Syria,MTN,52,4,303000.00,2,1,2,212,Other
+1595,Yousef Dimashqi,Aleppo,MTN,MTN Syria,MTN,44,5,245000.00,3,2,1,321,Other
+1596,Huda Rifai,Tartus,MTN,MTN Syria,MTN,26,8,351000.00,3,4,2,342,Loyal
+1597,Zainab Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,25,9,870000.00,3,4,5,345,Loyal
+1598,Mohammad Khatib,Raqqa,MTN,MTN Syria,MTN,26,5,198000.00,3,2,1,321,Other
+1599,Sami Zoubi,Latakia,MTN,MTN Syria,MTN,256,4,370000.00,1,1,2,112,Lost
+1600,Sarah Ahmad,Homs,MTN,MTN Syria,MTN,103,6,538000.00,1,2,3,123,Lost
+1601,Fatima Souri,Quneitra,MTN,MTN Syria,MTN,31,7,403000.00,3,3,2,332,Loyal
+1602,Maryam Homsi,Latakia,MTN,MTN Syria,MTN,111,7,340000.00,1,3,2,132,At Risk
+1603,Maher Tarabulsi,Damascus,MTN,MTN Syria,MTN,1,60,3977000.00,5,5,5,555,Champions
+1604,Yousef Souri,Aleppo,MTN,MTN Syria,MTN,2,9,585000.00,5,4,4,544,Champions
+1605,Maher Ali,Damascus,MTN,MTN Syria,MTN,4,9,856000.00,5,4,5,545,Champions
+1606,Reem Khatib,Raqqa,MTN,MTN Syria,MTN,19,8,339000.00,4,4,2,442,Loyal
+1607,Huda Khatib,Latakia,MTN,MTN Syria,MTN,51,5,188000.00,2,2,1,221,Other
+1608,Rana Rifai,Aleppo,MTN,MTN Syria,MTN,18,11,696000.00,4,5,4,454,Champions
+1609,Layla Rifai,Homs,MTN,MTN Syria,MTN,22,12,1236000.00,4,5,5,455,Champions
+1610,Omar Souri,Quneitra,MTN,MTN Syria,MTN,76,5,129000.00,2,2,1,221,Other
+1611,Mustafa Zoubi,As-Suwayda,MTN,MTN Syria,MTN,37,5,200000.00,3,2,1,321,Other
+1612,Bashar Omar,Al-Hasakah,MTN,MTN Syria,MTN,35,16,1096000.00,3,5,5,355,Loyal
+1613,Ahmad Tarabulsi,Rif Dimashq,MTN,MTN Syria,MTN,72,6,588000.00,2,2,4,224,Other
+1614,Yousef Homsi,Deir ez-Zor,MTN,MTN Syria,MTN,63,7,235000.00,2,3,1,231,At Risk
+1615,Sami Rifai,Homs,MTN,MTN Syria,MTN,263,5,355000.00,1,2,2,122,Lost
+1616,Ibrahim Rifai,Quneitra,MTN,MTN Syria,MTN,84,4,355000.00,1,1,2,112,Lost
+1617,Maryam Rifai,Raqqa,MTN,MTN Syria,MTN,20,4,380000.00,4,1,2,412,New
+1618,Ibrahim Rifai,Quneitra,MTN,MTN Syria,MTN,4,10,763000.00,5,5,5,555,Champions
+1619,Mustafa Hassan,As-Suwayda,MTN,MTN Syria,MTN,61,8,568000.00,2,4,4,244,At Risk
+1620,Maryam Zoubi,Damascus,MTN,MTN Syria,MTN,78,5,305000.00,1,2,2,122,Lost
+1621,Hassan Ahmad,Daraa,MTN,MTN Syria,MTN,13,11,544000.00,4,5,3,453,Loyal
+1622,Aisha Hassan,Damascus,MTN,MTN Syria,MTN,10,11,524000.00,4,5,3,453,Loyal
+1623,Noor Shami,Quneitra,MTN,MTN Syria,MTN,44,12,824000.00,3,5,5,355,Loyal
+1624,Ibrahim Halabi,Deir ez-Zor,MTN,MTN Syria,MTN,15,12,531000.00,4,5,3,453,Loyal
+1625,Waleed Kurdi,Deir ez-Zor,MTN,MTN Syria,MTN,105,4,320000.00,1,1,2,112,Lost
+1626,Omar Sayed,Daraa,MTN,MTN Syria,MTN,25,8,425000.00,3,4,3,343,Loyal
+1627,Mustafa Rifai,Latakia,MTN,MTN Syria,MTN,121,6,228000.00,1,2,1,121,Lost
+1628,Nizar Omar,Deir ez-Zor,MTN,MTN Syria,MTN,36,4,220000.00,3,1,1,311,Other
+1629,Nizar Hassan,Quneitra,MTN,MTN Syria,MTN,8,7,633000.00,5,3,4,534,Loyal
+1630,Mohammad Souri,Al-Hasakah,MTN,MTN Syria,MTN,11,9,743000.00,4,4,4,444,Champions
+1631,Noor Shami,Raqqa,MTN,MTN Syria,MTN,49,6,238000.00,2,2,1,221,Other
+1632,Ali Rifai,Daraa,MTN,MTN Syria,MTN,76,6,263000.00,2,2,1,221,Other
+1633,Hussein Homsi,Aleppo,MTN,MTN Syria,MTN,111,5,330000.00,1,2,2,122,Lost
+1634,Fatima Zoubi,Deir ez-Zor,MTN,MTN Syria,MTN,107,5,898000.00,1,2,5,125,Lost
+1635,Layla Tarabulsi,Latakia,MTN,MTN Syria,MTN,13,10,668000.00,4,5,4,454,Champions
+1636,Maher Ahmad,Aleppo,MTN,MTN Syria,MTN,39,8,385000.00,3,4,2,342,Loyal
+1637,Yousef Halabi,Raqqa,MTN,MTN Syria,MTN,105,7,446000.00,1,3,3,133,At Risk
+1638,Ali Shami,Al-Hasakah,MTN,MTN Syria,MTN,69,3,138000.00,2,1,1,211,Other
+1639,Rana Homsi,Hama,MTN,MTN Syria,MTN,11,6,285000.00,4,2,2,422,Other
+1640,Mohammad Souri,Latakia,MTN,MTN Syria,MTN,17,8,446000.00,4,4,3,443,Loyal
+1641,Bashar Souri,Al-Hasakah,MTN,MTN Syria,MTN,6,54,3274000.00,5,5,5,555,Champions
+1642,Waleed Khatib,Quneitra,MTN,MTN Syria,MTN,118,8,765000.00,1,4,5,145,At Risk
+1643,Layla Khatib,Rif Dimashq,MTN,MTN Syria,MTN,7,3,320000.00,5,1,2,512,New
+1644,Maryam Zoubi,Damascus,MTN,MTN Syria,MTN,196,4,605000.00,1,1,4,114,Lost
+1645,Mustafa Tarabulsi,Rif Dimashq,MTN,MTN Syria,MTN,23,9,716000.00,4,4,4,444,Champions
+1646,Nizar Tarabulsi,Tartus,MTN,MTN Syria,MTN,28,6,665000.00,3,2,4,324,Other
+1647,Hassan Masri,As-Suwayda,MTN,MTN Syria,MTN,115,6,285000.00,1,2,2,122,Lost
+1648,Sarah Tarabulsi,As-Suwayda,MTN,MTN Syria,MTN,62,10,738000.00,2,5,4,254,At Risk
+1649,Ali Hassan,As-Suwayda,MTN,MTN Syria,MTN,59,6,449000.00,2,2,3,223,Other
+1650,Yousef Sayed,Idlib,MTN,MTN Syria,MTN,10,10,845000.00,4,5,5,455,Champions
+1651,Huda Halabi,Latakia,MTN,MTN Syria,MTN,16,9,1115000.00,4,4,5,445,Champions
+1652,Noor Tarabulsi,Damascus,MTN,MTN Syria,MTN,101,7,825000.00,1,3,5,135,At Risk
+1653,Nizar Sayed,Daraa,MTN,MTN Syria,MTN,48,7,535000.00,2,3,3,233,At Risk
+1654,Fatima Tarabulsi,Daraa,MTN,MTN Syria,MTN,29,12,1023000.00,3,5,5,355,Loyal
+1655,Huda Souri,Damascus,MTN,MTN Syria,MTN,58,7,638000.00,2,3,4,234,At Risk
+1656,Aisha Shami,Deir ez-Zor,MTN,MTN Syria,MTN,29,4,313000.00,3,1,2,312,Other
+1657,Omar Zoubi,Aleppo,MTN,MTN Syria,MTN,11,3,30000.00,4,1,1,411,New
+1658,Waleed Omar,Daraa,MTN,MTN Syria,MTN,125,8,758000.00,1,4,5,145,At Risk
+1659,Rana Halabi,Aleppo,MTN,MTN Syria,MTN,191,4,56000.00,1,1,1,111,Lost
+1660,Maryam Homsi,Latakia,MTN,MTN Syria,MTN,83,3,105000.00,1,1,1,111,Lost
+1661,Nizar Shami,Tartus,MTN,MTN Syria,MTN,18,6,668000.00,4,2,4,424,Other
+1662,Bashar Homsi,Raqqa,MTN,MTN Syria,MTN,93,8,475000.00,1,4,3,143,At Risk
+1663,Waleed Souri,Aleppo,MTN,MTN Syria,MTN,34,12,498000.00,3,5,3,353,Loyal
+1664,Ahmad Masri,Quneitra,MTN,MTN Syria,MTN,4,65,4561000.00,5,5,5,555,Champions
+1665,Noor Halabi,Raqqa,MTN,MTN Syria,MTN,47,9,591000.00,2,4,4,244,At Risk
+1666,Omar Khatib,Aleppo,MTN,MTN Syria,MTN,7,5,203000.00,5,2,1,521,Other
+1667,Rana Masri,Quneitra,MTN,MTN Syria,MTN,116,4,253000.00,1,1,1,111,Lost
+1668,Rana Rifai,Al-Hasakah,MTN,MTN Syria,MTN,10,8,380000.00,4,4,2,442,Loyal
+1669,Maher Ahmad,Raqqa,MTN,MTN Syria,MTN,74,5,230000.00,2,2,1,221,Other
+1670,Noor Khatib,Hama,MTN,MTN Syria,MTN,57,5,420000.00,2,2,3,223,Other
+1671,Maher Souri,Homs,MTN,MTN Syria,MTN,1,68,5083000.00,5,5,5,555,Champions
+1672,Omar Masri,Homs,MTN,MTN Syria,MTN,53,8,673000.00,2,4,4,244,At Risk
+1673,Mohammad Homsi,Daraa,MTN,MTN Syria,MTN,2,9,611000.00,5,4,4,544,Champions
+1674,Omar Rifai,Aleppo,MTN,MTN Syria,MTN,9,5,285000.00,5,2,2,522,Other
+1675,Omar Khatib,Quneitra,MTN,MTN Syria,MTN,185,4,186000.00,1,1,1,111,Lost
+1676,Hussein Omar,Idlib,MTN,MTN Syria,MTN,30,5,380000.00,3,2,2,322,Other
+1677,Maher Masri,Quneitra,MTN,MTN Syria,MTN,57,6,259000.00,2,2,1,221,Other
+1678,Bashar Khatib,Homs,MTN,MTN Syria,MTN,17,8,668000.00,4,4,4,444,Champions
+1679,Bashar Kurdi,Idlib,MTN,MTN Syria,MTN,33,7,334000.00,3,3,2,332,Loyal
+1680,Mustafa Sayed,Raqqa,MTN,MTN Syria,MTN,23,5,200000.00,4,2,1,421,Other
+1681,Bashar Hassan,Rif Dimashq,MTN,MTN Syria,MTN,15,8,353000.00,4,4,2,442,Loyal
+1682,Maryam Omar,Idlib,MTN,MTN Syria,MTN,8,72,4739000.00,5,5,5,555,Champions
+1683,Khaled Halabi,Hama,MTN,MTN Syria,MTN,176,7,485000.00,1,3,3,133,At Risk
+1684,Mustafa Omar,Deir ez-Zor,MTN,MTN Syria,MTN,17,8,714000.00,4,4,4,444,Champions
+1685,Waleed Khatib,Daraa,MTN,MTN Syria,MTN,9,16,939000.00,5,5,5,555,Champions
+1686,Layla Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,60,6,558000.00,2,2,4,224,Other
+1687,Aisha Ali,Rif Dimashq,MTN,MTN Syria,MTN,5,9,421000.00,5,4,3,543,Loyal
+1688,Ibrahim Omar,Rif Dimashq,MTN,MTN Syria,MTN,136,8,595000.00,1,4,4,144,At Risk
+1689,Omar Halabi,Tartus,MTN,MTN Syria,MTN,25,3,125000.00,3,1,1,311,Other
+1690,Sarah Khatib,Al-Hasakah,MTN,MTN Syria,MTN,40,6,463000.00,3,2,3,323,Other
+1691,Ali Sayed,Damascus,MTN,MTN Syria,MTN,46,4,185000.00,2,1,1,211,Other
+1692,Rana Tarabulsi,Aleppo,MTN,MTN Syria,MTN,2,10,466000.00,5,5,3,553,Loyal
+1693,Aisha Tarabulsi,Idlib,MTN,MTN Syria,MTN,36,4,250000.00,3,1,1,311,Other
+1694,Hassan Halabi,Idlib,MTN,MTN Syria,MTN,10,10,631000.00,4,5,4,454,Champions
+1695,Ali Homsi,Latakia,MTN,MTN Syria,MTN,25,13,343000.00,3,5,2,352,Loyal
+1696,Hussein Shami,Homs,MTN,MTN Syria,MTN,4,8,351000.00,5,4,2,542,Loyal
+1697,Hussein Tarabulsi,Aleppo,MTN,MTN Syria,MTN,235,4,505000.00,1,1,3,113,Lost
+1698,Omar Masri,Idlib,MTN,MTN Syria,MTN,59,9,681000.00,2,4,4,244,At Risk
+1699,Huda Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,76,8,690000.00,2,4,4,244,At Risk
+1700,Zainab Omar,Aleppo,MTN,MTN Syria,MTN,6,10,726000.00,5,5,4,554,Champions
+1701,Maher Sayed,As-Suwayda,MTN,MTN Syria,MTN,6,4,358000.00,5,1,2,512,New
+1702,Ali Souri,Damascus,MTN,MTN Syria,MTN,41,2,80000.00,3,1,1,311,Other
+1703,Mohammad Tarabulsi,Raqqa,MTN,MTN Syria,MTN,117,13,1201000.00,1,5,5,155,At Risk
+1704,Mohammad Zoubi,Quneitra,MTN,MTN Syria,MTN,67,11,651000.00,2,5,4,254,At Risk
+1705,Waleed Dimashqi,Daraa,MTN,MTN Syria,MTN,35,8,386000.00,3,4,2,342,Loyal
+1706,Ali Kurdi,Homs,MTN,MTN Syria,MTN,19,9,1010000.00,4,4,5,445,Champions
+1707,Ahmad Halabi,Tartus,MTN,MTN Syria,MTN,61,7,483000.00,2,3,3,233,At Risk
+1708,Maryam Tarabulsi,As-Suwayda,MTN,MTN Syria,MTN,175,4,385000.00,1,1,2,112,Lost
+1709,Fatima Sayed,Homs,MTN,MTN Syria,MTN,61,5,270000.00,2,2,1,221,Other
+1710,Zainab Souri,Rif Dimashq,MTN,MTN Syria,MTN,48,6,538000.00,2,2,3,223,Other
+1711,Maryam Homsi,Daraa,MTN,MTN Syria,MTN,8,5,465000.00,5,2,3,523,Other
+1712,Rana Omar,Quneitra,MTN,MTN Syria,MTN,75,10,533000.00,2,5,3,253,At Risk
+1713,Nizar Dimashqi,Damascus,MTN,MTN Syria,MTN,87,7,310000.00,1,3,2,132,At Risk
+1714,Aisha Souri,Deir ez-Zor,MTN,MTN Syria,MTN,51,7,648000.00,2,3,4,234,At Risk
+1715,Ahmad Ali,As-Suwayda,MTN,MTN Syria,MTN,26,3,80000.00,3,1,1,311,Other
+1716,Hussein Dimashqi,Idlib,MTN,MTN Syria,MTN,30,11,608000.00,3,5,4,354,Loyal
+1717,Waleed Kurdi,Rif Dimashq,MTN,MTN Syria,MTN,10,11,629000.00,4,5,4,454,Champions
+1718,Waleed Dimashqi,Idlib,MTN,MTN Syria,MTN,238,3,405000.00,1,1,2,112,Lost
+1719,Ibrahim Khatib,Homs,MTN,MTN Syria,MTN,2,66,4968000.00,5,5,5,555,Champions
+1720,Sami Souri,Daraa,MTN,MTN Syria,MTN,22,6,403000.00,4,2,2,422,Other
+1721,Maryam Rifai,Damascus,MTN,MTN Syria,MTN,96,6,680000.00,1,2,4,124,Lost
+1722,Omar Masri,Damascus,MTN,MTN Syria,MTN,6,6,481000.00,5,2,3,523,Other
+1723,Zainab Shami,Homs,MTN,MTN Syria,MTN,65,6,363000.00,2,2,2,222,Other
+1724,Ali Dimashqi,As-Suwayda,MTN,MTN Syria,MTN,5,14,1081000.00,5,5,5,555,Champions
+1725,Ibrahim Hassan,Raqqa,MTN,MTN Syria,MTN,119,8,1095000.00,1,4,5,145,At Risk
+1726,Mustafa Sayed,Deir ez-Zor,MTN,MTN Syria,MTN,28,4,253000.00,3,1,1,311,Other
+1727,Fatima Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,54,6,329000.00,2,2,2,222,Other
+1728,Huda Zoubi,Daraa,MTN,MTN Syria,MTN,10,11,691000.00,4,5,4,454,Champions
+1729,Maryam Kurdi,Homs,MTN,MTN Syria,MTN,90,7,365000.00,1,3,2,132,At Risk
+1730,Hussein Sayed,Al-Hasakah,MTN,MTN Syria,MTN,4,4,170000.00,5,1,1,511,New
+1731,Sarah Khatib,Al-Hasakah,MTN,MTN Syria,MTN,21,1,30000.00,4,1,1,411,New
+1732,Huda Zoubi,Damascus,MTN,MTN Syria,MTN,114,4,265000.00,1,1,1,111,Lost
+1733,Layla Masri,Quneitra,MTN,MTN Syria,MTN,21,3,210000.00,4,1,1,411,New
+1734,Maher Rifai,Daraa,MTN,MTN Syria,MTN,6,6,343000.00,5,2,2,522,Other
+1735,Noor Omar,Quneitra,MTN,MTN Syria,MTN,77,6,578000.00,2,2,4,224,Other
+1736,Noor Hassan,Deir ez-Zor,MTN,MTN Syria,MTN,37,2,115000.00,3,1,1,311,Other
+1737,Huda Sayed,Aleppo,MTN,MTN Syria,MTN,161,5,245000.00,1,2,1,121,Lost
+1738,Fatima Shami,As-Suwayda,MTN,MTN Syria,MTN,7,10,781000.00,5,5,5,555,Champions
+1739,Bashar Souri,Latakia,MTN,MTN Syria,MTN,50,9,581000.00,2,4,4,244,At Risk
+1740,Ibrahim Zoubi,Latakia,MTN,MTN Syria,MTN,1,3,205000.00,5,1,1,511,New
+1741,Ahmad Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,100,8,708000.00,1,4,4,144,At Risk
+1742,Sarah Rifai,Rif Dimashq,MTN,MTN Syria,MTN,43,8,520000.00,3,4,3,343,Loyal
+1743,Maryam Dimashqi,Damascus,MTN,MTN Syria,MTN,106,4,280000.00,1,1,2,112,Lost
+1744,Layla Rifai,Hama,MTN,MTN Syria,MTN,45,11,870000.00,2,5,5,255,At Risk
+1745,Khaled Hassan,Idlib,MTN,MTN Syria,MTN,43,7,368000.00,3,3,2,332,Loyal
+1746,Sami Omar,Rif Dimashq,MTN,MTN Syria,MTN,11,67,4561000.00,4,5,5,455,Champions
+1747,Sarah Ahmad,Deir ez-Zor,MTN,MTN Syria,MTN,78,6,255000.00,1,2,1,121,Lost
+1748,Mustafa Homsi,Raqqa,MTN,MTN Syria,MTN,50,8,556000.00,2,4,4,244,At Risk
+1749,Huda Khatib,Al-Hasakah,MTN,MTN Syria,MTN,4,6,330000.00,5,2,2,522,Other
+1750,Mohammad Omar,Raqqa,MTN,MTN Syria,MTN,47,10,561000.00,2,5,4,254,At Risk
+1751,Rana Sayed,Raqqa,MTN,MTN Syria,MTN,27,8,880000.00,3,4,5,345,Loyal
+1752,Khaled Shami,Idlib,MTN,MTN Syria,MTN,6,8,246000.00,5,4,1,541,Loyal
+1753,Hassan Khatib,Idlib,MTN,MTN Syria,MTN,51,4,428000.00,2,1,3,213,Other
+1754,Layla Khatib,Idlib,MTN,MTN Syria,MTN,33,8,268000.00,3,4,1,341,Loyal
+1755,Layla Hassan,Daraa,MTN,MTN Syria,MTN,40,9,453000.00,3,4,3,343,Loyal
+1756,Ali Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,40,10,791000.00,3,5,5,355,Loyal
+1757,Bashar Omar,Quneitra,MTN,MTN Syria,MTN,63,6,441000.00,2,2,3,223,Other
+1758,Fatima Souri,Homs,MTN,MTN Syria,MTN,56,5,178000.00,2,2,1,221,Other
+1759,Hussein Zoubi,Tartus,MTN,MTN Syria,MTN,23,8,693000.00,4,4,4,444,Champions
+1760,Sarah Dimashqi,Raqqa,MTN,MTN Syria,MTN,6,5,245000.00,5,2,1,521,Other
+1761,Huda Sayed,Tartus,MTN,MTN Syria,MTN,35,2,180000.00,3,1,1,311,Other
+1762,Mohammad Halabi,Hama,MTN,MTN Syria,MTN,85,5,525000.00,1,2,3,123,Lost
+1763,Mustafa Shami,Homs,MTN,MTN Syria,MTN,27,5,183000.00,3,2,1,321,Other
+1764,Huda Souri,Quneitra,MTN,MTN Syria,MTN,52,4,418000.00,2,1,3,213,Other
+1765,Yousef Sayed,Al-Hasakah,MTN,MTN Syria,MTN,1,4,233000.00,5,1,1,511,New
+1766,Reem Masri,Al-Hasakah,MTN,MTN Syria,MTN,16,6,590000.00,4,2,4,424,Other
+1767,Maher Omar,Raqqa,MTN,MTN Syria,MTN,7,10,750000.00,5,5,4,554,Champions
+1768,Yousef Hassan,Rif Dimashq,MTN,MTN Syria,MTN,16,4,225000.00,4,1,1,411,New
+1769,Mohammad Kurdi,Daraa,MTN,MTN Syria,MTN,84,10,920000.00,1,5,5,155,At Risk
+1770,Nizar Tarabulsi,Al-Hasakah,MTN,MTN Syria,MTN,4,10,383000.00,5,5,2,552,Loyal
+1771,Fatima Souri,Quneitra,MTN,MTN Syria,MTN,18,6,320000.00,4,2,2,422,Other
+1772,Nizar Hassan,Idlib,MTN,MTN Syria,MTN,2,7,291000.00,5,3,2,532,Loyal
+1773,Omar Sayed,Latakia,MTN,MTN Syria,MTN,57,6,440000.00,2,2,3,223,Other
+1774,Ahmad Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,173,7,445000.00,1,3,3,133,At Risk
+1775,Ibrahim Khatib,Hama,MTN,MTN Syria,MTN,8,10,834000.00,5,5,5,555,Champions
+1776,Sarah Ahmad,Homs,MTN,MTN Syria,MTN,84,3,405000.00,1,1,2,112,Lost
+1777,Ibrahim Ahmad,Al-Hasakah,MTN,MTN Syria,MTN,17,13,803000.00,4,5,5,455,Champions
+1778,Fatima Masri,Latakia,MTN,MTN Syria,MTN,47,7,480000.00,2,3,3,233,At Risk
+1779,Mohammad Halabi,Idlib,MTN,MTN Syria,MTN,13,5,350000.00,4,2,2,422,Other
+1780,Mohammad Ali,As-Suwayda,MTN,MTN Syria,MTN,3,13,563000.00,5,5,4,554,Champions
+1781,Hassan Sayed,Damascus,MTN,MTN Syria,MTN,122,8,533000.00,1,4,3,143,At Risk
+1782,Sarah Souri,Latakia,MTN,MTN Syria,MTN,20,6,290000.00,4,2,2,422,Other
+1783,Fatima Rifai,Aleppo,MTN,MTN Syria,MTN,52,5,148000.00,2,2,1,221,Other
+1784,Yousef Sayed,Idlib,MTN,MTN Syria,MTN,12,6,288000.00,4,2,2,422,Other
+1785,Rana Souri,Deir ez-Zor,MTN,MTN Syria,MTN,5,5,368000.00,5,2,2,522,Other
+1786,Zainab Masri,As-Suwayda,MTN,MTN Syria,MTN,17,8,990000.00,4,4,5,445,Champions
+1787,Waleed Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,9,71,4683000.00,5,5,5,555,Champions
+1788,Zainab Homsi,Hama,MTN,MTN Syria,MTN,18,7,510000.00,4,3,3,433,Loyal
+1789,Hussein Kurdi,Hama,MTN,MTN Syria,MTN,60,7,478000.00,2,3,3,233,At Risk
+1790,Bashar Halabi,Aleppo,MTN,MTN Syria,MTN,125,7,330000.00,1,3,2,132,At Risk
+1791,Huda Homsi,Hama,MTN,MTN Syria,MTN,1,78,6531000.00,5,5,5,555,Champions
+1792,Hassan Omar,Homs,MTN,MTN Syria,MTN,5,11,729000.00,5,5,4,554,Champions
+1793,Ali Omar,Damascus,MTN,MTN Syria,MTN,10,9,296000.00,4,4,2,442,Loyal
+1794,Noor Ahmad,Latakia,MTN,MTN Syria,MTN,104,4,180000.00,1,1,1,111,Lost
+1795,Fatima Tarabulsi,Quneitra,MTN,MTN Syria,MTN,88,5,490000.00,1,2,3,123,Lost
+1796,Ibrahim Souri,Damascus,MTN,MTN Syria,MTN,114,6,228000.00,1,2,1,121,Lost
+1797,Ali Shami,Rif Dimashq,MTN,MTN Syria,MTN,3,64,4321000.00,5,5,5,555,Champions
+1798,Hassan Khatib,Rif Dimashq,MTN,MTN Syria,MTN,133,6,156000.00,1,2,1,121,Lost
+1799,Hussein Shami,Raqqa,MTN,MTN Syria,MTN,2,14,881000.00,5,5,5,555,Champions
+1800,Maryam Halabi,Aleppo,MTN,MTN Syria,MTN,6,6,475000.00,5,2,3,523,Other
+1801,Huda Dimashqi,Aleppo,MTN,MTN Syria,MTN,25,5,360000.00,3,2,2,322,Other
+1802,Zainab Souri,Latakia,MTN,MTN Syria,MTN,31,9,598000.00,3,4,4,344,Loyal
+1803,Huda Sayed,Raqqa,MTN,MTN Syria,MTN,39,6,348000.00,3,2,2,322,Other
+1804,Hassan Homsi,Tartus,MTN,MTN Syria,MTN,34,7,333000.00,3,3,2,332,Loyal
+1805,Huda Sayed,Latakia,MTN,MTN Syria,MTN,110,4,385000.00,1,1,2,112,Lost
+1806,Layla Hassan,Tartus,MTN,MTN Syria,MTN,42,6,910000.00,3,2,5,325,Other
+1807,Sami Kurdi,Daraa,MTN,MTN Syria,MTN,89,6,438000.00,1,2,3,123,Lost
+1808,Ibrahim Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,19,7,658000.00,4,3,4,434,Loyal
+1809,Zainab Shami,Deir ez-Zor,MTN,MTN Syria,MTN,14,10,1140000.00,4,5,5,455,Champions
+1810,Ahmad Rifai,Al-Hasakah,MTN,MTN Syria,MTN,38,7,608000.00,3,3,4,334,Loyal
+1811,Nizar Tarabulsi,Damascus,MTN,MTN Syria,MTN,2,6,773000.00,5,2,5,525,Other
+1812,Layla Masri,Deir ez-Zor,MTN,MTN Syria,MTN,43,5,465000.00,3,2,3,323,Other
+1813,Maryam Zoubi,Rif Dimashq,MTN,MTN Syria,MTN,22,8,353000.00,4,4,2,442,Loyal
+1814,Maher Masri,Idlib,MTN,MTN Syria,MTN,22,12,586000.00,4,5,4,454,Champions
+1815,Sarah Souri,Tartus,MTN,MTN Syria,MTN,137,5,150000.00,1,2,1,121,Lost
+1816,Waleed Tarabulsi,Tartus,MTN,MTN Syria,MTN,80,7,588000.00,1,3,4,134,At Risk
+1817,Sarah Rifai,Al-Hasakah,MTN,MTN Syria,MTN,16,8,483000.00,4,4,3,443,Loyal
+1818,Sami Omar,Aleppo,MTN,MTN Syria,MTN,136,4,795000.00,1,1,5,115,Lost
+1819,Ahmad Rifai,Deir ez-Zor,MTN,MTN Syria,MTN,4,59,4004000.00,5,5,5,555,Champions
+1820,Mustafa Souri,As-Suwayda,MTN,MTN Syria,MTN,99,7,413000.00,1,3,3,133,At Risk
+1821,Sarah Souri,Damascus,MTN,MTN Syria,MTN,2,7,443000.00,5,3,3,533,Loyal
+1822,Mohammad Ali,As-Suwayda,MTN,MTN Syria,MTN,131,1,50000.00,1,1,1,111,Lost
+1823,Sarah Halabi,Latakia,MTN,MTN Syria,MTN,196,5,383000.00,1,2,2,122,Lost
+1824,Maryam Hassan,Tartus,MTN,MTN Syria,MTN,53,4,144000.00,2,1,1,211,Other
+1825,Yousef Shami,Rif Dimashq,MTN,MTN Syria,MTN,104,3,168000.00,1,1,1,111,Lost
+1826,Waleed Ali,Aleppo,MTN,MTN Syria,MTN,242,4,350000.00,1,1,2,112,Lost
+1827,Maher Zoubi,Idlib,MTN,MTN Syria,MTN,26,1,120000.00,3,1,1,311,Other
+1828,Mohammad Halabi,Latakia,MTN,MTN Syria,MTN,13,10,868000.00,4,5,5,455,Champions
+1829,Maher Khatib,Deir ez-Zor,MTN,MTN Syria,MTN,85,4,120000.00,1,1,1,111,Lost
+1830,Sami Omar,Deir ez-Zor,MTN,MTN Syria,MTN,63,5,343000.00,2,2,2,222,Other
+1831,Huda Khatib,Quneitra,MTN,MTN Syria,MTN,36,9,405000.00,3,4,2,342,Loyal
+1832,Hassan Ahmad,Al-Hasakah,MTN,MTN Syria,MTN,25,9,664000.00,3,4,4,344,Loyal
+1833,Sarah Tarabulsi,Daraa,MTN,MTN Syria,MTN,40,7,418000.00,3,3,3,333,Loyal
+1834,Waleed Tarabulsi,Damascus,MTN,MTN Syria,MTN,100,7,226000.00,1,3,1,131,At Risk
+1835,Ahmad Kurdi,Rif Dimashq,MTN,MTN Syria,MTN,15,57,4059000.00,4,5,5,455,Champions
+1836,Bashar Omar,Raqqa,MTN,MTN Syria,MTN,38,6,645000.00,3,2,4,324,Other
+1837,Layla Souri,Hama,MTN,MTN Syria,MTN,45,7,395000.00,2,3,2,232,At Risk
+1838,Ibrahim Khatib,Tartus,MTN,MTN Syria,MTN,16,8,810000.00,4,4,5,445,Champions
+1839,Ibrahim Rifai,Raqqa,MTN,MTN Syria,MTN,89,6,345000.00,1,3,2,132,At Risk
+1840,Aisha Ali,As-Suwayda,MTN,MTN Syria,MTN,79,5,300000.00,1,2,2,122,Lost
+1841,Ali Kurdi,Raqqa,MTN,MTN Syria,MTN,10,67,4320000.00,4,5,5,455,Champions
+1842,Zainab Ali,Raqqa,MTN,MTN Syria,MTN,73,6,618000.00,2,3,4,234,At Risk
+1843,Omar Shami,Rif Dimashq,MTN,MTN Syria,MTN,123,3,295000.00,1,1,2,112,Lost
+1844,Bashar Souri,Daraa,MTN,MTN Syria,MTN,11,79,5338000.00,4,5,5,455,Champions
+1845,Mustafa Halabi,Aleppo,MTN,MTN Syria,MTN,121,5,600000.00,1,2,4,124,Lost
+1846,Nizar Tarabulsi,Damascus,MTN,MTN Syria,MTN,5,11,606000.00,5,5,4,554,Champions
+1847,Mustafa Rifai,Aleppo,MTN,MTN Syria,MTN,29,6,711000.00,3,3,4,334,Loyal
+1848,Yousef Khatib,As-Suwayda,MTN,MTN Syria,MTN,50,4,76000.00,2,1,1,211,Other
+1849,Rana Omar,Quneitra,MTN,MTN Syria,MTN,1,10,691000.00,5,5,4,554,Champions
+1850,Hassan Omar,Aleppo,MTN,MTN Syria,MTN,56,4,641000.00,2,1,4,214,Other
+1851,Yousef Omar,Rif Dimashq,MTN,MTN Syria,MTN,64,8,670000.00,2,4,4,244,At Risk
+1852,Ali Ali,Homs,MTN,MTN Syria,MTN,35,6,452000.00,3,3,3,333,Loyal
+1853,Sarah Souri,Al-Hasakah,MTN,MTN Syria,MTN,20,5,403000.00,4,2,2,422,Other
+1854,Hussein Ali,Daraa,MTN,MTN Syria,MTN,51,12,1151000.00,2,5,5,255,At Risk
+1855,Ibrahim Dimashqi,Deir ez-Zor,MTN,MTN Syria,MTN,80,7,293000.00,1,3,2,132,At Risk
+1856,Huda Sayed,Daraa,MTN,MTN Syria,MTN,94,7,315000.00,1,3,2,132,At Risk
+1857,Noor Khatib,Raqqa,MTN,MTN Syria,MTN,38,10,953000.00,3,5,5,355,Loyal
+1858,Reem Sayed,Aleppo,MTN,MTN Syria,MTN,8,14,875000.00,5,5,5,555,Champions
+1859,Yousef Shami,Homs,MTN,MTN Syria,MTN,40,6,438000.00,3,3,3,333,Loyal
+1860,Nizar Zoubi,Aleppo,MTN,MTN Syria,MTN,9,12,500000.00,5,5,3,553,Loyal
+1861,Mohammad Tarabulsi,Daraa,MTN,MTN Syria,MTN,2,4,258000.00,5,1,1,511,New
+1862,Huda Ahmad,Daraa,MTN,MTN Syria,MTN,8,8,789000.00,5,4,5,545,Champions
+1863,Waleed Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,65,5,505000.00,2,2,3,223,Other
+1864,Nizar Ahmad,Hama,MTN,MTN Syria,MTN,54,6,675000.00,2,3,4,234,At Risk
+1865,Ali Ahmad,Daraa,MTN,MTN Syria,MTN,18,15,1102000.00,4,5,5,455,Champions
+1866,Reem Halabi,Damascus,MTN,MTN Syria,MTN,3,64,5264000.00,5,5,5,555,Champions
+1867,Yousef Ali,As-Suwayda,MTN,MTN Syria,MTN,35,7,304000.00,3,3,2,332,Loyal
+1868,Bashar Rifai,Daraa,MTN,MTN Syria,MTN,49,7,443000.00,2,3,3,233,At Risk
+1869,Rana Homsi,Raqqa,MTN,MTN Syria,MTN,21,7,485000.00,4,3,3,433,Loyal
+1870,Omar Shami,Quneitra,MTN,MTN Syria,MTN,36,9,780000.00,3,4,5,345,Loyal
+1871,Maher Khatib,Damascus,MTN,MTN Syria,MTN,4,7,605000.00,5,3,4,534,Loyal
+1872,Aisha Sayed,Rif Dimashq,MTN,MTN Syria,MTN,42,6,363000.00,3,3,2,332,Loyal
+1873,Bashar Tarabulsi,Tartus,MTN,MTN Syria,MTN,30,7,336000.00,3,3,2,332,Loyal
+1874,Yousef Zoubi,As-Suwayda,MTN,MTN Syria,MTN,26,9,818000.00,3,4,5,345,Loyal
+1875,Noor Homsi,Damascus,MTN,MTN Syria,MTN,14,8,598000.00,4,4,4,444,Champions
+1876,Maryam Khatib,Tartus,MTN,MTN Syria,MTN,1,12,579000.00,5,5,4,554,Champions
+1877,Ibrahim Hassan,Rif Dimashq,MTN,MTN Syria,MTN,22,12,814000.00,4,5,5,455,Champions
+1878,Ibrahim Khatib,As-Suwayda,MTN,MTN Syria,MTN,3,4,231000.00,5,1,1,511,New
+1879,Rana Dimashqi,Quneitra,MTN,MTN Syria,MTN,20,8,583000.00,4,4,4,444,Champions
+1880,Ibrahim Kurdi,Aleppo,MTN,MTN Syria,MTN,137,9,755000.00,1,4,5,145,At Risk
+1881,Ali Ali,Rif Dimashq,MTN,MTN Syria,MTN,53,9,665000.00,2,4,4,244,At Risk
+1882,Hussein Ali,Tartus,MTN,MTN Syria,MTN,34,12,803000.00,3,5,5,355,Loyal
+1883,Hussein Rifai,Aleppo,MTN,MTN Syria,MTN,1,7,565000.00,5,3,4,534,Loyal
+1884,Hussein Hassan,Hama,MTN,MTN Syria,MTN,24,7,435000.00,3,3,3,333,Loyal
+1885,Aisha Zoubi,Deir ez-Zor,MTN,MTN Syria,MTN,9,11,700000.00,5,5,4,554,Champions
+1886,Ahmad Shami,Homs,MTN,MTN Syria,MTN,128,6,360000.00,1,3,2,132,At Risk
+1887,Hussein Souri,Idlib,MTN,MTN Syria,MTN,17,5,186000.00,4,2,1,421,Other
+1888,Maher Shami,Al-Hasakah,MTN,MTN Syria,MTN,22,3,58000.00,4,1,1,411,New
+1889,Sami Hassan,Tartus,MTN,MTN Syria,MTN,1,7,360000.00,5,3,2,532,Loyal
+1890,Huda Homsi,Homs,MTN,MTN Syria,MTN,23,14,1159000.00,4,5,5,455,Champions
+1891,Nizar Ahmad,Homs,MTN,MTN Syria,MTN,34,6,590000.00,3,3,4,334,Loyal
+1892,Reem Kurdi,Al-Hasakah,MTN,MTN Syria,MTN,26,5,291000.00,3,2,2,322,Other
+3793,نزار الخطيب,Jaramana,SYRIATEL,Syriatel,SYRIATEL,18,5,396000.00,4,2,2,422,Other
+3856,سليمان السيد,Safita,SYRIATEL,Syriatel,SYRIATEL,113,4,245000.00,1,1,1,111,Lost
+3864,عمر الدمشقي,Safita,SYRIATEL,Syriatel,SYRIATEL,1,5,300000.00,5,2,2,522,Other
+3914,نور العمر,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,34,7,968000.00,3,3,5,335,Loyal
+3921,عمر السيد,Jaramana,SYRIATEL,Syriatel,SYRIATEL,84,7,570000.00,1,3,4,134,At Risk
+3924,نور الرفاعي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,70,7,568000.00,2,3,4,234,At Risk
+3959,سامي الأحمد,Jaramana,SYRIATEL,Syriatel,SYRIATEL,42,11,685000.00,3,5,4,354,Loyal
+3987,فاطمة الحمصي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,29,4,138000.00,3,1,1,311,Other
+3988,وليد الحلبي,Safita,SYRIATEL,Syriatel,SYRIATEL,90,5,179000.00,1,2,1,121,Lost
+3990,أيمن البرازي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,40,6,390000.00,3,3,2,332,Loyal
+4006,باسل الحسن,Safita,SYRIATEL,Syriatel,SYRIATEL,72,4,221000.00,2,1,1,211,Other
+4019,أحمد العظمة,Jaramana,SYRIATEL,Syriatel,SYRIATEL,77,5,176000.00,2,2,1,221,Other
+4046,وليد الجابري,Safita,SYRIATEL,Syriatel,SYRIATEL,4,7,905000.00,5,3,5,535,Loyal
+4068,زينب البرازي,Safita,SYRIATEL,Syriatel,SYRIATEL,142,4,433000.00,1,1,3,113,Lost
+4069,بشار الدمشقي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,69,7,268000.00,2,3,1,231,At Risk
+4078,فاطمة الكيلاني,Jaramana,SYRIATEL,Syriatel,SYRIATEL,20,9,770000.00,4,4,5,445,Champions
+4109,أحمد العمر,Jaramana,SYRIATEL,Syriatel,SYRIATEL,66,6,543000.00,2,3,3,233,At Risk
+4136,أحمد الجابري,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,20,8,503000.00,4,4,3,443,Loyal
+4143,سامي الحلبي,Safita,SYRIATEL,Syriatel,SYRIATEL,125,3,83000.00,1,1,1,111,Lost
+4163,عائشة الشامي,Safita,SYRIATEL,Syriatel,SYRIATEL,208,6,441000.00,1,3,3,133,At Risk
+4181,سامي الكردي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,3,8,340000.00,5,4,2,542,Loyal
+4201,طارق الطرابلسي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,3,78,5716000.00,5,5,5,555,Champions
+4220,خالد الحمصي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,139,9,598000.00,1,4,4,144,At Risk
+4225,زينب الكردي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,205,4,340000.00,1,1,2,112,Lost
+4246,كريم الشامي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,8,5,300000.00,5,2,2,522,Other
+4270,ريم الحمصي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,2,7,745000.00,5,3,4,534,Loyal
+4273,عمر العظمة,Safita,SYRIATEL,Syriatel,SYRIATEL,186,3,63000.00,1,1,1,111,Lost
+4274,طارق الطرابلسي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,28,6,257000.00,3,3,1,331,Loyal
+4280,هدى السيد,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,45,11,938000.00,2,5,5,255,At Risk
+4290,زينب البرازي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,58,10,715000.00,2,5,4,254,At Risk
+4312,باسل العظمة,Jaramana,SYRIATEL,Syriatel,SYRIATEL,65,10,818000.00,2,5,5,255,At Risk
+4320,وليد البرازي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,11,8,426000.00,4,4,3,443,Loyal
+4327,ليلى الخطيب,Jaramana,SYRIATEL,Syriatel,SYRIATEL,114,6,361000.00,1,3,2,132,At Risk
+4338,عائشة الحسن,Safita,SYRIATEL,Syriatel,SYRIATEL,42,4,640000.00,3,1,4,314,Other
+4352,عائشة اللاذقاني,Jaramana,SYRIATEL,Syriatel,SYRIATEL,20,5,413000.00,4,2,3,423,Other
+4354,مصطفى العلي,Safita,SYRIATEL,Syriatel,SYRIATEL,8,8,440000.00,5,4,3,543,Loyal
+4360,إبراهيم الكيلاني,Jaramana,SYRIATEL,Syriatel,SYRIATEL,73,10,536000.00,2,5,3,253,At Risk
+4368,هدى الجابري,Jaramana,SYRIATEL,Syriatel,SYRIATEL,5,11,446000.00,5,5,3,553,Loyal
+4373,ماهر العظمة,Safita,SYRIATEL,Syriatel,SYRIATEL,13,9,729000.00,4,4,4,444,Champions
+4399,كريم الجابري,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,96,7,493000.00,1,3,3,133,At Risk
+4440,زينب الجابري,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,87,8,623000.00,1,4,4,144,At Risk
+4459,بشار القباني,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,7,7,511000.00,5,3,3,533,Loyal
+4467,عمر الكردي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,85,5,188000.00,1,2,1,121,Lost
+4513,طارق المصري,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,2,2,115000.00,5,1,1,511,New
+4514,ماهر الحمصي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,4,4,295000.00,5,1,2,512,New
+4515,نزار العلي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,29,7,465000.00,3,3,3,333,Loyal
+4536,طارق الحسن,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,83,8,730000.00,1,4,4,144,At Risk
+4577,ماهر الحلبي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,13,9,573000.00,4,4,4,444,Champions
+4602,سارة البيطار,Safita,SYRIATEL,Syriatel,SYRIATEL,10,10,808000.00,4,5,5,455,Champions
+4649,علي السيد,Safita,SYRIATEL,Syriatel,SYRIATEL,23,4,91000.00,3,1,1,311,Other
+4679,ليلى البيطار,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,9,9,935000.00,5,4,5,545,Champions
+4712,سارة الطرابلسي,Safita,SYRIATEL,Syriatel,SYRIATEL,77,12,1141000.00,2,5,5,255,At Risk
+4716,كريم الحمصي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,15,8,913000.00,4,4,5,445,Champions
+4726,فاطمة الطرابلسي,Jaramana,SYRIATEL,Syriatel,SYRIATEL,20,5,175000.00,4,2,1,421,Other
+4755,حسن العظمة,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,235,1,80000.00,1,1,1,111,Lost
+4764,سامي الحمصي,Salamiyah,SYRIATEL,Syriatel,SYRIATEL,155,5,155000.00,1,2,1,121,Lost
+4788,Layla Kurdi,Salamiyah,MTN,MTN Syria,MTN,14,11,756000.00,4,5,5,455,Champions
+4814,Maher Halabi,Safita,MTN,MTN Syria,MTN,177,8,477000.00,1,4,3,143,At Risk
+4846,Omar Shami,Jaramana,MTN,MTN Syria,MTN,49,4,175000.00,2,1,1,211,Other
+4864,Aisha Zoubi,Salamiyah,MTN,MTN Syria,MTN,44,4,300000.00,3,1,2,312,Other
+4871,Hussein Omar,Jaramana,MTN,MTN Syria,MTN,33,8,1135000.00,3,4,5,345,Loyal
+4880,Omar Rifai,Safita,MTN,MTN Syria,MTN,86,9,1008000.00,1,4,5,145,At Risk
+4887,Waleed Ali,Salamiyah,MTN,MTN Syria,MTN,18,6,273000.00,4,3,1,431,Loyal
+4891,Huda Rifai,Jaramana,MTN,MTN Syria,MTN,35,8,609000.00,3,4,4,344,Loyal
+4907,Bashar Homsi,Jaramana,MTN,MTN Syria,MTN,58,5,170000.00,2,2,1,221,Other
+4912,Huda Omar,Jaramana,MTN,MTN Syria,MTN,4,8,464000.00,5,4,3,543,Loyal
+4914,Rana Rifai,Safita,MTN,MTN Syria,MTN,6,59,4611000.00,5,5,5,555,Champions
+4930,Sarah Ali,Salamiyah,MTN,MTN Syria,MTN,44,6,343000.00,3,3,2,332,Loyal
+4937,Bashar Rifai,Salamiyah,MTN,MTN Syria,MTN,157,5,290000.00,1,2,2,122,Lost
+4942,Layla Tarabulsi,Safita,MTN,MTN Syria,MTN,36,9,1020000.00,3,4,5,345,Loyal
+4974,Ali Ali,Safita,MTN,MTN Syria,MTN,68,5,543000.00,2,2,3,223,Other
+4990,Sami Ahmad,Jaramana,MTN,MTN Syria,MTN,25,11,665000.00,3,5,4,354,Loyal
+5047,Sarah Tarabulsi,Salamiyah,MTN,MTN Syria,MTN,19,9,730000.00,4,4,4,444,Champions
+5049,Aisha Ali,Salamiyah,MTN,MTN Syria,MTN,31,6,688000.00,3,3,4,334,Loyal
+5056,Khaled Kurdi,Jaramana,MTN,MTN Syria,MTN,23,9,955000.00,3,4,5,345,Loyal
+5105,Ahmad Tarabulsi,Salamiyah,MTN,MTN Syria,MTN,48,6,340000.00,2,3,2,232,At Risk
+5173,Omar Dimashqi,Safita,MTN,MTN Syria,MTN,16,12,926000.00,4,5,5,455,Champions
+5195,Yousef Ahmad,Jaramana,MTN,MTN Syria,MTN,53,4,250000.00,2,1,1,211,Other
+5201,Waleed Hassan,Jaramana,MTN,MTN Syria,MTN,55,6,395000.00,2,3,2,232,At Risk
+5220,Omar Khatib,Salamiyah,MTN,MTN Syria,MTN,95,9,618000.00,1,4,4,144,At Risk
+5268,Ibrahim Ali,Safita,MTN,MTN Syria,MTN,62,8,635000.00,2,4,4,244,At Risk
+5271,Layla Omar,Safita,MTN,MTN Syria,MTN,45,5,315000.00,2,2,2,222,Other
+5280,Yousef Halabi,Safita,MTN,MTN Syria,MTN,20,5,360000.00,4,2,2,422,Other
+5296,Bashar Tarabulsi,Safita,MTN,MTN Syria,MTN,73,6,461000.00,2,3,3,233,At Risk
+5335,Yousef Shami,Safita,MTN,MTN Syria,MTN,16,8,548000.00,4,4,3,443,Loyal
+5345,Noor Dimashqi,Salamiyah,MTN,MTN Syria,MTN,34,4,185000.00,3,1,1,311,Other
+5372,Ibrahim Masri,Jaramana,MTN,MTN Syria,MTN,3,9,728000.00,5,4,4,544,Champions
+5376,Maher Halabi,Jaramana,MTN,MTN Syria,MTN,74,6,278000.00,2,3,2,232,At Risk
+5410,Omar Khatib,Jaramana,MTN,MTN Syria,MTN,47,4,70000.00,2,1,1,211,Other
+5481,Rana Halabi,Salamiyah,MTN,MTN Syria,MTN,3,6,365000.00,5,3,2,532,Loyal
+5516,Ibrahim Ali,Jaramana,MTN,MTN Syria,MTN,29,8,630000.00,3,4,4,344,Loyal
+5518,Reem Hassan,Salamiyah,MTN,MTN Syria,MTN,160,4,250000.00,1,1,1,111,Lost
+5519,Rana Sayed,Jaramana,MTN,MTN Syria,MTN,19,6,193000.00,4,3,1,431,Loyal
+5527,Ahmad Kurdi,Safita,MTN,MTN Syria,MTN,7,5,278000.00,5,2,2,522,Other
+5550,Yousef Shami,Salamiyah,MTN,MTN Syria,MTN,30,8,579000.00,3,4,4,344,Loyal
+5578,Yousef Zoubi,Jaramana,MTN,MTN Syria,MTN,23,11,508000.00,3,5,3,353,Loyal
+5602,Bashar Kurdi,Salamiyah,MTN,MTN Syria,MTN,37,8,903000.00,3,4,5,345,Loyal
+5616,Aisha Khatib,Jaramana,MTN,MTN Syria,MTN,42,8,660000.00,3,4,4,344,Loyal
+5620,Huda Zoubi,Jaramana,MTN,MTN Syria,MTN,106,6,696000.00,1,3,4,134,At Risk
+5630,Reem Hassan,Jaramana,MTN,MTN Syria,MTN,51,8,598000.00,2,4,4,244,At Risk
+5642,Nizar Ahmad,Safita,MTN,MTN Syria,MTN,36,10,468000.00,3,5,3,353,Loyal
+5648,Ibrahim Dimashqi,Jaramana,MTN,MTN Syria,MTN,44,8,436000.00,3,4,3,343,Loyal
+5696,Ahmad Ali,Jaramana,MTN,MTN Syria,MTN,3,9,923000.00,5,4,5,545,Champions
+5725,Ali Tarabulsi,Salamiyah,MTN,MTN Syria,MTN,1,67,5477000.00,5,5,5,555,Champions
+5730,Fatima Khatib,Salamiyah,MTN,MTN Syria,MTN,16,14,727000.00,4,5,4,454,Champions
+5734,Reem Rifai,Salamiyah,MTN,MTN Syria,MTN,5,10,806000.00,5,5,5,555,Champions
+5754,Maher Tarabulsi,Salamiyah,MTN,MTN Syria,MTN,72,8,468000.00,2,4,3,243,At Risk
+5782,Aisha Ahmad,Salamiyah,MTN,MTN Syria,MTN,10,11,935000.00,4,5,5,455,Champions
