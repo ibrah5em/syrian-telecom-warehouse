@@ -1,0 +1,7 @@
+psycopg[binary]>=3.2
+pandas>=2.2
+faker>=25.0
+python-dotenv>=1.0
+statsmodels>=0.14
+matplotlib>=3.8
+pytest>=8.0
