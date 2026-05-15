@@ -43,6 +43,33 @@ plt.rcParams.update({
     "axes.labelsize":   11,
 })
 
+# Arabic → Latin map for chart labels (Syriatel customers are stored
+# in Arabic; matplotlib renders Arabic glyphs disconnected, so we
+# transliterate for charts only — the underlying DW row keeps Arabic).
+ARABIC_TO_LATIN = {
+    # firsts
+    "أحمد": "Ahmad", "محمد": "Mohammad", "علي": "Ali", "عمر": "Omar",
+    "يوسف": "Yousef", "خالد": "Khaled", "حسن": "Hassan", "حسين": "Hussein",
+    "إبراهيم": "Ibrahim", "مصطفى": "Mustafa", "فاطمة": "Fatima", "عائشة": "Aisha",
+    "مريم": "Maryam", "سارة": "Sarah", "ليلى": "Layla", "نور": "Noor",
+    "رنا": "Rana", "هدى": "Huda", "زينب": "Zainab", "ريم": "Reem",
+    "بشار": "Bashar", "نزار": "Nizar", "وليد": "Waleed", "ماهر": "Maher",
+    "سامي": "Sami", "كريم": "Karim", "طارق": "Tareq", "سليمان": "Sulaiman",
+    "أيمن": "Ayman", "باسل": "Basel",
+    # lasts (leading ال dropped in the Latin form)
+    "الأحمد": "Ahmad", "الحسن": "Hassan", "العلي": "Ali", "الخطيب": "Khatib",
+    "السيد": "Sayed", "المصري": "Masri", "الحلبي": "Halabi", "الدمشقي": "Dimashqi",
+    "العمر": "Omar", "الزعبي": "Zoubi", "الشامي": "Shami", "الكردي": "Kurdi",
+    "الحمصي": "Homsi", "السوري": "Souri", "الطرابلسي": "Tarabulsi",
+    "اللاذقاني": "Lattakani", "الرفاعي": "Rifai", "البرازي": "Barazi",
+    "العظمة": "Azmeh", "القباني": "Qabbani", "البيطار": "Bitar",
+    "الجابري": "Jabri", "الكيلاني": "Kilani",
+}
+
+def latinize(name: str) -> str:
+    """Token-by-token Arabic→Latin. Falls back to the original token."""
+    return " ".join(ARABIC_TO_LATIN.get(tok, tok) for tok in name.split())
+
 def syp(val):
     """Format large SYP values as '702M SYP'."""
     if val >= 1_000_000:
@@ -110,7 +137,7 @@ with psycopg.connect(DSN) as conn:
         LIMIT 20
     """, conn)
 
-    df2["label"] = df2["full_name"].str[:22]
+    df2["label"] = df2["full_name"].map(latinize).str[:22]
     colors_q2 = [SYRIATEL_COLOR if s == "SYRIATEL" else MTN_COLOR for s in df2["source_system"]]
 
     fig, ax = plt.subplots(figsize=(12, 7))
