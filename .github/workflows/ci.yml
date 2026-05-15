@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  end-to-end:
+    name: End-to-end pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure environment
+        run: cp .env.example .env
+
+      - name: Boot Postgres stack (Syriatel + MTN + DW)
+        run: docker compose up -d syriatel mtn dw
+
+      - name: Wait for healthy databases
+        run: make wait-healthy
+
+      - name: Seed both OLTPs
+        run: make seed
+
+      - name: Verify 9-dimension divergence contract
+        run: make verify
+
+      - name: Run ETL (full reload)
+        run: make etl-full
+
+      - name: Run pytest smoke suite
+        run: python -m pytest etl/tests/ -v
+
+      - name: Run six analytical queries
+        run: make analytics
+
+      - name: Idempotency check — second ETL run must yield identical row count
+        run: |
+          before=$(docker exec telecom_dw psql -U dw -d telecom_dw -tAc "SELECT count(*) FROM dw.fact_sales;")
+          make etl-full
+          after=$(docker exec telecom_dw psql -U dw -d telecom_dw -tAc "SELECT count(*) FROM dw.fact_sales;")
+          echo "fact_sales rows  before=$before  after=$after"
+          test "$before" = "$after"
+
+      - name: Dump logs on failure
+        if: failure()
+        run: |
+          docker compose ps
+          docker compose logs --tail=200 syriatel mtn dw || true
