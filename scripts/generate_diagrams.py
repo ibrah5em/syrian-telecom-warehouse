@@ -1,5 +1,12 @@
 """Generate PNG diagrams for the README.
 
+NOTE: The diagrams currently committed under docs/diagrams/ are
+hand-styled dark-theme versions, not the output of this script.
+Running this script will overwrite them with the plain matplotlib
+fallback below. Kept in-repo as a reproducible, dependency-free
+baseline in case the styled versions need to be regenerated from
+source data later.
+
 Outputs three files into docs/diagrams/:
 - architecture.png   — three-tier system overview
 - star_schema.png    — DW fact + dimensions and their FKs
