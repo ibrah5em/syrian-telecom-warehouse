@@ -31,6 +31,7 @@ logs/
 # Claude Code (local-only — not part of submission)
 .claude/
 
-# docs/ hidden from history except for screenshots referenced by README
+# docs/ hidden from history except for screenshots + diagrams referenced by README
 docs/*
 !docs/screenshots/
+!docs/diagrams/

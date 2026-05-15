@@ -1,10 +1,5 @@
 # Telecom DW — Unified Data Warehouse for Two Syrian Telecom Operators
 
-> **Course:** Data Mining (البحث والتنقيب عن المعطيات)
-> **University:** Antioch Syrian Private University (جامعة أنطاكيا السورية الخاصة)
-> **Supervisor:** د. راكان رزوق · **Instructor:** م. ياسر المفعلاني
-> **Beneficiary (scenario):** Ministry of Communications of Syria (وزارة الاتصالات السورية)
-
 ## Table of Contents
 
 1. [Scenario](#1-scenario)
@@ -52,37 +47,7 @@ System size: ~1000 customers and ~10,000 orders per operator over a 12-month win
 
 A three-tier system:
 
-```
-+------------------+     +------------------+
-|  Syriatel OLTP   |     |  MTN Syria OLTP  |
-|  (Postgres 5433) |     |  (Postgres 5434) |
-|  Arabic-tilted   |     |  English-tilted  |
-|  SERIAL keys     |     |  UUID keys       |
-|  Stored totals   |     |  Computed totals |
-+--------+---------+     +--------+---------+
-         |                        |
-         +------------+-----------+
-                      |
-                      v
-              +---------------+
-              |  ETL (Python) |
-              |  Extract      |
-              |  Transform    |
-              |  Load         |
-              +-------+-------+
-                      |
-                      v
-              +---------------+
-              |  DW Postgres  |
-              |  (Port 5435)  |
-              |  Star Schema  |
-              +-------+-------+
-                      |
-        +-------------+-------------+
-        v             v             v
-    Analytics    Data Mining   Metabase
-    (6 SQL)      (RFM+HW)      Dashboard
-```
+![Three-tier architecture](docs/diagrams/architecture.png)
 
 - **Tier 1 — Sources:** two independent Postgres OLTPs.
 - **Tier 2 — ETL:** Python package using `pandas` + `psycopg`. Stages: Extract → Transform (resolves all 9 divergences) → Load (idempotent). Each batch is recorded in `etl_runs`; bad rows are quarantined in `etl_errors`.
@@ -167,6 +132,8 @@ Three tables. `UUID` PKs. Split `DATE` + `TIME`. Prices as `NUMERIC(12,2)`. No s
 
 ## 8. Data Warehouse — Star Schema
 
+![Star schema — fact_sales + 4 conformed dimensions](docs/diagrams/star_schema.png)
+
 One fact table, four dimensions.
 
 **`fact_sales`** — grain: one row per order line per operator.
@@ -195,6 +162,8 @@ One fact table, four dimensions.
 **SCD policy:** Type 1 (overwrite). The Ministry use-case wants current state, not historical drift; Type-1 simplifies ETL and avoids row-explosion. Audit columns (`etl_loaded_at`, `etl_batch_id`, `etl_source`) preserve traceability per row.
 
 ## 9. ETL Pipeline
+
+![ETL pipeline — six stages](docs/diagrams/etl_pipeline.png)
 
 `etl/` is a Python package. Stages:
 
