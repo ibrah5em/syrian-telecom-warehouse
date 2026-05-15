@@ -1,0 +1,16 @@
+offering_id,category,syriatel_name_ar,syriatel_price_int,mtn_category,mtn_name_en,mtn_price_decimal
+1,Internet,باقة 1GB,8000,INTERNET,1GB Internet Bundle,8000.00
+2,Internet,باقة 5GB,25000,INTERNET,5GB Internet Bundle,25000.00
+3,Internet,باقة 10GB,45000,INTERNET,10GB Internet Bundle,45000.00
+4,Internet,باقة 20GB,80000,INTERNET,20GB Internet Pack,80000.00
+5,Internet,باقة لا محدودة,200000,INTERNET,Unlimited Internet,200000.00
+6,Voice,دقائق 100,5000,VOICE,100 Minutes Voice,5000.00
+7,Voice,دقائق 500,20000,VOICE,500 Minutes Voice,20000.00
+8,Voice,دقائق 1000,35000,VOICE,1000 Minutes Voice,35000.00
+9,Voice,دقائق لا محدودة,90000,VOICE,Unlimited Voice,90000.00
+10,Bundle,باقة شاملة صغيرة,30000,BUNDLE,Small Combo Plan,30000.00
+11,Bundle,باقة شاملة متوسطة,60000,BUNDLE,Medium Combo Plan,60000.00
+12,Bundle,باقة شاملة كبيرة,120000,BUNDLE,Large Combo Plan,120000.00
+13,Bundle,باقة عائلية,180000,BUNDLE,Family Plan,180000.00
+14,Internet,باقة ليلية 10GB,18000,INTERNET,Night 10GB Pack,18000.00
+15,Voice,دقائق دولية 100,50000,VOICE,100 Intl Minutes,50000.00
