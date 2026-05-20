@@ -44,14 +44,14 @@ def _base_layout(height: int = 300, margin: dict | None = None) -> dict:
         margin=m,
         xaxis=dict(
             gridcolor=C["border"],
-            linecolor="transparent",
-            tickcolor="transparent",
+            linecolor="rgba(0,0,0,0)",
+            tickcolor="rgba(0,0,0,0)",
             zeroline=False,
         ),
         yaxis=dict(
             gridcolor=C["border"],
-            linecolor="transparent",
-            tickcolor="transparent",
+            linecolor="rgba(0,0,0,0)",
+            tickcolor="rgba(0,0,0,0)",
             zeroline=False,
         ),
         legend=dict(
@@ -242,7 +242,7 @@ def city_revenue_bar(city_df: pd.DataFrame) -> go.Figure:
         barmode="stack",
         bargap=0.25,
         xaxis=dict(ticksuffix="M", gridcolor=C["border"]),
-        yaxis=dict(gridcolor="transparent", tickfont=dict(size=11, color=C["textDim"])),
+        yaxis=dict(gridcolor="rgba(0,0,0,0)", tickfont=dict(size=11, color=C["textDim"])),
         margin=dict(t=16, b=40, l=110, r=16),
     )
     return _fig(traces, layout_ov, height=440)
@@ -267,7 +267,7 @@ def product_bar_chart(products_df: pd.DataFrame) -> go.Figure:
     layout_ov = dict(
         showlegend=False,
         xaxis=dict(gridcolor=C["border"], tickformat=",.0f"),
-        yaxis=dict(gridcolor="transparent", tickfont=dict(size=11, color=C["textDim"])),
+        yaxis=dict(gridcolor="rgba(0,0,0,0)", tickfont=dict(size=11, color=C["textDim"])),
         margin=dict(t=16, b=40, l=150, r=16),
     )
     return _fig([trace], layout_ov, height=340)
@@ -445,7 +445,7 @@ def revenue_tab(data: dict) -> html.Div:
 
     # Company cards
     company_cards = []
-    comp_map = {row["company_code"]: row for _, row in comparison_df.iterrows()} if not comparison_df.empty else {}
+    comp_map = {row["company_code"]: row.to_dict() for _, row in comparison_df.iterrows()} if not comparison_df.empty else {}
 
     for _, row in company_df.iterrows():
         code  = row["company_code"]
@@ -454,8 +454,8 @@ def revenue_tab(data: dict) -> html.Div:
         share = float(row["share_pct"])
         orders = int(row["order_count"])
         avg_k = float(row["avg_order_syp"]) / 1e3
-        cmp = comp_map.get(code, {})
-        cust  = int(cmp.get("customer_count", 0)) if cmp else 0
+        cmp = comp_map.get(code) or {}
+        cust  = int(cmp.get("customer_count", 0))
 
         card = html.Div([
             html.Div([

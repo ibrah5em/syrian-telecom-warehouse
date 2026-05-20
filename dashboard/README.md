@@ -10,11 +10,11 @@ Bilingual (Arabic / English) · Dark theme · Live warehouse data · Ministry of
 ### Via Docker Compose (recommended)
 
 ```bash
-# From the project root — builds the image and starts on port 8050
+# From the project root — builds the image and starts on port 3000 (mapped from the container's 8050)
 make dash-build
 
 # Open the dashboard
-open http://localhost:8050
+open http://localhost:3000
 
 # Tail logs
 make dash-logs

@@ -17,9 +17,18 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
-# analytics/mining/output/ relative to the project root (one level above dashboard/)
-_PROJECT_ROOT  = pathlib.Path(__file__).resolve().parent.parent
-_MINING_OUTPUT = _PROJECT_ROOT / "analytics" / "mining" / "output"
+# Mining CSV output directory. In the Docker image the volume is mounted at
+# /app/analytics/mining/output (see docker-compose dashboard.volumes), so the
+# default resolves relative to this file's directory. For local development
+# (parent .. up to the project root) it falls back to the repo path.
+_HERE = pathlib.Path(__file__).resolve().parent
+for _candidate in (_HERE / "analytics" / "mining" / "output",
+                   _HERE.parent / "analytics" / "mining" / "output"):
+    if _candidate.exists():
+        _MINING_OUTPUT = _candidate
+        break
+else:
+    _MINING_OUTPUT = _HERE / "analytics" / "mining" / "output"
 
 DATABASE_URL = os.getenv("DATABASE_URL") or (
     "postgresql://{user}:{pw}@{host}:{port}/{db}".format(
@@ -40,11 +49,16 @@ def _conn():
 
 
 def _qdf(sql: str) -> pd.DataFrame:
-    conn = _conn()
-    try:
-        return pd.read_sql(sql, conn)
-    finally:
-        conn.close()
+    # pandas warns when handed a raw DBAPI2 connection; pass the DSN directly
+    # so it picks up SQLAlchemy/psycopg2 cleanly. We still use psycopg2 under
+    # the hood — pandas opens its own short-lived connection.
+    with warnings.catch_warnings():
+        warnings.filterwarnings("ignore", category=UserWarning)
+        conn = _conn()
+        try:
+            return pd.read_sql(sql, conn)
+        finally:
+            conn.close()
 
 
 # ---------------------------------------------------------------------------

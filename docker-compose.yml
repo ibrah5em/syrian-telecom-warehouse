@@ -115,11 +115,11 @@ services:
     ports:
       - "3000:8050"
     environment:
-      DB_HOST: telecom_dw
+      DB_HOST: dw
       DB_PORT: "5432"
-      DB_NAME: telecom_dw
-      DB_USER: postgres
-      DB_PASS: postgres
+      DB_NAME: ${DW_DB:-telecom_dw}
+      DB_USER: ${DW_USER:-dw}
+      DB_PASS: ${DW_PASSWORD:-dw}
     volumes:
       - ./analytics/mining/output:/app/analytics/mining/output:ro
     depends_on:
