@@ -90,6 +90,7 @@ def _header() -> html.Header:
                                     "fontFamily": "'Noto Kufi Arabic', sans-serif",
                                     "direction": "rtl", "textAlign": "right"}),
                 ]),
+                html.Button("🖨 Print / Export PDF", id="print-btn", className="print-btn"),
                 html.Div(className="live-dot"),
             ], style={"display": "flex", "alignItems": "center", "gap": 16}),
         ], className="dw-header-inner"),
@@ -118,7 +119,13 @@ def _tab_nav() -> html.Div:
 app.layout = html.Div([
     _header(),
     _tab_nav(),
-    html.Main(id="tab-content", className="main-content"),
+    dcc.Loading(
+        id="loading-tab",
+        type="dot",
+        color=GOLD,
+        delay_show=120,
+        children=html.Main(id="tab-content", className="main-content"),
+    ),
     html.Footer([
         html.Span("Telecom DW — Unified Data Warehouse"),
         html.Span(" | ", style={"margin": "0 12px", "color": BORD}),
@@ -158,19 +165,26 @@ def render_tab(tab: str) -> html.Div:
             "color": "#F1F5F9",
         })
 
-    if tab == "overview":
-        return comp.overview_tab(DATA)
-    if tab == "revenue":
-        return comp.revenue_tab(DATA)
-    if tab == "geo":
-        return comp.geo_tab(DATA)
-    if tab == "customers":
-        return comp.customers_tab(DATA)
-    if tab == "forecast":
-        return comp.forecast_tab(DATA)
-    if tab == "recommendations":
-        return comp.recommendations_tab(DATA)
-    return html.Div("Unknown tab", style={"color": "#EF4444"})
+    tab_map = {
+        "overview":        comp.overview_tab,
+        "revenue":         comp.revenue_tab,
+        "geo":             comp.geo_tab,
+        "customers":       comp.customers_tab,
+        "forecast":        comp.forecast_tab,
+        "recommendations": comp.recommendations_tab,
+    }
+    builder = tab_map.get(tab)
+    if builder is None:
+        return html.Div("Unknown tab", style={"color": "#EF4444"})
+    return html.Div(builder(DATA), className="tab-panel-animate")
+
+
+app.clientside_callback(
+    "function(n) { if (n) { window.print(); } return '🖨 Print / Export PDF'; }",
+    Output("print-btn", "children"),
+    Input("print-btn", "n_clicks"),
+    prevent_initial_call=True,
+)
 
 
 @app.callback(Output("footer-stats", "children"), Input("tabs", "value"))

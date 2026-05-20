@@ -5,6 +5,7 @@ Loads once at startup; exposes a single load_all_data() function.
 
 import logging
 import os
+import pathlib
 import warnings
 
 import numpy as np
@@ -16,9 +17,18 @@ load_dotenv()
 
 log = logging.getLogger(__name__)
 
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql://dw:dw@dw:5432/telecom_dw",
+# analytics/mining/output/ relative to the project root (one level above dashboard/)
+_PROJECT_ROOT  = pathlib.Path(__file__).resolve().parent.parent
+_MINING_OUTPUT = _PROJECT_ROOT / "analytics" / "mining" / "output"
+
+DATABASE_URL = os.getenv("DATABASE_URL") or (
+    "postgresql://{user}:{pw}@{host}:{port}/{db}".format(
+        user=os.getenv("DB_USER", "postgres"),
+        pw=os.getenv("DB_PASS", "postgres"),
+        host=os.getenv("DB_HOST", "telecom_dw"),
+        port=os.getenv("DB_PORT", "5432"),
+        db=os.getenv("DB_NAME", "telecom_dw"),
+    )
 )
 
 # ---------------------------------------------------------------------------
@@ -373,6 +383,76 @@ def _fallback_forecast() -> dict:
 
 
 # ---------------------------------------------------------------------------
+# CSV-based loaders (preferred over live DB computation)
+# ---------------------------------------------------------------------------
+
+def load_rfm_data() -> pd.DataFrame:
+    """
+    Read analytics/mining/output/rfm_segments.csv and return a segment-summary
+    DataFrame with columns: segment, count, pct, color, segment_ar.
+
+    Shape is identical to the DataFrame produced by _build_rfm_summary() so
+    customers_tab() can consume either source without modification.
+    """
+    csv_path = _MINING_OUTPUT / "rfm_segments.csv"
+    df = pd.read_csv(csv_path)
+    # rfm_segments.csv has a 'segment' column for every customer row
+    return _build_rfm_summary(df)
+
+
+def load_forecast_data() -> dict:
+    """
+    Read analytics/mining/output/forecast-syriatel.csv and forecast-mtn.csv.
+
+    Each file has columns: period (YYYY-MM), type (actual|fitted|forecast), sales_syp.
+    Returns a dict keyed by company code with sub-keys matching _compute_forecast():
+        actual   — pd.Series[float] indexed by month-start datetime (SYP)
+        fitted   — pd.Series[float] indexed by month-start datetime (SYP)
+        forecast — pd.Series[float] indexed by month-start datetime (SYP)
+        rmse     — float (in-sample, SYP)
+        mape     — float (in-sample, %)
+    """
+    _CODE_TO_FILE = {
+        "SYRIATEL": "forecast-syriatel.csv",
+        "MTN":      "forecast-mtn.csv",
+    }
+    result = {}
+    for code, fname in _CODE_TO_FILE.items():
+        df = pd.read_csv(_MINING_OUTPUT / fname)
+        # "2025-05" → Timestamp("2025-05-01")
+        df["period"] = pd.to_datetime(df["period"] + "-01")
+        df = df.set_index("period")
+
+        actual   = df.loc[df["type"] == "actual",   "sales_syp"].astype(float)
+        fitted   = df.loc[df["type"] == "fitted",   "sales_syp"].astype(float)
+        forecast = df.loc[df["type"] == "forecast", "sales_syp"].astype(float)
+
+        # Recompute in-sample metrics from the pre-fitted values
+        actual_v = actual.values
+        fitted_v = fitted.values
+        rmse = float(np.sqrt(np.mean((actual_v - fitted_v) ** 2)))
+        with np.errstate(divide="ignore", invalid="ignore"):
+            ape = np.where(actual_v != 0,
+                           np.abs((actual_v - fitted_v) / actual_v),
+                           np.nan)
+        mape = float(np.nanmean(ape) * 100)
+
+        result[code] = {
+            "actual":   actual,
+            "fitted":   fitted,
+            "forecast": forecast,
+            "rmse":     rmse,
+            "mape":     mape,
+        }
+        log.debug(
+            "Forecast CSV loaded for %s — %d actual, %d fitted, %d forecast rows; "
+            "RMSE=%.2fM MAPE=%.1f%%",
+            code, len(actual), len(fitted), len(forecast), rmse / 1e6, mape,
+        )
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Monthly pivot helper (used by charts)
 # ---------------------------------------------------------------------------
 
@@ -430,13 +510,23 @@ def load_all_data() -> dict | None:
         # Monthly wide pivot
         monthly_wide = build_monthly_wide(monthly_df)
 
-        # RFM
+        # RFM — DB scoring used as fallback; CSV output preferred
         rfm_df = _score_rfm(rfm_raw_df)
         rfm_df = _assign_segments(rfm_df)
         rfm_summary = _build_rfm_summary(rfm_df)
+        try:
+            rfm_summary = load_rfm_data()
+            log.info("RFM summary sourced from CSV (%s)", _MINING_OUTPUT / "rfm_segments.csv")
+        except Exception as exc:
+            log.warning("CSV RFM unavailable (%s) — using DB-scored segmentation", exc)
 
-        # Forecast
+        # Forecast — live Holt-Winters used as fallback; CSV output preferred
         forecast = _compute_forecast(monthly_df)
+        try:
+            forecast = load_forecast_data()
+            log.info("Forecast sourced from CSV (%s)", _MINING_OUTPUT)
+        except Exception as exc:
+            log.warning("CSV forecast unavailable (%s) — using live Holt-Winters computation", exc)
 
         # KPI convenience values
         kpi_row = kpi_df.iloc[0]

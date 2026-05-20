@@ -31,7 +31,7 @@ This repository delivers:
 - A **Python ETL** pipeline that reconciles all the divergences, idempotently.
 - Weekly **pg_cron + LISTEN/NOTIFY** scheduling.
 - **Six required analytical queries** answering Ministry questions.
-- A **Metabase** dashboard surfacing the same six analyses.
+- A **Plotly Dash** dashboard surfacing the same six analyses.
 - A **data-mining layer** — RFM segmentation + Holt-Winters monthly forecast.
 
 System size: ~1000 customers and ~10,000 orders per operator over a 12-month window. The resulting DW contains ~20,000 rows in `fact_sales`, ~2000 unique customers, 30 products, and 17 Syrian cities.
@@ -41,7 +41,7 @@ System size: ~1000 customers and ~10,000 orders per operator over a 12-month win
 | Member | Handle | Role |
 |---|---|---|
 | Ibrahim (lead) | `ibrah5em` | Architecture, ETL, DW, data mining, infrastructure |
-| Luf8y | `luf8y` | Supporting contributor — OLTP + analytics queries |
+| Luf8y | `luf8y` | Supporting contributor — OLTP, analytics queries, dashboard UI |
 
 ## 3. Architecture
 
@@ -51,7 +51,7 @@ A three-tier system:
 
 - **Tier 1 — Sources:** two independent Postgres OLTPs.
 - **Tier 2 — ETL:** Python package using `pandas` + `psycopg`. Stages: Extract → Transform (resolves all 9 divergences) → Load (idempotent). Each batch is recorded in `etl_runs`; bad rows are quarantined in `etl_errors`.
-- **Tier 3 — Warehouse & Analytics:** unified star schema feeding six SQL analyses, the data-mining outputs, and a Metabase dashboard on port 3000.
+- **Tier 3 — Warehouse & Analytics:** unified star schema feeding six SQL analyses, the data-mining outputs, and a Plotly Dash dashboard on port 3000.
 
 ## 4. Quickstart
 
@@ -61,7 +61,7 @@ Requires Docker, Docker Compose, Python 3.11+, and `pip`.
 # 1. Configure
 cp .env.example .env
 
-# 2. Bring up the three Postgres instances + Metabase + ETL listener
+# 2. Bring up all services (Postgres instances, ETL listener, Dashboard)
 make up
 make wait-healthy
 
@@ -91,7 +91,7 @@ make dashboard       # http://localhost:3000
 | Syriatel OLTP | 5433 |
 | MTN OLTP | 5434 |
 | Unified DW | 5435 |
-| Metabase | 3000 |
+| Dashboard | 3000 |
 
 ## 6. The Divergence Rule — 9 dimensions
 
@@ -262,7 +262,7 @@ Translated from the original Arabic report:
 4. **Audit Syriatel's stored-total computation.** Inconsistencies between `total_price` and `qty * price` indicate an application-layer bug. Recommend dropping the stored column in favor of computed-at-query or a `CHECK CONSTRAINT`.
 5. **Expand forecasting models after 24 months of unified data.** Current 12-month Holt-Winters is methodologically sound but strategically limited; SARIMA becomes viable at 24 months.
 6. **Issue a data-format standard for operators.** Mandate E.164 phones, a canonical city dictionary, and UPPER product categories. This collapses future ETL cost dramatically.
-7. **Promote the Metabase board to a production monitoring tool.** Read-only access for Ministry analysts, plus alerts on KPI thresholds.
+7. **Promote the Dash dashboard to a production monitoring tool.** Read-only access for Ministry analysts, plus alerts on KPI thresholds.
 
 ## 14. Repo Layout
 
@@ -281,11 +281,20 @@ Translated from the original Arabic report:
 │   └── __main__.py         # CLI entrypoint
 ├── analytics/              # The 6 required queries + sanity + README
 │   └── mining/             # RFM segmentation + Holt-Winters forecast
-├── scripts/                # Seeder, divergence verifier, Metabase setup
+│       └── output/         # rfm_segments.csv, forecast-{syriatel,mtn}.csv
+├── dashboard/              # Plotly Dash analytics dashboard (port 3000)
+│   ├── app.py              # Dash entry point — layout, callbacks, tab routing
+│   ├── data.py             # All SQL queries + RFM scoring + Holt-Winters forecast
+│   ├── components.py       # Plotly figure builders + Dash HTML component helpers
+│   ├── assets/style.css    # Dark theme, Arabic fonts, animations, print mode
+│   ├── requirements.txt    # Pinned Python deps for the dashboard
+│   ├── Dockerfile          # python:3.11-slim image, exposes port 8050
+│   └── README.md           # Dashboard-specific setup and design docs
+├── scripts/                # Seeder and divergence verifier
 ├── data/                   # Reference CSVs (cities, product catalog)
 ├── docs/screenshots/       # Charts referenced by this README
-├── docker-compose.yml      # 3 Postgres instances + Metabase + listener
-├── Makefile                # make up | seed | etl | analytics | dashboard
+├── docker-compose.yml      # 3 Postgres instances + ETL listener + Dash dashboard
+├── Makefile                # make up | seed | etl | analytics | dash-build
 ├── .env.example
 ├── requirements.txt
 └── README.md               # ← you are here
@@ -299,7 +308,7 @@ Translated from the original Arabic report:
 - [x] `dw.etl_runs` has at least one `succeeded` row; `dw.etl_errors` exercised
 - [x] `pg_cron` job `telecom-etl-weekly` installed; listener container healthy; manual `pg_notify` triggers a run
 - [x] Six SQL analyses return non-empty, plausible results; `_sanity.sql` clean
-- [x] Metabase dashboard reachable, six tiles configured, survives `docker compose down && up`
+- [x] Dash dashboard reachable at `http://localhost:3000`, all six analyses surfaced, survives `docker compose down && up`
 - [x] RFM CSV + two forecast PNGs produced and referenced
 - [x] `requirements.txt` pins versions; `.env` is gitignored; no hardcoded credentials
 - [x] `pytest etl/tests/` is green

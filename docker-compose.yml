@@ -113,25 +113,15 @@ services:
     container_name: telecom_dashboard
     restart: unless-stopped
     ports:
-      - "8050:8050"
+      - "3000:8050"
     environment:
-      DATABASE_URL: postgresql://${DW_USER:-dw}:${DW_PASSWORD:-dw}@dw:5432/${DW_DB:-telecom_dw}
-      PORT: "8050"
-    depends_on:
-      dw:
-        condition: service_healthy
-    networks: [telecom_net]
-
-  metabase:
-    image: metabase/metabase:v0.50.20
-    container_name: telecom_metabase
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-    environment:
-      MB_DB_TYPE: h2
+      DB_HOST: telecom_dw
+      DB_PORT: "5432"
+      DB_NAME: telecom_dw
+      DB_USER: postgres
+      DB_PASS: postgres
     volumes:
-      - metabase_data:/metabase-data
+      - ./analytics/mining/output:/app/analytics/mining/output:ro
     depends_on:
       dw:
         condition: service_healthy
@@ -145,4 +135,3 @@ volumes:
   syriatel_data:
   mtn_data:
   dw_data:
-  metabase_data:

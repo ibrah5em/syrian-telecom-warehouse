@@ -37,6 +37,7 @@ def _base_layout(height: int = 300, margin: dict | None = None) -> dict:
     m = margin or dict(t=16, b=40, l=50, r=16)
     return dict(
         height=height,
+        autosize=True,
         paper_bgcolor=C["card"],
         plot_bgcolor=C["card"],
         font=dict(color=C["textMuted"], family="DM Sans, sans-serif", size=11),
@@ -298,7 +299,7 @@ def rfm_pie_chart(rfm_summary: pd.DataFrame) -> go.Figure:
 def forecast_chart(monthly_wide: pd.DataFrame, forecast: dict) -> go.Figure:
     traces = []
 
-    # Actual lines
+    # Actual lines (solid, from monthly_wide which covers all history)
     for code, color in [("SYRIATEL", C["accent2"]), ("MTN", C["accent1"])]:
         col = code if code in monthly_wide.columns else None
         if col is None:
@@ -314,23 +315,36 @@ def forecast_chart(monthly_wide: pd.DataFrame, forecast: dict) -> go.Figure:
             hovertemplate=f"<b>{name} actual</b><br>%{{y:.1f}}M SYP<extra></extra>",
         ))
 
-    # Forecast lines (dashed)
+    # Fitted lines (faint dashed) — present when data comes from the pre-computed CSV
+    for code, color in [("SYRIATEL", C["accent2"]), ("MTN", C["accent1"])]:
+        if code not in forecast:
+            continue
+        fitted = forecast[code].get("fitted")
+        if fitted is None or (hasattr(fitted, "empty") and fitted.empty):
+            continue
+        name = "Syriatel" if code == "SYRIATEL" else "MTN"
+        traces.append(go.Scatter(
+            x=[d.strftime("%b %y") for d in fitted.index],
+            y=[float(v) / 1e6 for v in fitted.values],
+            mode="lines",
+            name=f"{name} (HW fit)",
+            line=dict(color=color, width=1, dash="dash"),
+            opacity=0.4,
+            hovertemplate=f"<b>{name} fitted</b><br>%{{y:.1f}}M SYP<extra></extra>",
+        ))
+
+    # Forecast lines (dashed diamond) bridged from last actual point
     for code, color in [("SYRIATEL", C["accent2"]), ("MTN", C["accent1"])]:
         if code not in forecast:
             continue
         fc = forecast[code]["forecast"]
-        if fc.empty:
+        if fc is None or (hasattr(fc, "empty") and fc.empty):
             continue
         name = "Syriatel" if code == "SYRIATEL" else "MTN"
-        # Bridge: last actual point
-        actual_data = forecast[code]["actual"]
         bridge_x, bridge_y = [], []
-        if not monthly_wide.empty:
-            last_label = monthly_wide["label"].iloc[-1]
-            last_val = monthly_wide[code].iloc[-1] if code in monthly_wide.columns else None
-            if last_val is not None:
-                bridge_x.append(last_label)
-                bridge_y.append(float(last_val))
+        if not monthly_wide.empty and code in monthly_wide.columns:
+            bridge_x.append(monthly_wide["label"].iloc[-1])
+            bridge_y.append(float(monthly_wide[code].iloc[-1]))
         bridge_x += [d.strftime("%b %y") for d in fc.index]
         bridge_y += [float(v) / 1e6 for v in fc.values]
 
@@ -397,14 +411,14 @@ def overview_tab(data: dict) -> html.Div:
             # Market share donut
             chart_card([
                 *chart_header("Market Share", "الحصة السوقية"),
-                dcc.Graph(figure=company_share_pie(company_df), config={"displayModeBar": False}),
+                dcc.Graph(figure=company_share_pie(company_df), config={"displayModeBar": False, "responsive": True}, responsive=True),
                 share_legend,
             ], {"flex": "1", "minWidth": 280}),
 
             # Monthly area trend
             chart_card([
                 *chart_header("Monthly Revenue Trend", "الاتجاه الشهري للإيرادات"),
-                dcc.Graph(figure=monthly_area_chart(monthly_wide), config={"displayModeBar": False}),
+                dcc.Graph(figure=monthly_area_chart(monthly_wide), config={"displayModeBar": False, "responsive": True}, responsive=True),
             ], {"flex": "2", "minWidth": 380}),
         ], style={"display": "flex", "gap": 24, "marginBottom": 32, "flexWrap": "wrap"}),
 
@@ -506,7 +520,7 @@ def revenue_tab(data: dict) -> html.Div:
         chart_card([
             *chart_header("Monthly Revenue — Operator Comparison",
                           "مقارنة الإيرادات الشهرية بين المشغلين"),
-            dcc.Graph(figure=monthly_bar_chart(monthly_wide), config={"displayModeBar": False}),
+            dcc.Graph(figure=monthly_bar_chart(monthly_wide), config={"displayModeBar": False, "responsive": True}, responsive=True),
         ], {"marginBottom": 0}),
 
         html.Div(style={"height": 24}),
@@ -514,7 +528,7 @@ def revenue_tab(data: dict) -> html.Div:
         chart_card([
             *chart_header("Product Catalog — Average Order Value by Product",
                           "كتالوج المنتجات — متوسط قيمة الطلب لكل منتج"),
-            dcc.Graph(figure=product_bar_chart(products_df), config={"displayModeBar": False}),
+            dcc.Graph(figure=product_bar_chart(products_df), config={"displayModeBar": False, "responsive": True}, responsive=True),
             cat_legend,
         ], {"marginBottom": 0}),
     ])
@@ -568,7 +582,7 @@ def geo_tab(data: dict) -> html.Div:
         chart_card([
             html.Div("Revenue by City — Stacked by Operator",
                      className="chart-title-en mb-16"),
-            dcc.Graph(figure=city_revenue_bar(city_df), config={"displayModeBar": False}),
+            dcc.Graph(figure=city_revenue_bar(city_df), config={"displayModeBar": False, "responsive": True}, responsive=True),
         ], {"marginBottom": 24}),
 
         html.Div(city_cards, className="city-grid"),
@@ -635,7 +649,7 @@ def customers_tab(data: dict) -> html.Div:
             # Pie chart
             chart_card([
                 html.Div("Segment Distribution", className="chart-title-en mb-16"),
-                dcc.Graph(figure=rfm_pie_chart(rfm_summary), config={"displayModeBar": False}),
+                dcc.Graph(figure=rfm_pie_chart(rfm_summary), config={"displayModeBar": False, "responsive": True}, responsive=True),
                 html.Div([
                     legend_item(r["color"], f"{r['segment']} ({float(r['pct']):.1f}%)")
                     for _, r in rfm_summary.iterrows()
@@ -775,7 +789,7 @@ def forecast_tab(data: dict) -> html.Div:
                 "Revenue Forecast — Actual vs Holt-Winters Prediction",
                 "التنبؤ بالإيرادات — الفعلي مقابل نموذج هولت-وينترز",
             ),
-            dcc.Graph(figure=forecast_chart(monthly_wide, forecast), config={"displayModeBar": False}),
+            dcc.Graph(figure=forecast_chart(monthly_wide, forecast), config={"displayModeBar": False, "responsive": True}, responsive=True),
         ], {"marginBottom": 24}),
 
         html.Div([

@@ -497,3 +497,92 @@ body {
   .arch-grid { grid-template-columns: repeat(2, 1fr); }
   .city-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Tab Panel Transition ────────────────────────────────── */
+.tab-panel-animate {
+  animation: fadeSlideUp 0.3s ease both;
+}
+
+/* ── Print Button ────────────────────────────────────────── */
+.print-btn {
+  background: transparent;
+  border: 1px solid #1E293B;
+  color: #94A3B8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.print-btn:hover {
+  border-color: #D4A843;
+  color: #D4A843;
+}
+
+/* ── RTL Alignment Fixes ─────────────────────────────────── */
+.kpi-label-ar   { text-align: right; }
+.chart-title-ar { text-align: right; }
+.dw-title-ar    { text-align: right; }
+.arabic         { text-align: right; }
+
+/* ── Print / PDF Export ──────────────────────────────────── */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+  }
+
+  .dw-header {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    position: static !important;
+    backdrop-filter: none !important;
+  }
+
+  .tab-nav-outer,
+  .print-btn,
+  .live-dot {
+    display: none !important;
+  }
+
+  .main-content { padding: 16px !important; }
+
+  .kpi-card,
+  .chart-card,
+  .company-card,
+  .city-card,
+  .segment-card,
+  .rec-card,
+  .stat-card,
+  .alert-card-red,
+  .alert-card-green,
+  .arch-node {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  .kpi-value, .section-title-en, .dw-title-en { color: #0f172a !important; }
+  .kpi-label-en, .chart-title-en, .section-subtitle { color: #475569 !important; }
+  .text-dim, .text-muted { color: #475569 !important; }
+
+  .section-divider { background: #d4a843 !important; }
+
+  .dw-table th {
+    color: #d4a843 !important;
+    border-bottom-color: rgba(212,168,67,0.4) !important;
+  }
+  .dw-table td {
+    color: #334155 !important;
+    border-bottom-color: #e2e8f0 !important;
+  }
+
+  @page { margin: 1.5cm; }
+}
