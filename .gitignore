@@ -1,0 +1,37 @@
+# Environment
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Docker volumes (managed by named volumes, but just in case)
+pgdata/
+metabase_data/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Claude Code (local-only — not part of submission)
+.claude/
+
+# docs/ hidden from history except for screenshots + diagrams referenced by README
+docs/*
+!docs/screenshots/
+!docs/diagrams/

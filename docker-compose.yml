@@ -1,0 +1,148 @@
+name: telecom-dw
+
+services:
+  syriatel:
+    image: postgres:16-alpine
+    container_name: telecom_syriatel
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       ${SYRIATEL_DB:-syriatel_oltp}
+      POSTGRES_USER:     ${SYRIATEL_USER:-syriatel}
+      POSTGRES_PASSWORD: ${SYRIATEL_PASSWORD:-syriatel}
+    ports:
+      - "5433:5432"
+    volumes:
+      - syriatel_data:/var/lib/postgresql/data
+      - ./oltp/syriatel/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${SYRIATEL_USER:-syriatel} -d ${SYRIATEL_DB:-syriatel_oltp}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks: [telecom_net]
+
+  mtn:
+    image: postgres:16-alpine
+    container_name: telecom_mtn
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       ${MTN_DB:-mtn_oltp}
+      POSTGRES_USER:     ${MTN_USER:-mtn}
+      POSTGRES_PASSWORD: ${MTN_PASSWORD:-mtn}
+    ports:
+      - "5434:5432"
+    volumes:
+      - mtn_data:/var/lib/postgresql/data
+      - ./oltp/mtn/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${MTN_USER:-mtn} -d ${MTN_DB:-mtn_oltp}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks: [telecom_net]
+
+  dw:
+    # pg_cron-enabled Postgres image (built locally; base = postgres:16)
+    build:
+      context: ./dw
+      dockerfile: Dockerfile
+    image: telecom-dw/postgres-pgcron:16
+    container_name: telecom_dw
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       ${DW_DB:-telecom_dw}
+      POSTGRES_USER:     ${DW_USER:-dw}
+      POSTGRES_PASSWORD: ${DW_PASSWORD:-dw}
+    command:
+      - postgres
+      - -c
+      - shared_preload_libraries=pg_cron
+      - -c
+      - cron.database_name=${DW_DB:-telecom_dw}
+    ports:
+      - "5435:5432"
+    volumes:
+      - dw_data:/var/lib/postgresql/data
+      - ./dw/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./dw/cron.sql:/docker-entrypoint-initdb.d/02_cron.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DW_USER:-dw} -d ${DW_DB:-telecom_dw}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks: [telecom_net]
+
+  etl-listener:
+    build:
+      context: .
+      dockerfile: etl/Dockerfile
+    image: telecom-dw/etl:latest
+    container_name: telecom_etl_listener
+    restart: unless-stopped
+    environment:
+      SYRIATEL_HOST: syriatel
+      SYRIATEL_PORT: "5432"
+      SYRIATEL_DB: ${SYRIATEL_DB:-syriatel_oltp}
+      SYRIATEL_USER: ${SYRIATEL_USER:-syriatel}
+      SYRIATEL_PASSWORD: ${SYRIATEL_PASSWORD:-syriatel}
+      MTN_HOST: mtn
+      MTN_PORT: "5432"
+      MTN_DB: ${MTN_DB:-mtn_oltp}
+      MTN_USER: ${MTN_USER:-mtn}
+      MTN_PASSWORD: ${MTN_PASSWORD:-mtn}
+      DW_HOST: dw
+      DW_PORT: "5432"
+      DW_DB: ${DW_DB:-telecom_dw}
+      DW_USER: ${DW_USER:-dw}
+      DW_PASSWORD: ${DW_PASSWORD:-dw}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    depends_on:
+      syriatel:
+        condition: service_healthy
+      mtn:
+        condition: service_healthy
+      dw:
+        condition: service_healthy
+    networks: [telecom_net]
+
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    image: telecom-dw/dashboard:latest
+    container_name: telecom_dashboard
+    restart: unless-stopped
+    ports:
+      - "8050:8050"
+    environment:
+      DATABASE_URL: postgresql://${DW_USER:-dw}:${DW_PASSWORD:-dw}@dw:5432/${DW_DB:-telecom_dw}
+      PORT: "8050"
+    depends_on:
+      dw:
+        condition: service_healthy
+    networks: [telecom_net]
+
+  metabase:
+    image: metabase/metabase:v0.50.20
+    container_name: telecom_metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: h2
+    volumes:
+      - metabase_data:/metabase-data
+    depends_on:
+      dw:
+        condition: service_healthy
+    networks: [telecom_net]
+
+networks:
+  telecom_net:
+    driver: bridge
+
+volumes:
+  syriatel_data:
+  mtn_data:
+  dw_data:
+  metabase_data:
