@@ -7,6 +7,7 @@ All layout helpers return dash html.Div subtrees.
 import pandas as pd
 import plotly.graph_objects as go
 from dash import html, dcc
+from map_tab import coverage_map_tab  # noqa: F401 — re-exported for app.py
 
 # ---------------------------------------------------------------------------
 # Colour palette (mirrors JSX reference)

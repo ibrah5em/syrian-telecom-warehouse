@@ -11,10 +11,12 @@ import logging
 import os
 
 import dash
-from dash import Input, Output, dcc, html
+import plotly.graph_objects as go
+from dash import ALL, Input, Output, State, ctx, dcc, html
 
 import components as comp
 from data import load_all_data
+from map_tab import build_gov_data, build_map_figure, gov_detail_panel, gov_ranking_panel
 
 logging.basicConfig(
     level=logging.INFO,
@@ -53,6 +55,7 @@ TABS = [
     {"id": "customers",       "label": "Customer Segments",  "label_ar": "شرائح العملاء",    "icon": "👥"},
     {"id": "forecast",        "label": "Forecast & Mining",  "label_ar": "التنبؤ والتنقيب",   "icon": "🔮"},
     {"id": "recommendations", "label": "Recommendations",    "label_ar": "التوصيات",          "icon": "📋"},
+    {"id": "coverage",        "label": "Coverage Map",        "label_ar": "خريطة التغطية",     "icon": "🗺️"},
 ]
 
 # ---------------------------------------------------------------------------
@@ -172,6 +175,7 @@ def render_tab(tab: str) -> html.Div:
         "customers":       comp.customers_tab,
         "forecast":        comp.forecast_tab,
         "recommendations": comp.recommendations_tab,
+        "coverage":        comp.coverage_map_tab,
     }
     builder = tab_map.get(tab)
     if builder is None:
@@ -197,6 +201,55 @@ def update_footer(_tab: str) -> str:
         f"{DATA['cities_served']} cities · "
         f"{len(DATA['products'])} products"
     )
+
+
+# ---------------------------------------------------------------------------
+# Coverage Map callbacks
+# ---------------------------------------------------------------------------
+
+@app.callback(
+    Output("map-selected-gov", "data"),
+    Input("coverage-map-graph", "clickData"),
+    Input({"type": "gov-rank-row", "index": ALL}, "n_clicks"),
+    State("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_select(click_data, _rank_clicks, current):
+    triggered = ctx.triggered_id
+    if isinstance(triggered, dict) and triggered.get("type") == "gov-rank-row":
+        gid = triggered["index"]
+        return None if gid == current else gid
+    if triggered == "coverage-map-graph" and click_data and click_data.get("points"):
+        gid = click_data["points"][0]["customdata"][0]
+        return None if gid == current else gid
+    return current
+
+
+@app.callback(
+    Output("coverage-map-graph", "figure"),
+    Input("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_figure(selected_id):
+    if DATA is None:
+        return go.Figure()
+    return build_map_figure(DATA["city"], selected_id)
+
+
+@app.callback(
+    Output("map-right-panel", "children"),
+    Input("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_panel(selected_id):
+    if DATA is None:
+        return html.Div()
+    gov_data = build_gov_data(DATA["city"])
+    if selected_id:
+        gov = next((g for g in gov_data if g["id"] == selected_id), None)
+        if gov:
+            return gov_detail_panel(gov, gov_data)
+    return gov_ranking_panel(gov_data)
 
 
 # ---------------------------------------------------------------------------
