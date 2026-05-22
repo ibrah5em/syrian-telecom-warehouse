@@ -1,0 +1,288 @@
+"""
+app.py — Dash entry point for the Syrian Telecom Data Warehouse dashboard.
+
+Run locally (requires a reachable DW):
+    DATABASE_URL=postgresql://postgres:postgres@localhost:5435/telecom_dw python app.py
+
+In Docker Compose the DATABASE_URL defaults to the telecom_dw service hostname.
+"""
+
+import logging
+import os
+
+import dash
+import plotly.graph_objects as go
+from dash import ALL, Input, Output, Patch, State, ctx, dcc, html
+
+import components as comp
+from data import load_all_data
+from map_tab import build_gov_data, build_map_figure, gov_detail_panel, gov_ranking_panel
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+log = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Bootstrap
+# ---------------------------------------------------------------------------
+
+app = dash.Dash(
+    __name__,
+    title="Telecom DW — Syria",
+    suppress_callback_exceptions=True,
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"},
+        {"charset": "utf-8"},
+    ],
+)
+server = app.server  # expose Flask server for gunicorn
+
+log.info("Loading warehouse data…")
+DATA = load_all_data()
+if DATA is None:
+    log.error("Could not load data from the warehouse — dashboard will show error state")
+
+# ---------------------------------------------------------------------------
+# Tab definitions
+# ---------------------------------------------------------------------------
+
+TABS = [
+    {"id": "overview",        "label": "Overview",           "label_ar": "نظرة عامة",       "icon": "📊"},
+    {"id": "revenue",         "label": "Revenue Analysis",   "label_ar": "تحليل الإيرادات",   "icon": "💰"},
+    {"id": "geo",             "label": "Geographic",         "label_ar": "التوزيع الجغرافي",  "icon": "🗺️"},
+    {"id": "customers",       "label": "Customer Segments",  "label_ar": "شرائح العملاء",    "icon": "👥"},
+    {"id": "forecast",        "label": "Forecast & Mining",  "label_ar": "التنبؤ والتنقيب",   "icon": "🔮"},
+    {"id": "recommendations", "label": "Recommendations",    "label_ar": "التوصيات",          "icon": "📋"},
+    {"id": "coverage",        "label": "Coverage Map",        "label_ar": "خريطة التغطية",     "icon": "🗺️"},
+]
+
+# ---------------------------------------------------------------------------
+# Layout
+# ---------------------------------------------------------------------------
+
+BG   = "#0A0E1A"
+CARD = "#111827"
+BORD = "#1E293B"
+GOLD = "#D4A843"
+GOLD_DIM = "#8B7235"
+TEXT_DIM  = "#94A3B8"
+TEXT_MUTED = "#64748B"
+
+
+def _header() -> html.Header:
+    return html.Header([
+        html.Div([
+            html.Div([
+                html.Div("DW", className="dw-logo"),
+                html.Div([
+                    html.H1("Telecom Data Warehouse", className="dw-title-en"),
+                    html.Div("مستودع بيانات الاتصالات السورية الموحد", className="dw-title-ar"),
+                ]),
+            ], style={"display": "flex", "alignItems": "center", "gap": 16}),
+
+            html.Div([
+                html.Div([
+                    html.Div("Ministry of Communications",
+                             style={"fontSize": 11, "color": TEXT_MUTED,
+                                    "textTransform": "uppercase", "letterSpacing": "0.1em",
+                                    "textAlign": "right"}),
+                    html.Div("وزارة الاتصالات والتقانة",
+                             style={"fontSize": 11, "color": GOLD_DIM,
+                                    "fontFamily": "'Noto Kufi Arabic', sans-serif",
+                                    "direction": "rtl", "textAlign": "right"}),
+                ]),
+                html.Button("🖨 Print / Export PDF", id="print-btn", className="print-btn"),
+                html.Div(className="live-dot"),
+            ], style={"display": "flex", "alignItems": "center", "gap": 16}),
+        ], className="dw-header-inner"),
+    ], className="dw-header")
+
+
+def _tab_nav() -> html.Div:
+    return html.Div([
+        dcc.Tabs(
+            id="tabs",
+            value="overview",
+            className="custom-tabs",
+            children=[
+                dcc.Tab(
+                    label=f"{t['icon']}  {t['label']}",
+                    value=t["id"],
+                    className="custom-tab",
+                    selected_className="custom-tab--selected",
+                )
+                for t in TABS
+            ],
+        ),
+    ], className="tab-nav-outer")
+
+
+app.layout = html.Div([
+    _header(),
+    _tab_nav(),
+    dcc.Loading(
+        id="loading-tab",
+        type="dot",
+        color=GOLD,
+        delay_show=120,
+        children=html.Main(id="tab-content", className="main-content"),
+    ),
+    html.Footer([
+        html.Span("Telecom DW — Unified Data Warehouse"),
+        html.Span(" | ", style={"margin": "0 12px", "color": BORD}),
+        html.Span("الجمهورية العربية السورية",
+                  style={"fontFamily": "'Noto Kufi Arabic', sans-serif"}),
+        html.Span(" | ", style={"margin": "0 12px", "color": BORD}),
+        html.Span(id="footer-stats", children="—"),
+    ], style={
+        "borderTop": f"1px solid {BORD}", "padding": "20px 32px",
+        "textAlign": "center", "color": TEXT_MUTED, "fontSize": 12,
+        "background": CARD,
+    }),
+], style={"background": BG, "minHeight": "100vh", "color": "#F1F5F9"})
+
+
+# ---------------------------------------------------------------------------
+# Callbacks
+# ---------------------------------------------------------------------------
+
+@app.callback(Output("tab-content", "children"), Input("tabs", "value"))
+def render_tab(tab: str) -> html.Div:
+    if DATA is None:
+        return html.Div([
+            html.Div("⚠️", style={"fontSize": 48, "marginBottom": 16}),
+            html.H2("Cannot connect to the data warehouse",
+                    style={"color": "#EF4444", "marginBottom": 8}),
+            html.P(
+                "Ensure the telecom_dw PostgreSQL container is running and reachable.",
+                style={"color": TEXT_MUTED, "fontSize": 13},
+            ),
+            html.Code(
+                f"DATABASE_URL = {os.getenv('DATABASE_URL', 'postgresql://dw:dw@dw:5432/telecom_dw')}",
+                style={"fontSize": 11, "color": GOLD_DIM, "display": "block", "marginTop": 16},
+            ),
+        ], style={
+            "textAlign": "center", "padding": "80px 32px",
+            "color": "#F1F5F9",
+        })
+
+    tab_map = {
+        "overview":        comp.overview_tab,
+        "revenue":         comp.revenue_tab,
+        "geo":             comp.geo_tab,
+        "customers":       comp.customers_tab,
+        "forecast":        comp.forecast_tab,
+        "recommendations": comp.recommendations_tab,
+        "coverage":        comp.coverage_map_tab,
+    }
+    builder = tab_map.get(tab)
+    if builder is None:
+        return html.Div("Unknown tab", style={"color": "#EF4444"})
+    return html.Div(builder(DATA), className="tab-panel-animate")
+
+
+app.clientside_callback(
+    "function(n) { if (n) { window.print(); } return '🖨 Print / Export PDF'; }",
+    Output("print-btn", "children"),
+    Input("print-btn", "n_clicks"),
+    prevent_initial_call=True,
+)
+
+
+@app.callback(Output("footer-stats", "children"), Input("tabs", "value"))
+def update_footer(_tab: str) -> str:
+    if DATA is None:
+        return "No data loaded"
+    return (
+        f"{DATA['total_orders']:,} orders · "
+        f"{DATA['total_customers']:,} customers · "
+        f"{DATA['cities_served']} cities · "
+        f"{len(DATA['products'])} products"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Coverage Map callbacks
+# ---------------------------------------------------------------------------
+
+@app.callback(
+    Output("map-selected-gov", "data"),
+    Input("coverage-map-graph", "clickData"),
+    Input({"type": "gov-rank-row", "index": ALL}, "n_clicks"),
+    State("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_select(click_data, _rank_clicks, current):
+    triggered = ctx.triggered_id
+    if isinstance(triggered, dict) and triggered.get("type") == "gov-rank-row":
+        gid = triggered["index"]
+        return None if gid == current else gid
+    if triggered == "coverage-map-graph" and click_data and click_data.get("points"):
+        gid = click_data["points"][0]["customdata"][0]
+        return None if gid == current else gid
+    return current
+
+
+@app.callback(
+    Output("coverage-map-graph", "figure"),
+    Input("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_figure(selected_id):
+    """Patch only the highlight trace (data[1]) so the base layer never
+    re-renders. This eliminates the flicker on every polygon when a region
+    is clicked."""
+    if DATA is None:
+        return go.Figure()
+
+    patched = Patch()
+    gov_data = build_gov_data(DATA["city"])
+    sel = next((g for g in gov_data if g["id"] == selected_id), None) if selected_id else None
+
+    if sel is not None:
+        # Rebuild the matching customdata row so the hover card stays correct.
+        cd = [
+            sel["id"], sel["name"], sel["ar"],
+            f"{sel['total_m']:.1f}",
+            f"{sel['syr_m']:.1f}",
+            f"{sel['mtn_m']:.1f}",
+            sel["customers"], f"{sel['orders']:,}",
+        ]
+        patched["data"][1]["locations"]  = [sel["id"]]
+        patched["data"][1]["z"]          = [sel["total_m"]]
+        patched["data"][1]["customdata"] = [cd]
+    else:
+        patched["data"][1]["locations"]  = []
+        patched["data"][1]["z"]          = []
+        patched["data"][1]["customdata"] = []
+
+    return patched
+
+
+@app.callback(
+    Output("map-right-panel", "children"),
+    Input("map-selected-gov", "data"),
+    prevent_initial_call=True,
+)
+def _map_panel(selected_id):
+    if DATA is None:
+        return html.Div()
+    gov_data = build_gov_data(DATA["city"])
+    if selected_id:
+        gov = next((g for g in gov_data if g["id"] == selected_id), None)
+        if gov:
+            return gov_detail_panel(gov, gov_data)
+    return gov_ranking_panel(gov_data)
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8050))
+    debug = os.getenv("DEBUG", "false").lower() == "true"
+    log.info("Starting Dash server on port %d (debug=%s)", port, debug)
+    app.run(host="0.0.0.0", port=port, debug=debug)

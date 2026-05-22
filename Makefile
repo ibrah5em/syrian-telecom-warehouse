@@ -22,14 +22,14 @@ DW_DB         ?= telecom_dw
 PY ?= $(shell if [ -x ./venv/bin/python ]; then echo ./venv/bin/python; else echo python3; fi)
 
 .PHONY: help up down restart wait-healthy schemas ping seed seed-reset etl etl-full \
-        verify analytics dashboard report listener-logs notify-test clean nuke
+        verify analytics dashboard dash-build dash-logs report listener-logs notify-test clean nuke
 
 help:  ## Show this help
 	@echo "Telecom DW — common commands"
 	@echo ""
 	@grep -E '^[a-zA-Z_-]+:.*?## ' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
 
-up:  ## Start all containers (Syriatel, MTN, DW, Metabase)
+up:  ## Start all containers (Syriatel, MTN, DW, ETL listener, Dashboard)
 	docker compose up -d
 
 down:  ## Stop containers (keep data volumes)
@@ -88,13 +88,15 @@ analytics:  ## Run the six analytical queries against the DW
 	@echo "=== sanity ==="
 	@docker exec -i telecom_dw psql -U $(DW_USER) -d $(DW_DB) < analytics/_sanity.sql
 
-dashboard:  ## Configure Metabase dashboards (idempotent) and print URL
-	python3 scripts/metabase_setup.py
+dashboard:  ## Open the Dash analytics dashboard
+	@echo "Dashboard → http://localhost:3000"
 
-metabase-url:  ## Print Metabase URLs (admin UI + public dashboard)
-	@echo "Admin UI:  http://localhost:3000"
-	@echo "Dashboard: http://localhost:3000/dashboard/2"
-	@cat docs/metabase_setup.json 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print('Public:   ', d.get('public_url','(not yet generated)'))" || true
+dash-build:  ## Build and start the Plotly Dash analytics dashboard (port 3000)
+	docker compose up -d --build dashboard
+	@echo "Dashboard → http://localhost:3000"
+
+dash-logs:  ## Tail the Dash dashboard container logs
+	docker logs -f telecom_dashboard
 
 report:  ## Build the Arabic PDF report (docs/report.pdf)
 	pandoc docs/report.md \
