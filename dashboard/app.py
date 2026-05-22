@@ -12,7 +12,7 @@ import os
 
 import dash
 import plotly.graph_objects as go
-from dash import ALL, Input, Output, State, ctx, dcc, html
+from dash import ALL, Input, Output, Patch, State, ctx, dcc, html
 
 import components as comp
 from data import load_all_data
@@ -231,9 +231,34 @@ def _map_select(click_data, _rank_clicks, current):
     prevent_initial_call=True,
 )
 def _map_figure(selected_id):
+    """Patch only the highlight trace (data[1]) so the base layer never
+    re-renders. This eliminates the flicker on every polygon when a region
+    is clicked."""
     if DATA is None:
         return go.Figure()
-    return build_map_figure(DATA["city"], selected_id)
+
+    patched = Patch()
+    gov_data = build_gov_data(DATA["city"])
+    sel = next((g for g in gov_data if g["id"] == selected_id), None) if selected_id else None
+
+    if sel is not None:
+        # Rebuild the matching customdata row so the hover card stays correct.
+        cd = [
+            sel["id"], sel["name"], sel["ar"],
+            f"{sel['total_m']:.1f}",
+            f"{sel['syr_m']:.1f}",
+            f"{sel['mtn_m']:.1f}",
+            sel["customers"], f"{sel['orders']:,}",
+        ]
+        patched["data"][1]["locations"]  = [sel["id"]]
+        patched["data"][1]["z"]          = [sel["total_m"]]
+        patched["data"][1]["customdata"] = [cd]
+    else:
+        patched["data"][1]["locations"]  = []
+        patched["data"][1]["z"]          = []
+        patched["data"][1]["customdata"] = []
+
+    return patched
 
 
 @app.callback(

@@ -1,34 +1,35 @@
 """
-map_tab.py — Coverage Map tab built from official GADM Syria admin-1 GeoJSON.
+map_tab.py — Coverage Map tab built on a real interactive basemap.
 
-Coordinate pipeline:
-  GeoJSON (lon, lat)  →  Mercator projection  →  normalised SVG pixel space  →  Plotly Scatter
+Stack:
+  * go.Choroplethmapbox        — choropleth fill on top of a tile basemap
+  * mapbox_style="carto-darkmatter" — free CARTO dark tiles, English labels
+  * GADM 4.1 Syria admin-1 GeoJSON (14 governorates)
+  * Outside-Syria mask layer    — Proton-VPN-style darken-the-neighbours effect
 
-The bundled file dashboard/data/syria_gov.geojson is the GADM 4.1 Syria level-1
-dataset (gadm41_SYR_1.json).  If it is absent at startup the module tries to
-download it from the GADM CDN; this only happens once.
+The bundled file dashboard/data/syria_gov.geojson is the GADM level-1 dataset.
+If it is absent at startup the module tries to download it from the GADM CDN.
+
+The map is fully pannable / zoomable via standard Mapbox gestures
+(drag to pan, scroll/pinch to zoom).
 """
 from __future__ import annotations
 
 import json
-import math
+import logging
 import pathlib
 import urllib.request
-import logging
 
 import pandas as pd
 import plotly.graph_objects as go
-from dash import html, dcc
+from dash import dcc, html
 
 log = logging.getLogger(__name__)
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-_HERE          = pathlib.Path(__file__).resolve().parent
-_GEOJSON_PATH  = _HERE / "data" / "syria_gov.geojson"
-_GEOJSON_URL   = "https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_SYR_1.json"
-
-# ── SVG canvas ────────────────────────────────────────────────────────────────
-_W, _H = 700, 500
+_HERE         = pathlib.Path(__file__).resolve().parent
+_GEOJSON_PATH = _HERE / "data" / "syria_gov.geojson"
+_GEOJSON_URL  = "https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_SYR_1.json"
 
 # ── Colour palette ────────────────────────────────────────────────────────────
 _C = {
@@ -47,19 +48,15 @@ _C = {
     "purple":    "#8B5CF6",
 }
 
-# ── Heatmap ramp (low=#4A3A0E → high=#D4A843) ─────────────────────────────────
-_HEAT = [
-    (0.00, "#4A3A0E"), (0.35, "#5A4818"), (0.50, "#7D6220"),
-    (0.65, "#A47D28"), (0.80, "#C49535"), (1.00, "#D4A843"),
+# Diverging heat ramp for the choropleth — low → high revenue
+_COLOR_SCALE = [
+    [0.00, "#3A2D0B"],
+    [0.25, "#5A4818"],
+    [0.50, "#8B6B22"],
+    [0.75, "#B89033"],
+    [1.00, "#F5D78E"],
 ]
-LEGEND_STOPS = [c for _, c in _HEAT]
-
-
-def _heat(ratio: float) -> str:
-    for thresh, color in reversed(_HEAT):
-        if ratio >= thresh:
-            return color
-    return _HEAT[0][1]
+LEGEND_STOPS = [c for _, c in _COLOR_SCALE]
 
 
 # ── Governorate metadata ──────────────────────────────────────────────────────
@@ -98,7 +95,7 @@ CITY_TO_GOV: dict[str, str] = {
     "Rif Dimashq": "rif_dimashq",
 }
 
-# GADM NAME_1 field values → internal gov IDs
+# GADM NAME_1 → internal gov IDs
 _GADM_NAME_TO_ID: dict[str, str] = {
     "Aleppo":       "aleppo",
     "AlḤasakah":    "al_hasakah",
@@ -120,108 +117,67 @@ _GADM_NAME_TO_ID: dict[str, str] = {
 # ── GeoJSON loader ────────────────────────────────────────────────────────────
 
 def _load_geojson() -> dict:
-    """Return parsed GeoJSON; downloads from GADM CDN on first run."""
+    """Return parsed GeoJSON; downloads from GADM CDN on first run.
+
+    Each feature is given an `id` equal to our internal gov_id so the choropleth
+    can match `locations` against it without needing a `featureidkey`.
+    """
     if not _GEOJSON_PATH.exists():
         log.info("Downloading Syria GeoJSON from GADM …")
         _GEOJSON_PATH.parent.mkdir(parents=True, exist_ok=True)
         urllib.request.urlretrieve(_GEOJSON_URL, _GEOJSON_PATH)
         log.info("Saved %s (%d bytes)", _GEOJSON_PATH, _GEOJSON_PATH.stat().st_size)
+
     with open(_GEOJSON_PATH, encoding="utf-8") as fh:
-        return json.load(fh)
+        geojson = json.load(fh)
 
-
-# ── Mercator projection ───────────────────────────────────────────────────────
-# Bounding box with 0.3° padding so borders are never clipped
-_LON_MIN, _LON_MAX = 35.2,  42.8
-_LAT_MIN, _LAT_MAX = 31.9,  37.8
-_PAD_PX = 12                          # pixel margin inside the canvas
-
-_merc_y_min = math.log(math.tan(math.pi / 4 + math.radians(_LAT_MIN) / 2))
-_merc_y_max = math.log(math.tan(math.pi / 4 + math.radians(_LAT_MAX) / 2))
-
-
-def _project(lon: float, lat: float) -> tuple[float, float]:
-    """Mercator lon/lat → canvas pixel (x, y) with y=0 at top."""
-    x = _PAD_PX + (lon - _LON_MIN) / (_LON_MAX - _LON_MIN) * (_W - 2 * _PAD_PX)
-    m = math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
-    y_norm = 1 - (m - _merc_y_min) / (_merc_y_max - _merc_y_min)
-    y = _PAD_PX + y_norm * (_H - 2 * _PAD_PX)
-    return round(x, 2), round(y, 2)
-
-
-# ── GeoJSON geometry helpers ──────────────────────────────────────────────────
-
-def _exterior_rings(geometry: dict) -> list[list]:
-    """Return list of exterior rings from a Polygon or MultiPolygon geometry."""
-    gtype = geometry["type"]
-    if gtype == "Polygon":
-        return [geometry["coordinates"][0]]
-    if gtype == "MultiPolygon":
-        return [poly[0] for poly in geometry["coordinates"]]
-    return []
-
-
-def _rings_to_xy(rings: list[list]) -> tuple[list, list]:
-    """
-    Project a list of rings to Plotly x/y arrays, separated by None so that
-    fill='toself' closes each ring independently.
-    """
-    xs: list = []
-    ys: list = []
-    for ring in rings:
-        for lon, lat in ring:
-            px, py = _project(lon, lat)
-            xs.append(px)
-            ys.append(py)
-        # Close the ring back to the first point, then break with None
-        if ring:
-            px0, py0 = _project(ring[0][0], ring[0][1])
-            xs.extend([px0, None])
-            ys.extend([py0, None])
-    return xs, ys
-
-
-def _centroid_of_rings(rings: list[list]) -> tuple[float, float]:
-    """Approximate centroid as mean of all exterior-ring vertices."""
-    all_pts = [_project(lon, lat) for ring in rings for lon, lat in ring]
-    cx = sum(p[0] for p in all_pts) / len(all_pts)
-    cy = sum(p[1] for p in all_pts) / len(all_pts)
-    return cx, cy
-
-
-# ── Pre-process GeoJSON on import ─────────────────────────────────────────────
-
-def _build_geometry_cache() -> dict[str, dict]:
-    """
-    Parse the GeoJSON once and return a dict keyed by gov_id containing:
-        xs, ys     — projected coordinate arrays (with None separators)
-        cx, cy     — centroid pixel coordinates
-    """
-    try:
-        geojson = _load_geojson()
-    except Exception:
-        log.exception("Failed to load Syria GeoJSON; map will be empty")
-        return {}
-
-    cache: dict[str, dict] = {}
+    matched = 0
     for feature in geojson.get("features", []):
-        name1  = feature["properties"].get("NAME_1", "")
+        name1 = feature["properties"].get("NAME_1", "")
         gov_id = _GADM_NAME_TO_ID.get(name1)
-        if not gov_id:
+        if gov_id:
+            feature["id"] = gov_id
+            matched += 1
+        else:
             log.warning("Unrecognised GADM NAME_1: %r", name1)
-            continue
-        rings  = _exterior_rings(feature["geometry"])
-        if not rings:
-            continue
-        xs, ys = _rings_to_xy(rings)
-        cx, cy = _centroid_of_rings(rings)
-        cache[gov_id] = {"xs": xs, "ys": ys, "cx": cx, "cy": cy}
-
-    log.info("Geometry cache built: %d / 14 governorates", len(cache))
-    return cache
+    log.info("GeoJSON loaded: %d / 14 governorates matched", matched)
+    return geojson
 
 
-_GEO_CACHE: dict[str, dict] = _build_geometry_cache()
+_GEOJSON: dict = _load_geojson()
+
+
+# ── Outside-Syria mask (Proton-VPN-style "darken the neighbours") ─────────────
+#
+# A single Polygon feature whose outer ring spans the world and whose inner
+# rings are every Syria governorate boundary — i.e. Syria itself is punched
+# out as a hole. Rendered as a semi-transparent dark fill via mapbox.layers,
+# it dims everything outside Syria without affecting the choropleth on top.
+
+def _build_outside_syria_mask() -> dict:
+    outer = [[-180, -60], [180, -60], [180, 85], [-180, 85], [-180, -60]]
+    holes: list[list] = []
+    for feature in _GEOJSON.get("features", []):
+        geom = feature.get("geometry", {})
+        if geom.get("type") == "Polygon":
+            holes.append(geom["coordinates"][0])
+        elif geom.get("type") == "MultiPolygon":
+            for poly in geom["coordinates"]:
+                holes.append(poly[0])
+    return {
+        "type": "FeatureCollection",
+        "features": [{
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [outer, *holes],
+            },
+        }],
+    }
+
+
+_OUTSIDE_MASK: dict = _build_outside_syria_mask()
 
 
 # ── Data builder ──────────────────────────────────────────────────────────────
@@ -238,8 +194,8 @@ def build_gov_data(city_df: pd.DataFrame) -> list[dict]:
 
     result = []
     for meta in GOV_META:
-        gid  = meta["id"]
-        row  = city_lookup.get(gid, {})
+        gid       = meta["id"]
+        row       = city_lookup.get(gid, {})
         total_m   = float(row.get("total_m",          0))
         syr_m     = float(row.get("syriatel_m",       0))
         mtn_m     = float(row.get("mtn_m",            0))
@@ -262,108 +218,117 @@ def build_gov_data(city_df: pd.DataFrame) -> list[dict]:
 
 # ── Figure builder ────────────────────────────────────────────────────────────
 
+# Initial camera — fits all of Syria
+_MAP_CENTER = {"lat": 35.0, "lon": 38.5}
+_MAP_ZOOM   = 6.1
+
+
 def build_map_figure(city_df: pd.DataFrame, selected_id: str | None) -> go.Figure:
-    gov_data   = build_gov_data(city_df)
-    gov_lookup = {g["id"]: g for g in gov_data}
-    max_rev    = max((g["total_m"] for g in gov_data), default=1) or 1
-    has_sel    = selected_id is not None
+    gov_data = build_gov_data(city_df)
 
-    traces = []
+    locations  = [g["id"]      for g in gov_data]
+    z_values   = [g["total_m"] for g in gov_data]
+    customdata = [
+        [g["id"], g["name"], g["ar"],
+         f"{g['total_m']:.1f}",
+         f"{g['syr_m']:.1f}",
+         f"{g['mtn_m']:.1f}",
+         g["customers"], f"{g['orders']:,}"]
+        for g in gov_data
+    ]
 
-    for gid, geo in _GEO_CACHE.items():
-        g = gov_lookup.get(gid)
-        if not g:
-            continue
+    hovertemplate = (
+        "<b>%{customdata[1]}</b>  %{customdata[2]}<br>"
+        "Revenue: <b>%{customdata[3]}M SYP</b><br>"
+        "🟡 Syriatel: %{customdata[4]}M  |  🔵 MTN: %{customdata[5]}M<br>"
+        "👥 %{customdata[6]} customers  📦 %{customdata[7]} orders"
+        "<extra></extra>"
+    )
 
-        ratio   = g["total_m"] / max_rev
-        is_sel  = gid == selected_id
-        fill    = _C["gold"] if is_sel else _heat(ratio)
-        stroke  = _C["goldLight"] if is_sel else (_C["gold"] if has_sel else "#263040")
-        sw      = 2.5 if is_sel else (1.5 if has_sel else 0.8)
-        opacity = 1.0 if (is_sel or not has_sel) else 0.45
+    # Base choropleth layer — all 14 governorates coloured by revenue.
+    # Opacity is constant across selection states so updating the highlight
+    # trace via dash.Patch does not visibly flicker every polygon.
+    base_layer = go.Choroplethmapbox(
+        geojson=_GEOJSON,
+        locations=locations,
+        z=z_values,
+        customdata=customdata,
+        colorscale=_COLOR_SCALE,
+        zmin=0,
+        zmax=max(z_values) if z_values else 1,
+        marker=dict(
+            line=dict(color="#263040", width=0.8),
+            opacity=0.78,
+        ),
+        hovertemplate=hovertemplate,
+        showscale=False,
+        name="Revenue",
+    )
 
-        n  = len(geo["xs"])
-        cd = [[
-            gid,
-            g["name"],
-            g["ar"],
-            f"{g['total_m']:.1f}",
-            f"{g['syr_m']:.1f}",
-            f"{g['mtn_m']:.1f}",
-            g["customers"],
-            f"{g['orders']:,}",
-        ]] * n
+    # Highlight layer — always present so the selection update is a pure
+    # data swap (dash.Patch on data[1].locations / z) instead of a full
+    # figure rebuild. Empty arrays = nothing selected.
+    sel = next((g for g in gov_data if g["id"] == selected_id), None) if selected_id else None
+    if sel is not None:
+        hl_locations  = [sel["id"]]
+        hl_z          = [sel["total_m"]]
+        hl_customdata = [customdata[locations.index(sel["id"])]]
+    else:
+        hl_locations, hl_z, hl_customdata = [], [], []
 
-        traces.append(go.Scatter(
-            x=geo["xs"], y=geo["ys"],
-            mode="lines",
-            fill="toself",
-            fillcolor=fill,
-            opacity=opacity,
-            line=dict(color=stroke, width=sw),
-            name=g["name"],
-            customdata=cd,
-            hovertemplate=(
-                "<b>%{customdata[1]}</b>  %{customdata[2]}<br>"
-                "Revenue: <b>%{customdata[3]}M SYP</b><br>"
-                "🟡 Syriatel: %{customdata[4]}M  |  🔵 MTN: %{customdata[5]}M<br>"
-                "👥 %{customdata[6]} customers  📦 %{customdata[7]} orders"
-                "<extra></extra>"
-            ),
-            showlegend=False,
-        ))
+    highlight_layer = go.Choroplethmapbox(
+        geojson=_GEOJSON,
+        locations=hl_locations,
+        z=hl_z,
+        customdata=hl_customdata,
+        colorscale=[[0, _C["gold"]], [1, _C["gold"]]],
+        zmin=0,
+        zmax=max(z_values) if z_values else 1,
+        marker=dict(
+            line=dict(color=_C["goldLight"], width=3),
+            opacity=0.92,
+        ),
+        hovertemplate=hovertemplate,
+        showscale=False,
+        name="Selected",
+    )
 
-    # Centroid dots + labels for selected governorate
-    cx_list, cy_list, text_list = [], [], []
-    for g in gov_data:
-        gid = g["id"]
-        geo = _GEO_CACHE.get(gid)
-        if not geo:
-            continue
-        cx_list.append(geo["cx"])
-        cy_list.append(geo["cy"])
-        text_list.append(g["name"] if gid == selected_id else "")
-
-    traces.append(go.Scatter(
-        x=cx_list, y=cy_list,
-        mode="markers+text",
-        marker=dict(size=5, color=_C["goldLight"], opacity=0.8),
-        text=text_list,
-        textposition="top center",
-        textfont=dict(color=_C["text"], size=9),
-        hoverinfo="skip",
-        showlegend=False,
-        name="",
-    ))
+    traces: list[go.BaseTraceType] = [base_layer, highlight_layer]
 
     layout = go.Layout(
         paper_bgcolor=_C["card"],
-        plot_bgcolor="rgba(13,17,23,0.95)",
-        margin=dict(t=8, b=8, l=8, r=8),
-        height=490,
-        xaxis=dict(
-            range=[0, _W], showgrid=False, showticklabels=False,
-            zeroline=False, fixedrange=True,
+        plot_bgcolor=_C["card"],
+        margin=dict(t=0, b=0, l=0, r=0),
+        height=560,
+        mapbox=dict(
+            style="carto-darkmatter",     # dark mode, English labels, free
+            center=_MAP_CENTER,
+            zoom=_MAP_ZOOM,
+            uirevision="coverage-map-mapbox",  # keep subplot/tile state across updates
+            layers=[
+                # Darken everything outside Syria so the country pops
+                dict(
+                    source=_OUTSIDE_MASK,
+                    type="fill",
+                    below="traces",
+                    color="rgba(6,10,20,0.55)",
+                ),
+                # Soft outline around the country boundary
+                dict(
+                    source=_OUTSIDE_MASK,
+                    type="line",
+                    below="traces",
+                    color="rgba(212,168,67,0.35)",
+                    line=dict(width=0.8),
+                ),
+            ],
         ),
-        yaxis=dict(
-            range=[0, _H], autorange="reversed",
-            showgrid=False, showticklabels=False,
-            zeroline=False, fixedrange=True,
-        ),
-        annotations=[
-            dict(x=_W - 8, y=_H - 4, text="SYRIAN ARAB REPUBLIC",
-                 showarrow=False, font=dict(size=8, color=_C["textMuted"]),
-                 opacity=0.3, xanchor="right", yanchor="bottom"),
-            dict(x=_W - 8, y=_H + 4, text="الجمهورية العربية السورية",
-                 showarrow=False, font=dict(size=8, color=_C["goldDim"]),
-                 opacity=0.3, xanchor="right", yanchor="bottom"),
-        ],
         hoverlabel=dict(
-            bgcolor="#1F2937", bordercolor=_C["gold"],
+            bgcolor="#1F2937",
+            bordercolor=_C["gold"],
             font=dict(color=_C["text"], size=12),
         ),
-        uirevision="coverage-map",
-        dragmode=False,
+        uirevision="coverage-map",  # preserves zoom/pan across callbacks
     )
 
     return go.Figure(data=traces, layout=layout)
@@ -597,8 +562,8 @@ def coverage_map_tab(data: dict) -> html.Div:
             ], style={"display": "flex", "alignItems": "baseline",
                       "gap": 16, "flexWrap": "wrap"}),
             html.P(
-                "Revenue heatmap across 14 Syrian governorates (GADM official boundaries) "
-                "— click any region for a detailed breakdown",
+                "Revenue heatmap across 14 Syrian governorates on an OpenStreetMap basemap — "
+                "drag to pan, scroll to zoom, click any region for a detailed breakdown",
                 style={"fontSize": 13, "color": _C["textMuted"], "margin": "6px 0 0"},
             ),
             html.Div(style={
@@ -639,32 +604,47 @@ def coverage_map_tab(data: dict) -> html.Div:
         # Shared selection store
         dcc.Store(id="map-selected-gov", data=None),
 
-        # Map + right panel
+        # Map + right panel — CSS grid with fixed-track columns. Using grid
+        # (not flex) means the right column's content swap can't change the
+        # map column's width, so dcc.Graph never receives a resize → Plotly
+        # never re-renders the mapbox subplot → no tile flicker on click.
         html.Div([
             html.Div([
                 dcc.Graph(
                     id="coverage-map-graph",
                     figure=build_map_figure(city_df, None),
-                    config={"displayModeBar": False, "responsive": True},
-                    style={"width": "100%"},
+                    config={
+                        "displayModeBar": True,
+                        "scrollZoom": True,
+                        "displaylogo": False,
+                        "modeBarButtonsToRemove": [
+                            "lasso2d", "select2d", "toImage",
+                        ],
+                        "responsive": True,
+                    },
+                    style={"width": "100%", "height": "560px"},
                     responsive=True,
                 ),
             ], style={
-                "background": (
-                    "radial-gradient(ellipse at 35% 40%, #151D30, #111827 70%, #0D1117)"
-                ),
+                "background": _C["card"],
                 "border": f"1px solid {_C['border']}",
-                "borderRadius": 18, "padding": 10,
-                "flex": 3, "minWidth": 360,
+                "borderRadius": 18, "padding": 6,
+                "minWidth": 0,
+                "overflow": "hidden",
             }),
 
             html.Div(
                 id="map-right-panel",
                 children=gov_ranking_panel(gov_data),
                 style={
-                    "flex": 1, "minWidth": 280, "maxWidth": 340,
-                    "overflowY": "auto", "maxHeight": 560,
+                    "minWidth": 0,
+                    "overflowY": "auto", "maxHeight": 600,
                 },
             ),
-        ], style={"display": "flex", "gap": 20, "alignItems": "flex-start"}),
+        ], style={
+            "display": "grid",
+            "gridTemplateColumns": "minmax(360px, 1fr) 320px",
+            "gap": 20,
+            "alignItems": "start",
+        }),
     ])
